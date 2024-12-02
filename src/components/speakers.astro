@@ -1,4 +1,6 @@
 ---
+import config from '../data/configs/default-config'; // TODO: Make this into a switcher based on the event
+
 interface Speaker {
   id: string;
   fullName: string;
@@ -6,7 +8,7 @@ interface Speaker {
   tagLine?: string;
 }
 
-const sessionizeUrl = "https://sessionize.com/api/v2/8cknf5zh/view/all";
+const sessionizeUrl = `https://sessionize.com/api/v2/${config.sessionizeId}/view/all`;
 
 // Fetch data during build/SSR
 const data = await fetch(sessionizeUrl).then((res) => res.json());
