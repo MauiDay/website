@@ -6,13 +6,13 @@ interface Speaker {
   tagLine?: string;
 }
 
-//const sessionizeUrl = "https://sessionize.com/api/v2/h70dwgnw/view/all";
+const sessionizeUrl = "https://sessionize.com/api/v2/8cknf5zh/view/all";
 
 // Fetch data during build/SSR
-//const data = await fetch(sessionizeUrl).then((res) => res.json());
+const data = await fetch(sessionizeUrl).then((res) => res.json());
 
 // Extract speakers from the data (adjust depending on the API structure)
-const speakers: Speaker[] = []; //data.speakers || [];
+const speakers: Speaker[] = data.speakers || [];
 ---
 <section id="speakers" class="bg-brand-dark py-16">
     <!-- Content Container -->
