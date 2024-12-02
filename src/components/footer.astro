@@ -1,0 +1,32 @@
+---
+import { config } from "../../mauiday.config.mjs";
+---
+
+<footer class="py-12 bg-black">
+  <div class="container mx-auto max-w-5xl px-4 flex items-center justify-between">
+    <div class="text-left">
+      <p class="text-md text-white">2024 © .NET Maui Day</p>
+      <p class="text-sm mt-1 text-gray-400">
+        The .NET MAUI day is in no way endorsed or supported by Microsoft and is not an official Microsoft event.
+      </p>
+    </div>
+    <div class="flex space-x-4">
+      <a
+        href={config.BLUESKY_LINK}
+        target="_blank"
+        aria-label="BlueSky"
+        class="text-gray-400 hover:text-white"
+      >
+        <i class="fa-brands fa-bluesky text-2xl"></i>
+      </a>
+      <a
+        href={config.GITHUB_LINK}
+        target="_blank"
+        aria-label="GitHub"
+        class="text-gray-400 hover:text-white"
+      >
+        <i class="fa-brands fa-github text-2xl"></i>
+      </a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,41 @@
+---
+interface Speaker {
+  id: string;
+  fullName: string;
+  profilePicture: string;
+  tagLine?: string;
+}
+
+//const sessionizeUrl = "https://sessionize.com/api/v2/h70dwgnw/view/all";
+
+// Fetch data during build/SSR
+//const data = await fetch(sessionizeUrl).then((res) => res.json());
+
+// Extract speakers from the data (adjust depending on the API structure)
+const speakers: Speaker[] = []; //data.speakers || [];
+---
+<section id="speakers" class="bg-brand-dark py-16">
+    <!-- Content Container -->
+    <div class="container max-w-4xl mx-auto px-4 text-center">
+      <!-- Section Title -->
+      <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">Our Awesome Line-Up</p>
+      <h2 class="text-white text-4xl md:text-4xl uppercase font-header font-bold mb-4">The Speakers</h2>
+      <p class="text-white text-base text-md mb-12">
+        Below are the speakers that will make this instance of .NET MAUI day unforgettable! Go watch their awesome sessions and connect with them afterwards in our "hallway track".
+      </p>
+  
+      <!-- Speakers Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+        {speakers.map((speaker) => (
+        <div class="flex flex-col items-center text-white">
+          <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
+            <img src={speaker.profilePicture || '/images/default-profile.png'} alt={speaker.fullName} class="w-full h-full object-cover" />
+          </div>
+          <h4 class="font-bold text-lg">{speaker.fullName}</h4>
+          <p class="text-sm">{speaker.tagLine}</p>
+        </div>
+        ))}  
+      </div>
+    </div>
+  </section>
+  
