@@ -1,4 +1,4 @@
-import { config as baseConfig } from './mauiday.config.mjs';
+import { config as baseConfig } from '../mauiday.config.mjs';
 import path from 'path';
 
 async function loadConfig() {
