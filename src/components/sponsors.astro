@@ -5,7 +5,7 @@ import type { Sponsor } from '../types';
 const config = await loadConfig();
 const sponsors: Sponsor[] = config.sponsors;
 ---
-<section id="sponsors" class="bg-white py-16 pb-0 px-0">
+<section id="sponsors" class="bg-white py-24 px-0">
     <!-- Content Container -->
     <div class="container max-w-4xl mx-auto px-4 text-center">
       <!-- Section Title -->
@@ -15,7 +15,7 @@ const sponsors: Sponsor[] = config.sponsors;
         Our awesome sponsors are what make this event possible. They help us to keep the event free and accessible to everyone. Please take a moment to check them out and show them some love.
       </p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center place-items-center">
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center place-items-center">
         {sponsors.map((sponsor) => (
           <a
             href={sponsor.url}
