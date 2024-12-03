@@ -1,96 +1,103 @@
 ---
 import { config } from "../../mauiday.config.mjs";
----
 
-<header class="bg-transparent absolute top-0 left-0 w-full z-10 font-header">
+// Add a prop to determine if the header should be styled differently
+const { isStaticHeader = false } = Astro.props;
+
+let accentColor = isStaticHeader ? 'brand-extra' : 'brand-light';
+---
+<header class={`${
+  isStaticHeader ? 'bg-white text-brand-dark' : 'bg-transparent absolute text-white'
+} top-0 left-0 w-full z-10 font-header`}
+>
   <div class="container max-w-5xl mx-auto px-4 flex items-center justify-between py-4">
     <!-- Logo -->
     <div class="flex items-center space-x-2 h-12">
-      <a href="/" class="cursor-pointer">
-        <img src={`${import.meta.env.BASE_URL}/images/logo-darkmode.png`} class="h-[40px] object-contain" alt=".NET MAUI Day" />
+      <a href={`${import.meta.env.BASE_URL}`} class="cursor-pointer">
+        <img src={`${import.meta.env.BASE_URL}/images/logo${isStaticHeader ? '' : '-darkmode' }.png`} class="h-[40px] object-contain" alt=".NET MAUI Day" />
       </a>
     </div>
 
     <!-- Navigation Menu -->
-    <nav class="hidden md:flex space-x-6 font-bold font-sans text-white text-md">
-      <p class="group hover:text-brand-light relative">
+    <nav class="hidden md:flex space-x-6 font-bold font-sans text-md">
+      <p class={`group hover:text-${accentColor} relative`}>
         <a href=`${import.meta.env.BASE_URL}` class="cursor-pointer transition">Home</a>
-        <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-brand-light group-hover:w-3/6"></span>
-        <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-brand-light group-hover:w-3/6"></span>
+        <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
+        <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>      
-      <p class="group hover:text-brand-light relative">
+      <p class={`group hover:text-${accentColor} relative`}>
         <a href=`${import.meta.env.BASE_URL}/#speakers` class="cursor-pointer transition">Speakers</a>
-        <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-brand-light group-hover:w-3/6"></span>
-        <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-brand-light group-hover:w-3/6"></span>
+        <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
+        <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>      
-      <p class="group hover:text-brand-light relative">
+      <p class={`group hover:text-${accentColor} relative`}>
         <a href=`${import.meta.env.BASE_URL}/#schedule` class="cursor-pointer transition">Schedule</a>
-        <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-brand-light group-hover:w-3/6"></span>
-        <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-brand-light group-hover:w-3/6"></span>
+        <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
+        <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>
-      <p class="group hover:text-brand-light relative">
+      <p class={`group hover:text-${accentColor} relative`}>
         <a href=`${import.meta.env.BASE_URL}/#location` class="cursor-pointer transition">Location</a>
-        <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-brand-light group-hover:w-3/6"></span>
-        <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-brand-light group-hover:w-3/6"></span>
+        <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
+        <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>
-      <p class="group hover:text-brand-light relative">
+      <p class={`group hover:text-${accentColor} relative`}>
         <a href=`${import.meta.env.BASE_URL}/#sponsors` class="cursor-pointer transition">Sponsors</a>
-        <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-brand-light group-hover:w-3/6"></span>
-        <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-brand-light group-hover:w-3/6"></span>
+        <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
+        <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>
-      <p class="group hover:text-brand-light relative">
+      <p class={`group hover:text-${accentColor} relative`}>
         <a href=`${import.meta.env.BASE_URL}/code-of-conduct` class="cursor-pointer transition">Code of Conduct</a>
-        <span class="absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-brand-light group-hover:w-3/6"></span>
-        <span class="absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-brand-light group-hover:w-3/6"></span>
+        <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
+        <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>
     </nav>
 
     <!-- Social Icons -->
-    <div class="hidden md:flex text-white space-x-4">
+    <div class="hidden md:flex space-x-4">
       <a
         href={config.BLUESKY_LINK}
         aria-label="BlueSky"
-        class="hover:text-brand-light transition"
+        class={`hover:text-${accentColor} transition`}
       >
         <i class="fa-brands fa-bluesky"></i>
       </a>
       <a
         href={config.GITHUB_LINK}
         aria-label="GitHub"
-        class="hover:text-brand-light transition"
+        class={`hover:text-${accentColor} transition`}
       >
         <i class="fa-brands fa-github"></i>
       </a>
     </div>
 
     <!-- Mobile Menu Button -->
-    <button id="menu-toggle" class="block md:hidden text-white text-2xl">
+    <button id="menu-toggle" class={`block md:hidden ${isStaticHeader ? 'text-brand-dark' : 'text-white'} text-2xl`}>
       <i class="fa-solid fa-bars"></i>
     </button>
   </div>
 
   <!-- Mobile Dropdown -->
   <div id="mobile-menu" class="md:hidden hidden text-sans bg-brand-light text-brand-dark">
-    <nav class="flex flex-col space-y-4 px-4 py-4">
-      <a href=`${import.meta.env.BASE_URL}` class="hover:text-brand-light cursor-pointer transition">Home</a>
-      <a href=`${import.meta.env.BASE_URL}/#speakers` class="hover:text-brand-light cursor-pointer transition">Speakers</a>
-      <a href=`${import.meta.env.BASE_URL}/#schedule` class="hover:text-brand-light cursor-pointer transition">Schedule</a>
-      <a href=`${import.meta.env.BASE_URL}/#location` class="hover:text-brand-light cursor-pointer transition">Location</a>
-      <a href=`${import.meta.env.BASE_URL}/#sponsors` class="hover:text-brand-light cursor-pointer transition">Sponsors</a>
-      <a href=`${import.meta.env.BASE_URL}/code-of-conduct` class="hover:text-brand-light cursor-pointer transition">Code of Conduct</a>
+    <nav class="flex flex-col space-y-4 px-4 py-4 font-bold font-sans text-md">
+      <a href=`${import.meta.env.BASE_URL}` class={`hover:text-${accentColor} cursor-pointer transition`}>Home</a>
+      <a href=`${import.meta.env.BASE_URL}/#speakers` class={`hover:text-${accentColor} cursor-pointer transition`}>Speakers</a>
+      <a href=`${import.meta.env.BASE_URL}/#schedule` class={`hover:text-${accentColor} cursor-pointer transition`}>Schedule</a>
+      <a href=`${import.meta.env.BASE_URL}/#location` class={`hover:text-${accentColor} cursor-pointer transition`}>Location</a>
+      <a href=`${import.meta.env.BASE_URL}/#sponsors` class={`hover:text-${accentColor} cursor-pointer transition`}>Sponsors</a>
+      <a href=`${import.meta.env.BASE_URL}/code-of-conduct` class={`hover:text-${accentColor} cursor-pointer transition`}>Code of Conduct</a>
     </nav>
     <div class="flex justify-center space-x-4 py-4">
       <a
         href={config.BLUESKY_LINK}
         aria-label="BlueSky"
-        class="hover:text-brand-light transition"
+        class={`hover:text-${accentColor} transition`}
       >
         <i class="fa-brands fa-bluesky"></i>
       </a>
       <a
         href={config.GITHUB_LINK}
         aria-label="GitHub"
-        class="hover:text-brand-light transition"
+        class={`hover:text-${accentColor} transition`}
       >
         <i class="fa-brands fa-github"></i>
       </a>

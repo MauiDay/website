@@ -62,7 +62,7 @@ try {
       {error ? (
         <p class="text-brand-dark text-md italic">Sorry, we couldn't retrieve the schedule at this time. Please try again later.</p>
       ) : (
-      <div class="max-w-3xl mx-auto px-4 text-center">
+      <div class="max-w-4xl mx-auto px-4 text-center">
         {sessions.map((session, index) => (
             <div className={`flex gap-4 flex-row px-16 items-stretch ${index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}`}>
                 <div class="flex-shrink-0 py-8 w-32 mt-1 text-right">
