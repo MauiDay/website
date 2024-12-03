@@ -1,5 +1,3 @@
-import type { Sponsor } from '../../types';
-
 export default {
     name: "",
     sessionizeId: "8cknf5zh",
@@ -36,6 +34,6 @@ export default {
             logo: "sessionize",
             url: "https://sessionize.com",
         },
-    ] as Sponsor[],
+    ],
   };
   

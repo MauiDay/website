@@ -3,7 +3,7 @@ import path from 'path';
 
 async function loadConfig() {
     const conference = baseConfig.USE_CONFIG || 'default';
-    const configPath = path.resolve('src/data/configs', `${conference}-config.ts`);
+    const configPath = path.resolve('src/data/configs', `${conference}-config.mjs`);
 
     try {
         // Dynamically import the specific configuration file
