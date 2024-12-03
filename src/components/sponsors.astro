@@ -1,4 +1,9 @@
 ---
+import loadConfig from '../configLoader';
+import type { Sponsor } from '../types';
+
+const config = await loadConfig();
+const sponsors: Sponsor[] = config.sponsors;
 ---
 <section id="sponsors" class="bg-white py-16 pb-0 px-0">
     <!-- Content Container -->
@@ -9,5 +14,22 @@
       <p class="text-brand-dark text-base text-md mb-8">
         Our awesome sponsors are what make this event possible. They help us to keep the event free and accessible to everyone. Please take a moment to check them out and show them some love.
       </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center place-items-center">
+        {sponsors.map((sponsor) => (
+          <a
+            href={sponsor.url}
+            target="_blank"
+            rel="noopener noreferrer"            
+            class="flex flex-col items-center p-4 transition-transform opacity-70 transform hover:scale-105 hover:opacity-100"
+          >
+            <img
+              src={`/images/sponsors/${sponsor.logo}.png`}
+              alt={sponsor.name}
+              class="w-full object-contain mb-4"
+            />
+          </a>
+        ))}
+      </div>
     </div>
 </section>

@@ -6,5 +6,5 @@ export const config = {
     SITE_ROOT: 'https://www.mauiday.net', // Root URL of the site
     BLUESKY_LINK: 'https://bsky.app/profile/mauiday.net', // Link to the BlueSky profile
     GITHUB_LINK: 'https://github.com/MauiDay', // Link to the GitHub profile
-    USE_CONFIG: 'default', // Configuration to use, alternatively "London"
+    USE_CONFIG: 'default', // Configuration to use, alternatively "london"
 };
