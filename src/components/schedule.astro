@@ -30,15 +30,16 @@ try {
             title: session.title,
             isServiceSession: session.isServiceSession,
             description: session.description,
-            startTime: new Date(session.startsAt).toLocaleTimeString('en-US', {
+            startTime: new Date(session.startsAt).toLocaleTimeString('nl-NL', {
                     hour: '2-digit',
                     minute: '2-digit',
                   }),
-            endTime: new Date(session.endsAt).toLocaleTimeString('en-US', {
+            endTime: new Date(session.endsAt).toLocaleTimeString('nl-NL', {
                     hour: '2-digit',
                     minute: '2-digit',
                   }),
             speakers: speakerDetails.map(speaker => speaker.fullName).join(", "),
+            speakerImages: speakerDetails.map(speaker => speaker.profilePicture),
             room: session.roomId,
             duration: duration
         };
@@ -49,7 +50,7 @@ try {
 }
 ---
 
-<section id="schedule" class="bg-gray-100 py-16">
+<section id="schedule" class="bg-white py-16">
     <!-- Content Container -->
     <div class="container max-w-4xl mx-auto px-4 text-center">
       <!-- Section Title -->
@@ -58,25 +59,49 @@ try {
       <p class="text-brand-dark text-base text-md mb-12">
         Check out our schedule below to plan your day and make the most of this event. See you there!
       </p>
-  
-      <!-- Conditional Rendering -->
       {error ? (
-        <p class="text-red-600 text-lg">Sorry, we couldn't retrieve the schedule at this time. Please try again later.</p>
+        <p class="text-brand-dark text-md italic">Sorry, we couldn't retrieve the schedule at this time. Please try again later.</p>
       ) : (
-      <div class="space-y-8">
-        {sessions.map((session) => (
-          <div class="p-6 bg-white rounded-lg shadow-lg border border-gray-200 flex flex-col" key={session.id}>
-            <div class="flex items-center justify-between mb-4">
-              <p class="text-gray-600 font-bold text-lg">
-                {session.startTime} - {session.endTime} ({session.duration}m)
-              </p>
-              <span class="bg-green-100 text-green-600 px-2 py-1 text-xs rounded-full font-semibold">
-                Confirmed
-              </span>
-            </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">{session.title}</h3>
-            <p class="text-gray-500 text-sm">{session.speakers}</p>
-          </div>
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        {sessions.map((session, index) => (
+            <div className={`flex gap-4 flex-row px-16 items-stretch ${index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}`}>
+                <div class="flex-shrink-0 py-8 w-32 mt-1 text-right">
+                    <p class="text-gray-600 font-medium text-sm">{session.startTime} - {session.endTime}</p>
+                    <p class="text-gray-500 text-sm">{session.duration}min</p>
+                </div>
+                <div class="flex-shrink-0 bg-transparent w-[2px]"></div>
+                <div class="flex-shrink-0 py-8 flex-1 text-left">
+                    <h4 class="mt-0 mb-2 font-semibold text-lg text-brand-dark">{session.title}</h4>
+                    <p class="text-base text-sm text-gray-600 leading-6 space-y-4">
+                        {session.description}
+                    </p>
+                    <div className={`flex items-center flex-row gap-3 ${!session.isServiceSession ? 'mt-4' : ''}`}>
+                        {session.speakerImages.map((image, index) => (
+                            <img
+                                key={index}
+                                src={image}
+                                class="object-cover rounded-full flex-shrink-0 w-8 h-8"
+                            />
+                        ))}
+                        <div class="flex items-center">
+                            <p class="leading-5 text-brand-dark font-medium text-md">{session.speakers}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            //     {session.startTime} - {session.endTime}
+            //   </p>
+            //   <p> ({session.duration}m)</p>
+            //   <h3 class="text-xl font-bold text-gray-800 mb-2">{session.title}</h3>
+            // </div>
+            // <p class="text-gray-500 text-sm">{session.speakers}</p>
+            // {session.speakerImages.map((image) => (
+            //   <img
+            //     src={image}
+            //     class="w-8 h-8 rounded-full border-2 border-white -ml-2"
+            //   />
+        //     ))}
+        //   </div>
         ))}
       </div>
       )}
