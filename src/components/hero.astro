@@ -1,4 +1,9 @@
 ---
+import loadConfig from '../configLoader';
+
+const config = await loadConfig();
+
+const { ticketUrl } = config;
 ---
 
 <section
@@ -23,7 +28,7 @@
     </p>
     <div class="flex space-x-4">
       <a
-        href="#tickets"
+        href={`${ticketUrl}`}
         class="bg-brand-extra font-bold text-white px-6 py-3 rounded-full text-md hover:bg-brand-extraDark"
         >Get a Ticket</a
       >

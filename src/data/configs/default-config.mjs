@@ -1,6 +1,7 @@
 export default {
     name: "",
     sessionizeId: "8cknf5zh",
+    ticketUrl: "",
     location: "Microsoft Office in Cologne",
     locationNote: "<b>Please Note:</b> There is no parking space available directly at the venue. Please find something in the area yourself.",
     locationAddress: `

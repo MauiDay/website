@@ -1,0 +1,84 @@
+---
+import loadConfig from '../configLoader';
+import type { Session, Speaker } from '../types';
+
+const config = await loadConfig();
+const sessionizeUrl = `https://sessionize.com/api/v2/${config.sessionizeId}/view/all`;
+let sessions: Session[] = [];
+let error = false;
+
+try {
+  // Attempt to fetch data from the Sessionize API
+  const response = await fetch(sessionizeUrl);
+  
+  if (!response.ok) {
+    throw new Error(`Failed to fetch: ${response.statusText}`);
+  }
+
+  const data = await response.json();
+  
+  sessions = data.sessions.map(session => {
+        // Find the speaker details if any
+        const speakerDetails = session.speakers.map(speakerId => {
+            return data.speakers.find(speaker => speaker.id === speakerId);
+        }).filter(Boolean) as Speaker[]; // Filter out any null results
+
+        // Calculate the duration in minutes
+        const duration = Math.floor((new Date(session.endsAt).getTime() - new Date(session.startsAt).getTime()) / (1000 * 60));
+
+        return {
+            title: session.title,
+            isServiceSession: session.isServiceSession,
+            description: session.description,
+            startTime: new Date(session.startsAt).toLocaleTimeString('en-US', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  }),
+            endTime: new Date(session.endsAt).toLocaleTimeString('en-US', {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                  }),
+            speakers: speakerDetails.map(speaker => speaker.fullName).join(", "),
+            room: session.roomId,
+            duration: duration
+        };
+    }) || []; // Make sure to handle if data.sessions doesn't exist
+} catch (err) {
+  console.error('Error fetching schedule:', err);
+  error = true;
+}
+---
+
+<section id="schedule" class="bg-gray-100 py-16">
+    <!-- Content Container -->
+    <div class="container max-w-4xl mx-auto px-4 text-center">
+      <!-- Section Title -->
+      <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">Where to go and when</p>
+      <h2 class="text-brand-dark text-4xl md:text-4xl uppercase font-header font-bold mb-4">The Schedule</h2>
+      <p class="text-brand-dark text-base text-md mb-12">
+        Check out our schedule below to plan your day and make the most of this event. See you there!
+      </p>
+  
+      <!-- Conditional Rendering -->
+      {error ? (
+        <p class="text-red-600 text-lg">Sorry, we couldn't retrieve the schedule at this time. Please try again later.</p>
+      ) : (
+      <div class="space-y-8">
+        {sessions.map((session) => (
+          <div class="p-6 bg-white rounded-lg shadow-lg border border-gray-200 flex flex-col" key={session.id}>
+            <div class="flex items-center justify-between mb-4">
+              <p class="text-gray-600 font-bold text-lg">
+                {session.startTime} - {session.endTime} ({session.duration}m)
+              </p>
+              <span class="bg-green-100 text-green-600 px-2 py-1 text-xs rounded-full font-semibold">
+                Confirmed
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">{session.title}</h3>
+            <p class="text-gray-500 text-sm">{session.speakers}</p>
+          </div>
+        ))}
+      </div>
+      )}
+    </div>
+  </section>

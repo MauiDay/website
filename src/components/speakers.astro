@@ -1,20 +1,27 @@
 ---
-import config from '../data/configs/default-config'; // TODO: Make this into a switcher based on the event
+import loadConfig from '../configLoader';
+import type { Speaker } from '../types';
 
-interface Speaker {
-  id: string;
-  fullName: string;
-  profilePicture: string;
-  tagLine?: string;
-}
-
+const config = await loadConfig();
 const sessionizeUrl = `https://sessionize.com/api/v2/${config.sessionizeId}/view/all`;
 
-// Fetch data during build/SSR
-const data = await fetch(sessionizeUrl).then((res) => res.json());
+let speakers: Speaker[] = [];
+let error = false;
 
-// Extract speakers from the data (adjust depending on the API structure)
-const speakers: Speaker[] = data.speakers || [];
+try {
+  // Attempt to fetch data from the Sessionize API
+  const response = await fetch(sessionizeUrl);
+  
+  if (!response.ok) {
+    throw new Error(`Failed to fetch: ${response.statusText}`);
+  }
+
+  const data = await response.json();
+  speakers = data.speakers || [];
+} catch (err) {
+  console.error('Error fetching speakers:', err);
+  error = true;
+}
 ---
 <section id="speakers" class="bg-brand-dark py-16">
     <!-- Content Container -->
@@ -27,17 +34,21 @@ const speakers: Speaker[] = data.speakers || [];
       </p>
   
       <!-- Speakers Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-        {speakers.map((speaker) => (
-        <div class="flex flex-col items-center text-white">
-          <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
-            <img src={speaker.profilePicture || '/images/default-profile.png'} alt={speaker.fullName} class="w-full h-full object-cover" />
+      {error ? (
+          <p class="text-white text-md italic">Sorry, we couldn't retrieve the speaker list at this time. Please try again later.</p>
+        ) : (
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+          {speakers.map((speaker) => (
+          <div class="flex flex-col items-center text-white">
+            <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
+              <img src={speaker.profilePicture || '/images/default-profile.png'} alt={speaker.fullName} class="w-full h-full object-cover" />
+            </div>
+            <h4 class="font-bold text-lg">{speaker.fullName}</h4>
+            <p class="text-sm">{speaker.tagLine}</p>
           </div>
-          <h4 class="font-bold text-lg">{speaker.fullName}</h4>
-          <p class="text-sm">{speaker.tagLine}</p>
+          ))}
         </div>
-        ))}  
-      </div>
+      )}
     </div>
   </section>
   
