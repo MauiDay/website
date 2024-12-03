@@ -64,15 +64,18 @@ try {
       ) : (
       <div class="max-w-4xl mx-auto px-4 text-center">
         {sessions.map((session, index) => (
-            <div className={`flex gap-4 flex-row px-16 items-stretch ${index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}`}>
-                <div class="flex-shrink-0 py-8 w-32 mt-1 text-right">
+            <div className={`flex gap-4 flex-row px-4 md:px-16 items-stretch ${index % 2 === 0 ? 'bg-gray-100' : 'bg-white'}`}>
+                <div class="flex-shrink-0 md:block hidden py-8 w-32 mt-1 text-right">
                     <p class="text-gray-600 font-medium text-sm">{session.startTime} - {session.endTime}</p>
                     <p class="text-gray-500 text-sm">{session.duration}min</p>
                 </div>
                 <div class="flex-shrink-0 bg-transparent w-[2px]"></div>
                 <div class="flex-shrink-0 py-8 flex-1 text-left">
+                    <div class="flex-shrink-0 md:hidden block text-left">
+                      <p class="text-gray-600 font-medium text-sm">{session.startTime} - {session.endTime} ({session.duration}min)</p>
+                    </div>
                     <h4 class="mt-0 mb-2 font-semibold text-lg text-brand-dark">{session.title}</h4>
-                    <p class="text-base text-sm text-gray-600 leading-6 space-y-4">
+                    <p class="text-base md:block hidden text-sm text-gray-600 leading-6 space-y-4">
                         {session.description}
                     </p>
                     <div className={`flex items-center flex-row gap-3 ${!session.isServiceSession ? 'mt-4' : ''}`}>
