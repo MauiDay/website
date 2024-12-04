@@ -1,5 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import loadConfig from '../configLoader';
+
+const config = await loadConfig();
+const { codeOfConductMain, codeOfConductSecondary } = config;
 ---
 
 <Layout isStaticHeader={true}>
@@ -105,19 +109,11 @@ import Layout from "../layouts/Layout.astro";
         <p class="mt-4">
           Instances of abusive, harassing, or otherwise unacceptable behavior
           may be reported to the community leaders responsible for enforcement
-          at
-          <a
-            class="text-brand-extra hover:underline"
-            href="mailto:gerald@verslu.is">Gerald Versluis</a
-          > (one of the organizers).
+          at <span set:html={codeOfConductMain}></span>.
         </p>
         <p class="mt-4">
           If, for whatever reason, you prefer another contact, feel free to
-          contact
-          <a
-            class="text-brand-extra hover:underline"
-            href="mailto:Anjuli.Jhakry@hotmail.com">Anjuli Jhakry</a
-          > (not part of the organization crew) and she will make sure to follow
+          contact <span set:html={codeOfConductSecondary}></span>, who will make sure to follow
           up with the people in question.
         </p>
         <p class="mt-4">

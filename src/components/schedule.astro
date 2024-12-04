@@ -61,6 +61,8 @@ try {
       </p>
       {error ? (
         <p class="text-brand-dark text-md italic">Sorry, we couldn't retrieve the schedule at this time. Please try again later.</p>
+      ) : sessions.length === 0 ? (
+        <p class="text-brand-dark text-md italic">Sessions have not been announced yet. Please check back soon!</p>
       ) : (
       <div class="max-w-4xl mx-auto px-4 text-center">
         {sessions.map((session, index) => (

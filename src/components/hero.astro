@@ -3,7 +3,7 @@ import loadConfig from '../configLoader';
 
 const config = await loadConfig();
 
-const { ticketUrl } = config;
+const { ticketUrl, headline } = config;
 ---
 
 <section
@@ -12,7 +12,7 @@ const { ticketUrl } = config;
 >
   <div class="container max-w-4xl mx-auto px-8 py-48 flex flex-col h-full">
     <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">
-      New event coming up in October!
+      {headline}
     </p>
     <h1
       class="text-white text-4xl md:text-5xl uppercase font-header font-bold mb-4"
@@ -21,8 +21,7 @@ const { ticketUrl } = config;
     </h1>
     <p class="text-white text-lg mt-6 mb-12">
       .NET MAUI day is a one-day, free, event filled with sessions that have to
-      do with cross-platform development based on .NET MAUI (Multi-platform App
-      UI). Speakers from all around the world will be there to present about the
+      do with cross-platform development using, you guessed it, .NET MAUI. Speakers from all around the world will be there to present about the
       latest and greatest in the .NET MAUI ecosystem, as well as being in the
       “hallway track” so you can talk to them, discuss and ask questions.
     </p>
