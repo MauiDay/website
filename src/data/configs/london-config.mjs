@@ -10,6 +10,8 @@ export default {
         70 Wilson Street, London, EC2A 2DB<br/>
         United Kingdom
     `,
+    codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a> (not part of the London organizers, but involved)`,
+    codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:Tony.edwards@gmail.com">Tony Edwards</a> (note: part of the London crew)`,
     sponsors: [
         {
             name: "Microsoft",
