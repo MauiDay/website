@@ -4,5 +4,5 @@ export const siteMeta = {
     title: config.SITE_TITLE,
     description: config.SITE_DESCRIPTION,
     url: config.SITE_ROOT,
-    image: "/default.png",
+    image: "default.png",
   };
