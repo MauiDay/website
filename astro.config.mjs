@@ -5,6 +5,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.mauiday.net',
+  site: 'https://mauiday.net',
   integrations: [tailwind(), sitemap()]
 });
