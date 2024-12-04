@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  base: '/website', // Once DNS is in place, empty this.
+  base: 'https://www.mauiday.net', // Once DNS is in place, empty this.
   site: 'https://www.mauiday.net',
   integrations: [tailwind(), sitemap()]
 });
