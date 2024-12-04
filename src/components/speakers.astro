@@ -36,7 +36,9 @@ try {
       <!-- Speakers Grid -->
       {error ? (
           <p class="text-white text-md italic">Sorry, we couldn't retrieve the speaker list at this time. Please try again later.</p>
-        ) : (
+        ) : speakers.length === 0 ? (
+        <p class="text-white text-md italic">Speakers have not been announced yet. Please check back soon!</p>
+      ) : (
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {speakers.map((speaker) => (
           <div class="flex flex-col items-center text-white">
