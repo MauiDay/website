@@ -13,40 +13,40 @@ let accentColor = isStaticHeader ? 'brand-extra' : 'brand-light';
   <div class="container max-w-5xl mx-auto px-4 flex items-center justify-between py-4">
     <!-- Logo -->
     <div class="flex items-center space-x-2 h-12">
-      <a href={`${import.meta.env.BASE_URL}`} class="cursor-pointer">
-        <img src={`${import.meta.env.BASE_URL}/images/logo${isStaticHeader ? '' : '-darkmode' }.png`} class="h-[40px] object-contain" alt=".NET MAUI Day" />
+      <a href={`/`} class="cursor-pointer">
+        <img src={`/images/logo${isStaticHeader ? '' : '-darkmode' }.png`} class="h-[40px] object-contain" alt=".NET MAUI Day" />
       </a>
     </div>
 
     <!-- Navigation Menu -->
     <nav class="hidden md:flex space-x-6 font-bold font-sans text-md">
       <p class={`group hover:text-${accentColor} relative`}>
-        <a href=`${import.meta.env.BASE_URL}` class="cursor-pointer transition">Home</a>
+        <a href=`/` class="cursor-pointer transition">Home</a>
         <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
         <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>      
       <p class={`group hover:text-${accentColor} relative`}>
-        <a href=`${import.meta.env.BASE_URL}/#speakers` class="cursor-pointer transition">Speakers</a>
+        <a href=`/#speakers` class="cursor-pointer transition">Speakers</a>
         <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
         <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>      
       <p class={`group hover:text-${accentColor} relative`}>
-        <a href=`${import.meta.env.BASE_URL}/#schedule` class="cursor-pointer transition">Schedule</a>
+        <a href=`/#schedule` class="cursor-pointer transition">Schedule</a>
         <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
         <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>
       <p class={`group hover:text-${accentColor} relative`}>
-        <a href=`${import.meta.env.BASE_URL}/#location` class="cursor-pointer transition">Location</a>
+        <a href=`/#location` class="cursor-pointer transition">Location</a>
         <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
         <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>
       <p class={`group hover:text-${accentColor} relative`}>
-        <a href=`${import.meta.env.BASE_URL}/#sponsors` class="cursor-pointer transition">Sponsors</a>
+        <a href=`/#sponsors` class="cursor-pointer transition">Sponsors</a>
         <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
         <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>
       <p class={`group hover:text-${accentColor} relative`}>
-        <a href=`${import.meta.env.BASE_URL}/code-of-conduct` class="cursor-pointer transition">Code of Conduct</a>
+        <a href=`/code-of-conduct` class="cursor-pointer transition">Code of Conduct</a>
         <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
         <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>
@@ -79,12 +79,12 @@ let accentColor = isStaticHeader ? 'brand-extra' : 'brand-light';
   <!-- Mobile Dropdown -->
   <div id="mobile-menu" class="md:hidden hidden text-sans bg-brand-light text-brand-dark">
     <nav class="flex flex-col space-y-4 px-4 py-4 font-bold font-sans text-md">
-      <a href=`${import.meta.env.BASE_URL}` class={`hover:text-${accentColor} cursor-pointer transition`}>Home</a>
-      <a href=`${import.meta.env.BASE_URL}/#speakers` class={`hover:text-${accentColor} cursor-pointer transition`}>Speakers</a>
-      <a href=`${import.meta.env.BASE_URL}/#schedule` class={`hover:text-${accentColor} cursor-pointer transition`}>Schedule</a>
-      <a href=`${import.meta.env.BASE_URL}/#location` class={`hover:text-${accentColor} cursor-pointer transition`}>Location</a>
-      <a href=`${import.meta.env.BASE_URL}/#sponsors` class={`hover:text-${accentColor} cursor-pointer transition`}>Sponsors</a>
-      <a href=`${import.meta.env.BASE_URL}/code-of-conduct` class={`hover:text-${accentColor} cursor-pointer transition`}>Code of Conduct</a>
+      <a href=`/` class={`hover:text-${accentColor} cursor-pointer transition`}>Home</a>
+      <a href=`/#speakers` class={`hover:text-${accentColor} cursor-pointer transition`}>Speakers</a>
+      <a href=`/#schedule` class={`hover:text-${accentColor} cursor-pointer transition`}>Schedule</a>
+      <a href=`/#location` class={`hover:text-${accentColor} cursor-pointer transition`}>Location</a>
+      <a href=`/#sponsors` class={`hover:text-${accentColor} cursor-pointer transition`}>Sponsors</a>
+      <a href=`/code-of-conduct` class={`hover:text-${accentColor} cursor-pointer transition`}>Code of Conduct</a>
     </nav>
     <div class="flex justify-center space-x-4 py-4">
       <a
