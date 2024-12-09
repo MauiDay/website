@@ -19,10 +19,15 @@ export default {
             url: "https://www.microsoft.com",
         },
         {
+            name: "Syncfusion",
+            logo: "syncfusion",
+            url: "https://syncfusion.com/",
+        },
+        {
             name: "Sessionize",
             logo: "sessionize",
             url: "https://sessionize.com",
-        },
+        }
     ],
   };
   
