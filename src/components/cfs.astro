@@ -1,4 +1,7 @@
 ---
+import loadConfig from '../configLoader';
+const config = await loadConfig();
+
 ---
 <section id="call-for-speakers" class="bg-brand-dark py-24">
     <!-- Content Container -->
@@ -9,7 +12,7 @@
       <p class="text-white text-base text-md mb-12">
         We're looking for passionate speakers of all levels of experience to share their knowledge and experience with the .NET MAUI community. If you have a topic you'd like to present, or a story to tell, we'd love to hear from you! 
       </p>
-      <a href="https://sessionize.com/maui-day-london-2025/" target="_blank" class="bg-white text-brand-dark font-bold px-6 py-3 rounded-full text-md hover:bg-brand-light hover:text-brand-dark border border-brand-dark">Submit a Talk</a>
+      <a href=`${config.sessionizeCfsUrl}` target="_blank" class="bg-white text-brand-dark font-bold px-6 py-3 rounded-full text-md hover:bg-brand-light hover:text-brand-dark border border-brand-dark">Submit a Talk</a>
     </div>
   </section>
   

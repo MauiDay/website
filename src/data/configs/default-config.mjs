@@ -1,6 +1,7 @@
 export default {
     name: "",
     sessionizeId: "8cknf5zh",
+    sessionizeCfsUrl: "",
     ticketUrl: "",
     headline: "",
     location: "Microsoft Office in Cologne",
