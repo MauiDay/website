@@ -7,14 +7,22 @@ import CFS from '../components/cfs.astro';
 import Sponsors from '../components/sponsors.astro';
 import Speakers from '../components/speakers.astro';
 import Schedule from '../components/schedule.astro';
+import loadConfig from '../configLoader';
+
+const config = await loadConfig();
 ---
 
 <Layout>
 	<Hero />
 	<About />
-	<Speakers />
-	<Schedule />
+	{config.hasAnnouncedSpeakers ? (
+		<>
+		  <Speakers />
+		  <Schedule />
+		</>
+	  ) : (
+		<CFS />
+	  )}
 	<Location />
-	<CFS />
 	<Sponsors />
 </Layout>
