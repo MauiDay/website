@@ -1,5 +1,8 @@
 ---
 import { config } from "../../mauiday.config.mjs";
+import loadConfig from '../configLoader';
+
+const confConfig = await loadConfig();
 
 // Add a prop to determine if the header should be styled differently
 const { isStaticHeader = false } = Astro.props;
@@ -25,16 +28,27 @@ let accentColor = isStaticHeader ? 'brand-extra' : 'brand-light';
         <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
         <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>      
-      <p class={`group hover:text-${accentColor} relative`}>
-        <a href=`/#speakers` class="cursor-pointer transition">Speakers</a>
-        <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
-        <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
-      </p>      
-      <p class={`group hover:text-${accentColor} relative`}>
-        <a href=`/#schedule` class="cursor-pointer transition">Schedule</a>
-        <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
-        <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
-      </p>
+      {confConfig.hasAnnouncedSpeakers ? (
+        <>
+        <p class={`group hover:text-${accentColor} relative`}>
+          <a href=`/#speakers` class="cursor-pointer transition">Speakers</a>
+          <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
+          <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
+        </p>      
+        <p class={`group hover:text-${accentColor} relative`}>
+          <a href=`/#schedule` class="cursor-pointer transition">Schedule</a>
+          <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
+          <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
+        </p>
+        </>
+      ) : (        
+        <p class={`group hover:text-${accentColor} relative`}>
+          <a href=`/#call-for-speakers` class="cursor-pointer transition">Call for Speakers</a>
+          <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
+          <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
+        </p>
+      )}
+      
       <p class={`group hover:text-${accentColor} relative`}>
         <a href=`/#location` class="cursor-pointer transition">Location</a>
         <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
@@ -80,8 +94,15 @@ let accentColor = isStaticHeader ? 'brand-extra' : 'brand-light';
   <div id="mobile-menu" class="md:hidden hidden text-sans bg-brand-light text-brand-dark">
     <nav class="flex flex-col space-y-4 px-4 py-4 font-bold font-sans text-md">
       <a href=`/` class={`hover:text-${accentColor} cursor-pointer transition`}>Home</a>
-      <a href=`/#speakers` class={`hover:text-${accentColor} cursor-pointer transition`}>Speakers</a>
-      <a href=`/#schedule` class={`hover:text-${accentColor} cursor-pointer transition`}>Schedule</a>
+         
+      {confConfig.hasAnnouncedSpeakers ? (
+        <>
+        <a href=`/#speakers` class={`hover:text-${accentColor} cursor-pointer transition`}>Speakers</a>
+        <a href=`/#schedule` class={`hover:text-${accentColor} cursor-pointer transition`}>Schedule</a>
+        </>
+      ) : (  
+        <a href=`/#call-for-speakers` class={`hover:text-${accentColor} cursor-pointer transition`}>Call for Speakers</a>
+      )}
       <a href=`/#location` class={`hover:text-${accentColor} cursor-pointer transition`}>Location</a>
       <a href=`/#sponsors` class={`hover:text-${accentColor} cursor-pointer transition`}>Sponsors</a>
       <a href=`/code-of-conduct` class={`hover:text-${accentColor} cursor-pointer transition`}>Code of Conduct</a>
