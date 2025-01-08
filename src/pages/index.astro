@@ -15,13 +15,13 @@ const config = await loadConfig();
 <Layout>
 	<Hero />
 	<About />
-	{config.hasAnnouncedSpeakers ? (
+	{!config.hasCfs ? (
 		<>
 		  <Speakers />
 		  <Schedule />
 		</>
 	  ) : (
-		<CFS />
+	  <CFS />
 	  )}
 	<Location />
 	<Sponsors />

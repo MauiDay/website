@@ -9,15 +9,18 @@ let speakers: Speaker[] = [];
 let error = false;
 
 try {
-  // Attempt to fetch data from the Sessionize API
-  const response = await fetch(sessionizeUrl);
-  
-  if (!response.ok) {
-    throw new Error(`Failed to fetch: ${response.statusText}`);
-  }
+  if(config.hasAnnouncedSpeakers)
+  {
+    // Attempt to fetch data from the Sessionize API
+    const response = await fetch(sessionizeUrl);
+    
+    if (!response.ok) {
+      throw new Error(`Failed to fetch: ${response.statusText}`);
+    }
 
-  const data = await response.json();
-  speakers = data.speakers || [];
+    const data = await response.json();
+    speakers = data.speakers || [];
+  }
 } catch (err) {
   console.error('Error fetching speakers:', err);
   error = true;
