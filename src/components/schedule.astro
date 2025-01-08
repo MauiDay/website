@@ -8,7 +8,10 @@ let sessions: Session[] = [];
 let error = false;
 
 try {
-  // Attempt to fetch data from the Sessionize API
+
+  if(config.hasAnnouncedSchedule)
+  {
+      // Attempt to fetch data from the Sessionize API
   const response = await fetch(sessionizeUrl);
   
   if (!response.ok) {
@@ -44,6 +47,7 @@ try {
             duration: duration
         };
     }) || []; // Make sure to handle if data.sessions doesn't exist
+  }
 } catch (err) {
   console.error('Error fetching schedule:', err);
   error = true;
