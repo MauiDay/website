@@ -1,23 +1,23 @@
 (async function () {
-    const speakerContainerId = "custom-speakers"; // The ID where the speakers will be rendered
-    const speakerContainer = document.getElementById(containerId);
-    const speakerSessionizeId = speakerContainer?.getAttribute("data-sessionize-id");
+    const containerId = "custom-speakers"; // The ID where the speakers will be rendered
+    const container = document.getElementById(containerId);
+    const sessionizeId = container?.getAttribute("data-sessionize-id");
 
-    if (!speakerContainer) return;
+    if (!container) return;
 
-    if (!speakerSessionizeId) {
+    if (!sessionizeId) {
       console.error("Sessionize ID not provided!");
-      speakerContainer.innerHTML = "<p class=\"text-white text-md italic\">Sorry, we couldn't retrieve the speaker list at this time. Please try again later.</p>";
+      container.innerHTML = "<p class=\"text-white text-md italic\">Sorry, we couldn't retrieve the speaker list at this time. Please try again later.</p>";
       return;
     }
 
     // Construct the API URL
-    const speakerApiUrl = `https://sessionize.com/api/v2/${speakerSessionizeId}/view/all`;
+    const apiUrl = `https://sessionize.com/api/v2/${sessionizeId}/view/all`;
 
     // Fetch data from Sessionize
     async function fetchSpeakerData() {
         try {
-          const response = await fetch(speakerApiUrl);
+          const response = await fetch(apiUrl);
           if (!response.ok) throw new Error("Failed to fetch data");
           return await response.json();
         } catch (err) {
@@ -28,10 +28,10 @@
 
       // Render the schedule
     function renderSpeakers(data) {
-        if (!speakerContainer) return;
+        if (!container) return;
     
         if (!data || !data.speakers || data.speakers.length === 0) {
-          speakerContainer.innerHTML = "<p class=\"text-white text-md italic\">Speakers have not been announced yet. Please check back soon!</p>";
+          container.innerHTML = "<p class=\"text-white text-md italic\">Speakers have not been announced yet. Please check back soon!</p>";
           return;
         }
 
@@ -52,9 +52,9 @@
             )
             .join("");
 
-        speakerContainer.innerHTML = `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">${speakersHTML}</div>`;
+        container.innerHTML = `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">${speakersHTML}</div>`;
     }
 
-    const speakerData = await fetchSpeakerData();
-    renderSpeakers(speakerData);
+    const data = await fetchSpeakerData();
+    renderSpeakers(data);
 })
