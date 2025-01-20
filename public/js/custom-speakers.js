@@ -1,13 +1,13 @@
 (async function () {
     const speakerContainerId = "custom-speakers"; // The ID where the speakers will be rendered
     const speakerContainer = document.getElementById(containerId);
-    const speakerSessionizeId = container?.getAttribute("data-sessionize-id");
+    const speakerSessionizeId = speakerContainer?.getAttribute("data-sessionize-id");
 
     if (!speakerContainer) return;
 
     if (!speakerSessionizeId) {
       console.error("Sessionize ID not provided!");
-      container.innerHTML = "<p class=\"text-white text-md italic\">Sorry, we couldn't retrieve the speaker list at this time. Please try again later.</p>";
+      speakerContainer.innerHTML = "<p class=\"text-white text-md italic\">Sorry, we couldn't retrieve the speaker list at this time. Please try again later.</p>";
       return;
     }
 
@@ -15,7 +15,7 @@
     const speakerApiUrl = `https://sessionize.com/api/v2/${speakerSessionizeId}/view/all`;
 
     // Fetch data from Sessionize
-    async function fetchData() {
+    async function fetchSpeakerData() {
         try {
           const response = await fetch(speakerApiUrl);
           if (!response.ok) throw new Error("Failed to fetch data");
@@ -55,6 +55,6 @@
         speakerContainer.innerHTML = `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">${speakersHTML}</div>`;
     }
 
-    const data = await fetchData();
-    renderSpeakers(data);
+    const speakerData = await fetchSpeakerData();
+    renderSpeakers(speakerData);
 })
