@@ -17,11 +17,11 @@ const config = await loadConfig();
 	<About />
 	{!config.hasCfs ? (
 		<>
-		  <Speakers />
-		  <Schedule />
+		  {config.hasAnnouncedSpeakers ? ( <Speakers /> ) : <></>}
+		  {config.hasAnnouncedSchedule ? ( <Schedule /> ) : <></>}
 		</>
 	  ) : (
-	  <CFS />
+	  	<CFS />
 	  )}
 	<Location />
 	<Sponsors />
