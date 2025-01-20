@@ -57,4 +57,4 @@
 
     const data = await fetchSpeakerData();
     renderSpeakers(data);
-})
+})();
