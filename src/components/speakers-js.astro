@@ -1,0 +1,18 @@
+---
+import loadConfig from '../configLoader';
+
+const config = await loadConfig();
+---
+<section id="speakers" class="bg-brand-dark py-24">
+    <!-- Content Container -->
+    <div class="container max-w-4xl mx-auto px-4 text-center">
+      <!-- Section Title -->
+      <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">Our Awesome Line-Up</p>
+      <h2 class="text-white text-4xl md:text-4xl uppercase font-header font-bold mb-4">The Speakers</h2>
+      <p class="text-white text-base text-md mb-12">
+        Below are the speakers that will make this instance of .NET MAUI day unforgettable! Go watch their awesome sessions and connect with them afterwards in our "hallway track".
+      </p>
+      <div id="custom-speakers" data-sessionize-id=`${config.sessionizeId}`></div>
+    </div>  
+</section>  
+<script src=`${config.SITE_ROOT}/js/custom-speakers.js` defer></script>

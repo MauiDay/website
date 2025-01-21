@@ -5,8 +5,8 @@ import About from '../components/about.astro';
 import Location from '../components/location.astro';
 import CFS from '../components/cfs.astro';
 import Sponsors from '../components/sponsors.astro';
-import Speakers from '../components/speakers.astro';
-import Schedule from '../components/schedule.astro';
+import Speakers from '../components/speakers-js.astro';
+import Schedule from '../components/schedule-js.astro';
 import loadConfig from '../configLoader';
 
 const config = await loadConfig();
@@ -17,11 +17,11 @@ const config = await loadConfig();
 	<About />
 	{!config.hasCfs ? (
 		<>
-		  <Speakers />
-		  <Schedule />
+		  {config.hasAnnouncedSpeakers ? ( <Speakers /> ) : <></>}
+		  {config.hasAnnouncedSchedule ? ( <Schedule /> ) : <></>}
 		</>
 	  ) : (
-	  <CFS />
+	  	<CFS />
 	  )}
 	<Location />
 	<Sponsors />
