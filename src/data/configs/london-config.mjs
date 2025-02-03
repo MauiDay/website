@@ -32,6 +32,11 @@ export default {
             name: "Sessionize",
             logo: "sessionize",
             url: "https://sessionize.com",
+        },
+        {
+            name: "JetBrains",
+            logo: "jetbrains",
+            url: "https://www.jetbrains.com/",
         }
     ],
   };
