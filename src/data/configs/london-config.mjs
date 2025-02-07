@@ -5,7 +5,7 @@ export default {
     headline: "Next event: March 14, 2025 in London!",
     hasCfs: false,
     hasAnnouncedSpeakers: true,
-    hasAnnouncedSchedule: false,
+    hasAnnouncedSchedule: true,
     location: "Just Eat London",
     mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158923.9359208257!2d-0.2740424197835111!3d51.509794375987724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b52e612c625%3A0x6b62dacd84c1270c!2sJust%20Eat!5e0!3m2!1sen!2suk!4v1738867136142!5m2!1sen!2suk",
     ticketUrl: "https://mauiday-london-2025.eventbrite.nl",
