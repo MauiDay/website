@@ -37,6 +37,11 @@ export default {
             name: "JetBrains",
             logo: "jetbrains",
             url: "https://www.jetbrains.com/",
+        },
+        {
+            name: "Just Eat",
+            logo: "justeat",
+            url: "https://www.just-eat.co.uk/",
         }
     ],
   };
