@@ -42,6 +42,11 @@ export default {
             name: "Just Eat",
             logo: "justeat",
             url: "https://www.just-eat.co.uk/",
+        },
+        {
+            name: "Grial Kit",
+            logo: "grial",
+            url: "https://grialkit.com/",
         }
     ],
   };
