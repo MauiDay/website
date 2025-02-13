@@ -16,20 +16,26 @@ const sponsors: Sponsor[] = config.sponsors;
       </p>
 
       <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center place-items-center">
-        {sponsors.map((sponsor) => (
-          <a
-            href={sponsor.url}
-            target="_blank"
-            rel="noopener noreferrer"            
-            class="flex flex-col items-center p-4 transition-transform opacity-70 transform hover:scale-105 hover:opacity-100"
-          >
-            <img
-              src={`/images/sponsors/${sponsor.logo}.png`}
-              alt={sponsor.name}
-              class="w-full object-contain mb-4"
-            />
-          </a>
-        ))}
+        {[...sponsors]
+          .sort((a, b) => (b.boost ? 1 : 0) - (a.boost ? 1 : 0)) // Boosted sponsors come first
+          .map((sponsor) => (
+            <a
+              href={sponsor.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class={`flex flex-col items-center p-4 transition-transform opacity-70 transform hover:scale-105 hover:opacity-100 ${
+                sponsor.boost ? "sm:col-span-1 lg:col-span-2" : "sm:col-span-2 lg:col-span-3"
+              }`}
+            >
+              <img
+                src={`/images/sponsors/${sponsor.logo}.png`}
+                alt={sponsor.name}
+                class={`object-contain mb-4 ${
+                  sponsor.boost ? "w-2/3 sm:w-3/4 lg:w-2/3" : "w-1/2 sm:w-2/3 lg:w-3/4"
+                }`}
+              />
+            </a>
+          ))}
       </div>
     </div>
 </section>

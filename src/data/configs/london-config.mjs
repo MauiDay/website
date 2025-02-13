@@ -19,19 +19,28 @@ export default {
     codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:Tony.edwards@gmail.com">Tony Edwards</a> (note: part of the London crew)`,
     sponsors: [
         {
-            name: "Microsoft",
-            logo: "microsoft",
-            url: "https://www.microsoft.com",
+            name: "Sentry",
+            logo: "sentry",
+            url: "https://sentry.io",
+            boost: true,
         },
         {
             name: "Syncfusion",
             logo: "syncfusion",
             url: "https://syncfusion.com/",
+            boost: true,
+        },
+        {
+            name: "Microsoft",
+            logo: "microsoft",
+            url: "https://www.microsoft.com",
+            boost: false,
         },
         {
             name: "Sessionize",
             logo: "sessionize",
             url: "https://sessionize.com",
+            boost: false,   
         },
         {
             name: "JetBrains",
