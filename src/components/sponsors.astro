@@ -1,41 +1,61 @@
 ---
-import loadConfig from '../configLoader';
-import type { Sponsor } from '../types';
+import loadConfig from "../configLoader";
+import type { Sponsor } from "../types";
 
 const config = await loadConfig();
 const sponsors: Sponsor[] = config.sponsors;
+const boostedSponsors = sponsors.filter(s => s.boost);
+const regularSponsors = sponsors.filter(s => !s.boost);
 ---
-<section id="sponsors" class="bg-white py-24 px-0">
-    <!-- Content Container -->
-    <div class="container max-w-4xl mx-auto px-4 text-center">
-      <!-- Section Title -->
-      <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">We couldn't do it without you</p>
-      <h2 class="text-brand-dark text-4xl md:text-4xl uppercase font-header font-bold mb-4">Our Sponsors</h2>
-      <p class="text-brand-dark text-base text-md mb-8">
-        Our awesome sponsors are what make this event possible. They help us to keep the event free and accessible to everyone. Please take a moment to check them out and show them some love.
-      </p>
 
-      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center place-items-center">
-        {[...sponsors]
-          .sort((a, b) => (b.boost ? 1 : 0) - (a.boost ? 1 : 0)) // Boosted sponsors come first
-          .map((sponsor) => (
-            <a
-              href={sponsor.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class={`flex flex-col items-center p-4 transition-transform opacity-70 transform hover:scale-105 hover:opacity-100 ${
-                sponsor.boost ? "sm:col-span-1 lg:col-span-2" : "sm:col-span-2 lg:col-span-3"
-              }`}
-            >
-              <img
-                src={`/images/sponsors/${sponsor.logo}.png`}
-                alt={sponsor.name}
-                class={`object-contain mb-4 ${
-                  sponsor.boost ? "w-2/3 sm:w-3/4 lg:w-2/3" : "w-1/2 sm:w-2/3 lg:w-3/4"
-                }`}
-              />
-            </a>
-          ))}
-      </div>
+<section id="sponsors" class="bg-white py-24 px-0">
+  <div class="container max-w-4xl mx-auto px-4 text-center">
+    <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">
+      We couldn't do it without you
+    </p>
+    <h2 class="text-brand-dark text-4xl md:text-4xl uppercase font-header font-bold mb-4">
+      Our Sponsors
+    </h2>
+    <p class="text-brand-dark text-base text-md mb-8">
+      Our awesome sponsors are what make this event possible. They help us to
+      keep the event free and accessible to everyone. Please take a moment to
+      check them out and show them some love.
+    </p>
+
+    <!-- Boosted Sponsors -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center place-items-center">
+      {boostedSponsors.map((sponsor) => (
+        <a
+          href={sponsor.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex flex-col items-center p-4 transition-transform opacity-70 transform hover:scale-105 hover:opacity-100 w-full"
+        >
+          <img
+            src={`/images/sponsors/${sponsor.logo}.png`}
+            alt={sponsor.name}
+            class="w-3/4 sm:w-2/3 md:w-1/2 object-contain mb-4"
+          />
+        </a>
+      ))}
     </div>
+
+    <!-- Regular Sponsors -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 justify-center place-items-center mt-8">
+      {regularSponsors.map((sponsor) => (
+        <a
+          href={sponsor.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex flex-col items-center p-4 transition-transform opacity-70 transform hover:scale-105 hover:opacity-100 w-full"
+        >
+          <img
+            src={`/images/sponsors/${sponsor.logo}.png`}
+            alt={sponsor.name}
+            class="w-2/3 sm:w-3/4 md:w-1/2 object-contain mb-4"
+          />
+        </a>
+      ))}
+    </div>
+  </div>
 </section>
