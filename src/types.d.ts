@@ -2,6 +2,7 @@ export interface Sponsor {
     name: string;
     logo: string;
     url: string;
+    boost?: boolean;
   }
 
 export interface Speaker {
