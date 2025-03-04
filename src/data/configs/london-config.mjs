@@ -52,10 +52,15 @@ export default {
             logo: "justeat",
             url: "https://www.just-eat.co.uk/",
         },
+        // {
+        //     name: "Grial Kit",
+        //     logo: "grial",
+        //     url: "https://grialkit.com/",
+        // },
         {
-            name: "Grial Kit",
-            logo: "grial",
-            url: "https://grialkit.com/",
+            name: "UX Divers",
+            logo: "ux-divers",
+            url: "https://uxdivers.com/",
         }
     ],
   };
