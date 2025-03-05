@@ -26,8 +26,8 @@ export default {
         },       
         {
             name: "Telerik",
-            logo: "telerik",
-            url: "https://www.telerik.com/",
+            logo: "progress",
+            url: "https://www.telerik.com/maui-ui",
             boost: true,
         },
         {
