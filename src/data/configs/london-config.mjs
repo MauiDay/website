@@ -26,7 +26,7 @@ export default {
         },       
         {
             name: "Telerik",
-            logo: "telerik",
+            logo: "progress",
             url: "https://www.telerik.com/",
             boost: true,
         },
