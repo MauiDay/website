@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import loadConfig from '../configLoader';
+
+const config = await loadConfig();
+const { codeOfConductMain, codeOfConductSecondary } = config;
+---
+
+<Layout isStaticHeader={true}>
+  <section class="bg-white text-gray-600 text-md py-16">
+    <div class="container max-w-4xl mx-auto px-4">
+      <!-- Section Header -->
+      <div class="mb-12">
+        <h1 class="text-4xl mb-8 text-brand-dark font-bold">
+          Past events
+        </h1>
+
+        <p class={`group hover:text-${accentColor} relative`}>
+          <a href=`/archive/london-2025` class="cursor-pointer transition">London 2025</a>
+          <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
+          <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
+        </p>
+        
+      </div>
+    </div>
+  </section>
+</Layout>
