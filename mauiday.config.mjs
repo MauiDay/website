@@ -6,5 +6,7 @@ export const config = {
     SITE_ROOT: 'https://mauiday.net', // Root URL of the site
     BLUESKY_LINK: 'https://bsky.app/profile/mauiday.net', // Link to the BlueSky profile
     GITHUB_LINK: 'https://github.com/MauiDay', // Link to the GitHub profile
+    LINKEDIN_LINK: 'https://www.linkedin.com/company/106234598', // Link to the LinkedIn profile
+    FLICKR_LINK: 'https://www.flickr.com/photos/xamexpertday/', // Link to the Flickr profile
     USE_CONFIG: 'london', // Configuration to use, alternatively "london"
 };
