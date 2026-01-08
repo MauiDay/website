@@ -8,7 +8,7 @@ export default {
     hasAnnouncedSchedule: false,
     location: "NewDay",
     mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.7075286107192!2d-0.12333730000000002!3d51.536924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3daaaaaaab%3A0xf88c121c552af668!2sNewDay!5e0!3m2!1sen!2sde!4v1764791780638!5m2!1sen!2sde",
-    ticketUrl: "https://www.eventbrite.com/e/1980119104545",
+    ticketUrl: "https://e.runevents.net/maui-day-london-2026/checkout",
     locationNote:"",
     locationAddress: `
         <b>NewDay</b><br/>
