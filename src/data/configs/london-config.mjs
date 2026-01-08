@@ -18,12 +18,12 @@ export default {
     codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a> (not part of the London organizers, but involved)`,
     codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:tony@mauiday.net">Tony Edwards</a> (note: part of the London crew)`,
     sponsors: [
-        // {
-        //     name: "Syncfusion",
-        //     logo: "syncfusion",
-        //     url: "https://syncfusion.com/",
-        //     boost: true,
-        // },       
+        {
+            name: "Syncfusion",
+            logo: "syncfusion",
+            url: "https://syncfusion.com/",
+            boost: true,
+        },       
         // {
         //     name: "Telerik",
         //     logo: "progress",
