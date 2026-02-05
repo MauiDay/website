@@ -53,14 +53,13 @@ export default {
             logo: "sessionize",
             url: "https://sessionize.com",
             boost: false,   
+        },
+        {
+            name: "JetBrains",
+            logo: "jetbrains",
+            url: "https://www.jetbrains.com/",
+            boost: false,
         }
-        // ,
-        // {
-        //     name: "JetBrains",
-        //     logo: "jetbrains",
-        //     url: "https://www.jetbrains.com/",
-        //     boost: false,
-        // }
         //,
         // {
         //     name: "UX Divers",
