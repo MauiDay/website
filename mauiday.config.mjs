@@ -9,5 +9,5 @@ export const config = {
     LINKEDIN_LINK: 'https://www.linkedin.com/company/106234598', // Link to the LinkedIn profile
     FLICKR_LINK: 'https://www.flickr.com/photos/xamexpertday/', // Link to the Flickr profile
     INSTAGRAM_LINK: 'https://www.instagram.com/mauiday/', // Link to the Instagram profile
-    USE_CONFIG: 'london', // Configuration to use, alternatively "london"
+    USE_CONFIG: 'krakow', // Configuration to use, alternatively "london"
 };
