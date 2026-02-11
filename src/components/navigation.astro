@@ -79,6 +79,14 @@ let accentColor = isStaticHeader ? 'brand-extra' : 'brand-light';
         <i class="fa-brands fa-bluesky text-2xl"></i>
       </a>
       <a
+        href={config.X_LINK}
+        target="_blank"
+        aria-label="X"
+        class="text-gray-400 hover:text-white"
+      >
+        <i class="fa-brands fa-x-twitter text-2xl"></i>
+      </a>
+      <a
         href={config.GITHUB_LINK}
         target="_blank"
         aria-label="GitHub"
@@ -142,6 +150,13 @@ let accentColor = isStaticHeader ? 'brand-extra' : 'brand-light';
         class={`hover:text-${accentColor} transition`}
       >
         <i class="fa-brands fa-bluesky"></i>
+      </a>
+      <a
+        href={config.X_LINK}
+        aria-label="X"
+        class={`hover:text-${accentColor} transition`}
+      >
+        <i class="fa-brands fa-x-twitter"></i>
       </a>
       <a
         href={config.GITHUB_LINK}
