@@ -1,0 +1,118 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { fetchAlbums, fetchAlbumImages } from "../../data/gallery";
+
+export async function getStaticPaths() {
+  const albums = await fetchAlbums();
+  return albums.map((album) => ({
+    params: { album: album.id },
+    props: { title: album.title, date: album.date },
+  }));
+}
+
+const { album } = Astro.params;
+const { title, date } = Astro.props;
+const images = await fetchAlbumImages(album!);
+const formattedDate = new Date(date).toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<Layout isStaticHeader={true} pageTitle={`${title} | Gallery | .NET MAUI Day`}>
+  <section class="bg-white py-16">
+    <div class="container max-w-5xl mx-auto px-4">
+      <div class="mb-8">
+        <a href="/gallery" class="text-brand-extra hover:underline text-sm font-bold">
+          <i class="fa-solid fa-arrow-left mr-1"></i> Back to Gallery
+        </a>
+      </div>
+
+      <div class="mb-12">
+        <h1 class="text-4xl mb-2 text-brand-dark font-bold font-header">{title}</h1>
+        <p class="text-gray-500 text-md">{formattedDate}</p>
+      </div>
+
+      {images.length === 0 ? (
+        <p class="text-gray-500 italic">No photos have been added to this album yet. Check back soon!</p>
+      ) : (
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {images.map((src, i) => (
+            <div
+              class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square bg-gray-100"
+              data-index={i}
+            >
+              <img
+                src={src}
+                alt={`${title} photo ${i + 1}`}
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white text-3xl hover:text-gray-300" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <button id="lightbox-prev" class="absolute left-4 text-white text-3xl hover:text-gray-300" aria-label="Previous">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button id="lightbox-next" class="absolute right-4 text-white text-3xl hover:text-gray-300" aria-label="Next">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+    <img id="lightbox-img" class="max-h-[90vh] max-w-[90vw] object-contain" alt="" />
+  </div>
+
+  <script define:vars={{ images }}>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    let currentIndex = 0;
+
+    function showImage(index) {
+      currentIndex = index;
+      lightboxImg.src = images[index];
+      lightboxImg.alt = `Photo ${index + 1}`;
+      lightbox.classList.remove("hidden");
+      lightbox.classList.add("flex");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add("hidden");
+      lightbox.classList.remove("flex");
+      document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll(".gallery-item").forEach((item) => {
+      item.addEventListener("click", () => {
+        showImage(parseInt(item.dataset.index));
+      });
+    });
+
+    document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+    document.getElementById("lightbox-prev").addEventListener("click", () => {
+      showImage((currentIndex - 1 + images.length) % images.length);
+    });
+    document.getElementById("lightbox-next").addEventListener("click", () => {
+      showImage((currentIndex + 1) % images.length);
+    });
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (lightbox.classList.contains("hidden")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") showImage((currentIndex - 1 + images.length) % images.length);
+      if (e.key === "ArrowRight") showImage((currentIndex + 1) % images.length);
+    });
+  </script>
+</Layout>
