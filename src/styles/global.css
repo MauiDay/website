@@ -1,6 +1,6 @@
 /* Global overrides (e.g. third-party widgets) */
 
-/* .grecaptcha-badge,
+.grecaptcha-badge,
 #grecaptcha-badge {
   visibility: hidden;
-} */
+}
