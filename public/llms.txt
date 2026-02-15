@@ -15,11 +15,11 @@
 - [London 2026](https://mauiday.net/archive/london-2026): February 6, 2026
 - [London 2025](https://mauiday.net/archive/london-2025): March 14, 2025
 - [Cologne October 2024](https://mauiday.net/archive/cologne-2024): October 11, 2024
-- [Cologne February 2024](https://mauiday.net/archive/cologne-feb-2024): February 9, 2024
+- [Cologne February 2024](https://mauiday.net/archive/cologne-feb-2024): February 6, 2024
 - [XamExpertDay 2023 Cologne](https://mauiday.net/archive/cologne-2023): February 6, 2023
-- [XamExpertDay 2021 Online](https://mauiday.net/archive/online-2021): June 11, 2021
-- [XamExpertDay 2020 Online](https://mauiday.net/archive/online-2020): October 8, 2020
-- [XamExpertDay 2019 Cologne](https://mauiday.net/archive/cologne-2019): October 4, 2019
+- [XamExpertDay 2021 Online](https://mauiday.net/archive/online-2021): October 1, 2021
+- [XamExpertDay 2020 Online](https://mauiday.net/archive/online-2020): October 2, 2020
+- [XamExpertDay 2019 Cologne](https://mauiday.net/archive/cologne-2019): October 25, 2019
 
 ## Pages
 
