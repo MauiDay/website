@@ -4,10 +4,31 @@
   "date": "2020-10-02",
   "location": {
     "name": "Online",
-    "address": true,
+    "address": "",
     "mapsEmbedUrl": ""
   },
-  "sponsors": [],
+  "sponsors": [
+    {
+      "name": "MSG",
+      "logo": "msg",
+      "url": "https://www.msg.group/"
+    },
+    {
+      "name": "Manning",
+      "logo": "manning",
+      "url": "https://manning.com/"
+    },
+    {
+      "name": "JetBrains",
+      "logo": "jetbrains",
+      "url": "https://www.jetbrains.com/"
+    },
+    {
+      "name": "Syncfusion",
+      "logo": "syncfusion",
+      "url": "https://www.syncfusion.com/"
+    }
+  ],
   "speakers": [
     {
       "id": "3f5cafb2-ab4b-48e7-8897-b6956e733ed3",

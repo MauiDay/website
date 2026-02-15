@@ -31,6 +31,12 @@
       "logo": "msg",
       "url": "https://www.msg.group/en/",
       "boost": false
+    },
+    {
+      "name": "Manning",
+      "logo": "manning",
+      "url": "https://manning.com/",
+      "boost": false
     }
   ],
   "speakers": [

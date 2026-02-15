@@ -4,7 +4,7 @@
   "date": "2021-10-01",
   "location": {
     "name": "Online",
-    "address": true,
+    "address": "",
     "mapsEmbedUrl": ""
   },
   "sponsors": [],
