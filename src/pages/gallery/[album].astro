@@ -79,10 +79,10 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
       <i class="fa-solid fa-download"></i>
       <span class="text-sm font-bold">Full res</span>
     </a>
-    <div class="relative max-h-[90vh] max-w-[90vw]">
+    <div class="relative flex items-center justify-center max-h-[90vh] max-w-[90vw]">
       <img id="lightbox-thumb" class="max-h-[90vh] max-w-[90vw] object-contain blur-sm scale-[1.02]" alt="" />
-      <img id="lightbox-img" class="absolute inset-0 max-h-[90vh] max-w-[90vw] object-contain opacity-0 transition-opacity duration-300" alt="" />
-      <div id="lightbox-spinner" class="absolute inset-0 flex items-center justify-center">
+      <img id="lightbox-img" class="absolute max-h-[90vh] max-w-[90vw] object-contain opacity-0 transition-opacity duration-300" alt="" />
+      <div id="lightbox-spinner" class="absolute inset-0 flex items-center justify-center pointer-events-none">
         <i class="fa-solid fa-spinner fa-spin text-white text-3xl"></i>
       </div>
     </div>
