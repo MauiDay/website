@@ -21,7 +21,7 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
 ---
 
 <Layout isStaticHeader={true} pageTitle={`${title} | Gallery | .NET MAUI Day`}>
-  <section class="bg-white py-16">
+  <section class="bg-brand-dark py-24">
     <div class="container max-w-5xl mx-auto px-4">
       <div class="mb-8">
         <a href="/gallery" class="text-brand-extra hover:underline text-sm font-bold">
@@ -29,18 +29,21 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
         </a>
       </div>
 
-      <div class="mb-12">
-        <h1 class="text-4xl mb-2 text-brand-dark font-bold font-header">{title}</h1>
-        <p class="text-gray-500 text-md">{formattedDate}</p>
+      <div class="text-center mb-12">
+        <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">{formattedDate}</p>
+        <h2 class="text-white text-4xl md:text-4xl uppercase font-header font-bold mb-4">{title}</h2>
+        <p class="text-white text-base text-md">
+          {images.length > 0 ? `${images.length} photos from this event.` : ''}
+        </p>
       </div>
 
       {images.length === 0 ? (
-        <p class="text-gray-500 italic">No photos have been added to this album yet. Check back soon!</p>
+        <p class="text-white text-md italic text-center">No photos have been added to this album yet. Check back soon!</p>
       ) : (
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {images.map((src, i) => (
             <div
-              class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square bg-gray-100"
+              class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square bg-brand-dark border border-white/10"
               data-index={i}
             >
               <img
@@ -58,13 +61,13 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
 
   <!-- Lightbox -->
   <div id="lightbox" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
-    <button id="lightbox-close" class="absolute top-4 right-4 text-white text-3xl hover:text-gray-300" aria-label="Close">
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white text-3xl hover:text-brand-extra transition" aria-label="Close">
       <i class="fa-solid fa-xmark"></i>
     </button>
-    <button id="lightbox-prev" class="absolute left-4 text-white text-3xl hover:text-gray-300" aria-label="Previous">
+    <button id="lightbox-prev" class="absolute left-4 text-white text-3xl hover:text-brand-extra transition" aria-label="Previous">
       <i class="fa-solid fa-chevron-left"></i>
     </button>
-    <button id="lightbox-next" class="absolute right-4 text-white text-3xl hover:text-gray-300" aria-label="Next">
+    <button id="lightbox-next" class="absolute right-4 text-white text-3xl hover:text-brand-extra transition" aria-label="Next">
       <i class="fa-solid fa-chevron-right"></i>
     </button>
     <img id="lightbox-img" class="max-h-[90vh] max-w-[90vw] object-contain" alt="" />
