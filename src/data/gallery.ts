@@ -8,6 +8,7 @@ export interface Album {
   id: string;
   title: string;
   date: string;
+  thumbnail?: string;
 }
 
 export interface AlbumWithImages extends Album {
@@ -38,7 +39,11 @@ export async function fetchAlbumImages(albumId: string): Promise<string[]> {
     .map((f) => f.download_url);
 }
 
-export function getAlbumThumbnail(albumId: string, images: string[]): string {
+export function getAlbumThumbnail(album: Album, images: string[]): string {
+  if (album.thumbnail) {
+    const match = images.find((img) => img.endsWith(`/${album.thumbnail}`));
+    if (match) return match;
+  }
   if (images.length > 0) return images[0];
   return '/images/default-album.png';
 }

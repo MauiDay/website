@@ -7,7 +7,7 @@ const albums = await fetchAlbums();
 const albumsWithThumbnails = await Promise.all(
   albums.map(async (album) => {
     const images = await fetchAlbumImages(album.id);
-    return { ...album, thumbnail: getAlbumThumbnail(album.id, images), imageCount: images.length };
+    return { ...album, thumbnail: getAlbumThumbnail(album, images), imageCount: images.length };
   })
 );
 ---
