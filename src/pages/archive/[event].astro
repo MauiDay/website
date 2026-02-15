@@ -110,12 +110,12 @@ function sessionDuration(start: string, end: string) {
                     </p>
                   )}
                   {session.description && (
-                    <details class="mt-2 group/desc">
-                      <summary class="text-brand-extra/70 text-sm cursor-pointer hover:text-brand-extra select-none">
-                        Show description
-                      </summary>
-                      <p class="text-brand-light/50 text-sm mt-2">{session.description}</p>
-                    </details>
+                    <div class="mt-2">
+                      <p class="text-brand-light/50 text-sm line-clamp-3 session-preview">{session.description}</p>
+                      <button class="text-brand-extra/70 text-xs mt-1 hover:text-brand-extra cursor-pointer select-none hidden session-expand">
+                        Read more
+                      </button>
+                    </div>
                   )}
                 </div>
                 <div class="text-right shrink-0">
@@ -204,3 +204,19 @@ function sessionDuration(start: string, end: string) {
     </section>
   )}
 </Layout>
+
+<script>
+  document.querySelectorAll('.session-preview').forEach(p => {
+    if (p.scrollHeight > p.clientHeight) {
+      const btn = p.parentElement?.querySelector('.session-expand') as HTMLElement;
+      if (btn) {
+        btn.classList.remove('hidden');
+        btn.addEventListener('click', () => {
+          const isClamped = p.classList.contains('line-clamp-3');
+          p.classList.toggle('line-clamp-3');
+          btn.textContent = isClamped ? 'Show less' : 'Read more';
+        });
+      }
+    }
+  });
+</script>
