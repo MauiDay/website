@@ -1,0 +1,167 @@
+{
+  "id": "london-2026",
+  "title": ".NET MAUI Day London 2026",
+  "date": "2026-02-06",
+  "location": {
+    "name": "NewDay",
+    "address": "NewDay 7 Handyside St, London, N1C 4DA United Kingdom",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.7075286107192!2d-0.12333730000000002!3d51.536924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3daaaaaaab%3A0xf88c121c552af668!2sNewDay!5e0!3m2!1sen!2sde!4v1764791780638!5m2!1sen!2sde"
+  },
+  "sponsors": [
+    {
+      "name": "Syncfusion",
+      "logo": "syncfusion",
+      "url": "https://syncfusion.com/",
+      "boost": true
+    },
+    {
+      "name": "Microsoft",
+      "logo": "microsoft",
+      "url": "https://www.microsoft.com",
+      "boost": false
+    },
+    {
+      "name": "NewDay",
+      "logo": "newday",
+      "url": "https://newday.co.uk/",
+      "boost": true
+    },
+    {
+      "name": "Sessionize",
+      "logo": "sessionize",
+      "url": "https://sessionize.com",
+      "boost": false
+    },
+    {
+      "name": "JetBrains",
+      "logo": "jetbrains",
+      "url": "https://www.jetbrains.com/",
+      "boost": false
+    }
+  ],
+  "speakers": [
+    {
+      "id": "3a76506a-5c6c-4118-937b-6f7b6eefa975",
+      "fullName": "Clifford Agius",
+      "tagLine": "Freelance Developer that just so happens to fly an Airbus A320 around the Europe.",
+      "profilePicture": "https://sessionize.com/image/0ab8-400o400o1-LnHqrZMxJMhBXWUkoiGQ1Z.jpg"
+    },
+    {
+      "id": "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15",
+      "fullName": "David Ortinau",
+      "tagLine": "Principal Product Manager at Microsoft",
+      "profilePicture": "https://sessionize.com/image/fc0f-400o400o1-31qm53unFBj8A279VcnKHn.jpg"
+    },
+    {
+      "id": "b5f674c8-199a-444d-bfaf-e8f8cd8a6248",
+      "fullName": "Gerald Versluis",
+      "tagLine": "Senior Software Engineer at Microsoft",
+      "profilePicture": "https://sessionize.com/image/3d0e-400o400o1-c8-199a-444d-bfaf-e8f8cd8a6248.a492ee56-53af-42fa-9a7f-45c7186ac12d.png"
+    },
+    {
+      "id": "4d3e9157-208d-4627-95be-845a75fde435",
+      "fullName": "Katie Michaels",
+      "tagLine": "Founder of Moti Me | Innovate UK winner ",
+      "profilePicture": "https://sessionize.com/image/cb91-400o400o1-HJBHQqwhD8WRknkQKr4Xgd.jpg"
+    },
+    {
+      "id": "df2bc5ca-5a6b-48a9-87ac-71c817d7b240",
+      "fullName": "Mark Allibone",
+      "tagLine": "Technical Lead at iDIP Solution, Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/ab07-400o400o1-ca-5a6b-48a9-87ac-71c817d7b240.41b186a0-9d62-449a-90de-a16a94894db1.jpg"
+    },
+    {
+      "id": "e385d5fa-c345-4fbf-a1d1-9cc23aee66f1",
+      "fullName": "Matt Goldman",
+      "tagLine": "Innovation Consultant, Arinco",
+      "profilePicture": "https://sessionize.com/image/194c-400o400o1-KUWpgZ2L3HtDoggonuZShZ.jpg"
+    },
+    {
+      "id": "0519c705-7fe9-4ada-af6a-9fe6dd574d06",
+      "fullName": "Paul Anderson",
+      "tagLine": "Senior Product Manager @ Syncfusion",
+      "profilePicture": "https://sessionize.com/image/36a6-400o400o1-h79BgoRPdEwgNEosKuAY1w.jpg"
+    },
+    {
+      "id": "87079600-8901-4734-ad50-fcf974bfbc93",
+      "fullName": "Shriram Sankaran",
+      "tagLine": "Senior Product Manager, Syncfusion",
+      "profilePicture": "https://sessionize.com/image/1787-400o400o1-WMRQMPznfkkebSPSQa95cW.jpg"
+    },
+    {
+      "id": "5ad7b431-a439-49ce-b663-c510d64583fe",
+      "fullName": "Stéphane Delcroix",
+      "tagLine": "Software Engineer at Microsoft/Xamarin",
+      "profilePicture": "https://sessionize.com/image/8a8a-400o400o1-f47a5FAPhrtXEFZFRCHy9D.jpg"
+    }
+  ],
+  "sessions": [
+    {
+      "title": ".NET MAUI Now and Next",
+      "description": "We continue to pursue our mission to delight developers and empower you to achieve more with our SDKs and tools. While .NET 10 is still new and shiny, we are already working on .NET 11. In this session I'll share the product highlights and candidly share our vision for the future of mobile and desktop cross-platform development. ",
+      "startsAt": "2026-02-06T09:10:00",
+      "endsAt": "2026-02-06T10:10:00",
+      "speakers": [
+        "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15"
+      ]
+    },
+    {
+      "title": "Building a Children’s Physiotherapy System with .NET MAUI and IoT",
+      "description": "⭐ Building a Children’s Physiotherapy System with .NET MAUI and IoT\r\nMoti‑Me is an IoT‑powered therapeutic device paired with a mobile application designed to turn structured physical therapy into engaging, child‑friendly activities. \r\n\r\nThe system helps children develop key motor skills while providing clinicians and families with meaningful feedback.\r\n\r\nIn this session, we’ll start with an overview of the Moti‑Me ecosystem before diving into the architecture and implementation of the .NET MAUI mobile application.\r\n\r\nWe’ll explore how the app communicates with the device’s onboard controller over Bluetooth, how activities are initiated and tracked, and how the application manages state throughout each interaction. From there, we’ll look at how user feedback and activity results are captured, processed, and presented within the app.\r\n\r\nWe’ll also walk through the configuration and device‑management features available in the Settings area, highlighting how these support both everyday use and troubleshooting.\r\n\r\nFinally, we’ll cover the build and deployment pipeline, including how GitHub Actions is used to produce Android and iOS builds and deliver them to the respective app stores for testing.\r\n\r\n⭐\r\n\r\n",
+      "startsAt": "2026-02-06T10:30:00",
+      "endsAt": "2026-02-06T11:15:00",
+      "speakers": [
+        "3a76506a-5c6c-4118-937b-6f7b6eefa975",
+        "4d3e9157-208d-4627-95be-845a75fde435"
+      ]
+    },
+    {
+      "title": "Opinionated by Necessity: Lessons from Building Apps for Real Clients",
+      "description": "Building apps for real clients has a way of stripping theory back to what actually works. Patterns that look flexible and elegant at the start can quietly accumulate complexity, while the absence of clear constraints leaves teams exposed to subtle but expensive mistakes.\r\n\r\nIn this session, I’ll share lessons learned from delivering .NET MAUI apps as part of full-stack enterprise solutions. The focus is not on introducing new patterns, but on understanding where familiar ones succeed, where they fail, and how much opinion is actually required to make them sustainable.\r\n\r\nWe’ll look at:\r\n\r\n* Why unopinionated MVVM often leads to fragile state, inconsistent behaviour, and hard-to-reason-about UIs\r\n* Treating navigation, state, and UI consistency as systems, not incidental implementation details\r\n* Using constraints deliberately to remove decisions and reduce margin for error\r\n* Building high-walled, opinionated client architectures that guide teams toward the pit of success\r\n* The trade-offs involved, and the mistakes I’ve made along the way\r\n\r\nThis is an experience-driven talk for developers building client applications that need to integrate cleanly with enterprise backends, ship on real timelines, and stay maintainable long after the first release.",
+      "startsAt": "2026-02-06T11:30:00",
+      "endsAt": "2026-02-06T12:30:00",
+      "speakers": [
+        "e385d5fa-c345-4fbf-a1d1-9cc23aee66f1"
+      ]
+    },
+    {
+      "title": "Creating Data-Driven .NET MAUI Apps",
+      "description": ".NET MAUI apps come packed with powerful features out of the box - offline capabilities, GPS, Bluetooth, and more. These apps are typically distributed via app stores, which ensures offline functionality once installed. However, updating such apps usually requires pushing a new version through the store.\r\n\r\nBut what if we could make our apps dynamic - capable of adapting to backend-driven data - without sacrificing the benefits of store distribution?\r\n\r\nIn this talk, we’ll explore different techniques to build .NET MAUI apps that are flexible, dynamic, and driven entirely by runtime data. You’ll learn how to architect your app to update its content and behavior based on backend responses, all while maintaining the reliability and native experience of a traditionally deployed app.",
+      "startsAt": "2026-02-06T13:30:00",
+      "endsAt": "2026-02-06T14:30:00",
+      "speakers": [
+        "df2bc5ca-5a6b-48a9-87ac-71c817d7b240"
+      ]
+    },
+    {
+      "title": "From Web to Native: Building Cross-Platform Apps with .NET MAUI Blazor Hybrid",
+      "description": "Discover how .NET MAUI and Blazor Hybrid enable developers to create modern cross-platform applications from a single codebase, delivering native-like experiences on Android, iOS, macOS, Windows, and the web. Learn the core advantages of hybrid development: combining familiar web technologies with native device capabilities.\r\n\r\nExplore Blazor Hybrid architecture, reusing Razor components through shared class libraries, and leveraging project templates for hybrid + web scenarios. Follow a live demo that walks through building and running a complete .NET MAUI Blazor Hybrid application, showcasing multi-device rendering, project structures, and seamless code sharing between web and native targets. Gain practical patterns to start building your own hybrid apps efficiently.",
+      "startsAt": "2026-02-06T14:45:00",
+      "endsAt": "2026-02-06T15:15:00",
+      "speakers": [
+        "0519c705-7fe9-4ada-af6a-9fe6dd574d06",
+        "87079600-8901-4734-ad50-fcf974bfbc93"
+      ]
+    },
+    {
+      "title": "What's up, XAML",
+      "description": "Let's see how XAML is still the best way to declare your UI for MAUI in 2026.\r\n\r\nWe'll focus on the changes introduced in net10, the ones we plan to introduce in net11, how we make the language evolve, what are our dreams for it.\r\n\r\nExpect discussions about xmlns-less, source generation, hot reload, c# in xaml, some copilot assisted coding, and more",
+      "startsAt": "2026-02-06T15:30:00",
+      "endsAt": "2026-02-06T16:30:00",
+      "speakers": [
+        "5ad7b431-a439-49ce-b663-c510d64583fe"
+      ]
+    },
+    {
+      "title": "MAUI Q&A Panel",
+      "description": "This is your chance to put your questions to the MAUI team and friends.",
+      "startsAt": "2026-02-06T16:40:00",
+      "endsAt": "2026-02-06T17:25:00",
+      "speakers": [
+        "b5f674c8-199a-444d-bfaf-e8f8cd8a6248",
+        "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15"
+      ]
+    }
+  ],
+  "galleryAlbumId": "london-2026"
+}

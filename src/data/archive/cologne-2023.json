@@ -1,0 +1,121 @@
+{
+  "id": "cologne-2023",
+  "title": "XamExpertDay 2023 Cologne",
+  "date": "2023-02-06",
+  "location": {
+    "name": "Microsoft Office Cologne",
+    "address": "Holzmarkt 2, 50676 Köln, Germany",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.709543368347!2d6.963219500000001!3d50.9290898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf25b4bb4cf92b%3A0x80c4f5fba887b23b!2sMicrosoft%20Germany%20GmbH!5e0!3m2!1sen!2snl!4v1704618839331!5m2!1sen!2snl"
+  },
+  "sponsors": [],
+  "speakers": [
+    {
+      "id": "1df97ab4-43df-4b8b-a78c-805eac480c3d",
+      "fullName": "Almir Vuk",
+      "tagLine": "Software Development Engineer & Microsoft MVP, at AgentLocator Inc.",
+      "profilePicture": "https://sessionize.com/image/6752-400o400o1-b4-43df-4b8b-a78c-805eac480c3d.6d9b18b9-156e-4c2c-bc98-4cb220bc697d.jpg"
+    },
+    {
+      "id": "276db8d7-4b9d-4e5e-a656-b88335a0ba00",
+      "fullName": "Brandon Minnick",
+      "tagLine": "Developer Advocate @ AWS",
+      "profilePicture": "https://sessionize.com/image/3554-400o400o1-hKiFwFX5F2hVTkinmBcjK3.png"
+    },
+    {
+      "id": "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15",
+      "fullName": "David Ortinau",
+      "tagLine": "Principal Product Manager at Microsoft",
+      "profilePicture": "https://sessionize.com/image/faf7-400o400o1-46-6e2a-4eae-9b6d-9cf8ff0ecf15.9864fb21-e931-4e29-a40d-21791a131de8.png"
+    },
+    {
+      "id": "79741134-06bb-4596-bc44-40edd9e03f6b",
+      "fullName": "Luce Carter",
+      "tagLine": "Microsoft MVP, Twilio Champion and lover of code, sunshine and trains.",
+      "profilePicture": "https://sessionize.com/image/31df-400o400o1-34-06bb-4596-bc44-40edd9e03f6b.1750062d-3714-47f7-ab0e-990f57e9a723.jpg"
+    },
+    {
+      "id": "a0dc3822-2379-40ff-8ba4-08f28269c4c5",
+      "fullName": "Maddy Montaquila",
+      "tagLine": "Senior Product Manager, .NET MAUI at Microsoft",
+      "profilePicture": "https://sessionize.com/image/8b52-400o400o1-22-2379-40ff-8ba4-08f28269c4c5.b9d59a13-f4c1-4f14-b735-c25d2efad143.jpg"
+    },
+    {
+      "id": "df2bc5ca-5a6b-48a9-87ac-71c817d7b240",
+      "fullName": "Mark Allibone",
+      "tagLine": "Lead Mobile Developer Rey Technology, Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/ab07-400o400o1-ca-5a6b-48a9-87ac-71c817d7b240.41b186a0-9d62-449a-90de-a16a94894db1.jpg"
+    },
+    {
+      "id": "954358e9-59e0-413d-93b6-c3b272da3c23",
+      "fullName": "Mike James",
+      "tagLine": "Former Xamarin Evangelist who now preaches Avalonia UI.",
+      "profilePicture": "https://sessionize.com/image/ad36-400o400o1-SeyRkdchi1sYw17MnNfRBs.png"
+    }
+  ],
+  "sessions": [
+    {
+      "title": "Awesome UI with .NET MAUI",
+      "description": "Whether building an app for consumers or enterprises, for games or line-of-business apps, you can do it all with .NET MAUI. In this session, I'll share my pro tips from 25 years of developing beautiful UIs for desktop, mobile, and web applications. Going cross-platform doesn't mean you need to sacrifice amazing design. Making UI beautiful doesn't mean you need to sacrifice usability and accessibility. ",
+      "startsAt": "2023-02-06T08:45:00",
+      "endsAt": "2023-02-06T09:35:00",
+      "speakers": [
+        "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15"
+      ]
+    },
+    {
+      "title": "Building .NET MAUI UIs in C#",
+      "description": "Many developers use XAML to create UIs in .NET MAUI, but did you know that everything you can do in XAML can be done in C#?\r\n\r\nJoin me as we discuss the benefits of C# vs XAML, learn how to create our UIs in C# by exploring new exciting frameworks like C# Markup and MVU in .NET MAUI that make creating mobile apps even easier!\r\n",
+      "startsAt": "2023-02-06T09:35:00",
+      "endsAt": "2023-02-06T10:25:00",
+      "speakers": [
+        "276db8d7-4b9d-4e5e-a656-b88335a0ba00"
+      ]
+    },
+    {
+      "title": "Writing Reactive .NET MAUI apps",
+      "description": "Reactive programming allows you to write event-driven code. When we think about a mobile app, we can see a lot of interactions are driven by events. The user pushes a button, navigates to or from a page, a background service fires an event due to updated data, the user types into a form and we show suggestions. So let's dive into this event-driven world and have a look at how to write real-world reactive mobile apps using Reactive UI and friends that your users will love.",
+      "startsAt": "2023-02-06T10:25:00",
+      "endsAt": "2023-02-06T11:15:00",
+      "speakers": [
+        "df2bc5ca-5a6b-48a9-87ac-71c817d7b240"
+      ]
+    },
+    {
+      "title": "Let's play with .NET MAUI, SignalR Service and Azure Functions",
+      "description": "Azure SignalR Service simplifies the process of adding real-time web functionality to applications over HTTP. This real-time functionality allows the service to push content updates to connected clients, such as a single-page web or mobile application. As a result, clients are updated without polling the server or submitting new HTTP requests for updates. \r\n\r\nIn this session, we will walk through the steps and learn how to build a serverless app using Azure Functions and SignalR Service in combination with the .NET MAUI mobile app and CosmosDB as a storage option.\r\n\r\nSee you all at the session!",
+      "startsAt": "2023-02-06T11:15:00",
+      "endsAt": "2023-02-06T12:05:00",
+      "speakers": [
+        "1df97ab4-43df-4b8b-a78c-805eac480c3d"
+      ]
+    },
+    {
+      "title": "Visual Studio 2022 and .NET MAUI - the Ultimate Cross-Platform Developer Experience",
+      "description": "Visual Studio 2022 and .NET MAUI were both built with a focus on developer productivity. VS 2022 is the fastest, most personalized Visual Studio yet - and it's 64-bit! .NET MAUI support has also shipped in both Visual Studio and Visual Studio for Mac so you can start building your iOS, Android, macOS, and Windows apps wherever you want. Join Maddy Montaquila (Leger), .NET MAUI program manager, to go over some of the ways you'll be more productive than ever building your .NET MAUI apps, and get the latest updates on VS 2022, VS 2022 for Mac, and .NET MAUI developer experiences!",
+      "startsAt": "2023-02-06T13:00:00",
+      "endsAt": "2023-02-06T13:50:00",
+      "speakers": [
+        "a0dc3822-2379-40ff-8ba4-08f28269c4c5"
+      ]
+    },
+    {
+      "title": "Avalonia UI - Pixel Perfect UI for MAUI developers",
+      "description": "In this session, you'll learn about Avalonia UI and how we've been working to enable MAUI developers to create pixel-perfect controls for all their apps. Named the MAUI Avalonia Hybrid, we've made it possible to mix and match Avalonia UI content into your MAUI apps. I'll share code, demo live and share the future roadmap of how we will support MAUI developers.",
+      "startsAt": "2023-02-06T13:50:00",
+      "endsAt": "2023-02-06T14:40:00",
+      "speakers": [
+        "954358e9-59e0-413d-93b6-c3b272da3c23"
+      ]
+    },
+    {
+      "title": "Zero to Mobile Database Hero - Learn to create online/offline data capable cross-platform app",
+      "description": "Storage of data is a core part of of many applications. Historically, when you ask developers about databases, they will talk to you about SQLite. But this is not the only way!\r\nIn this session, Luce will introduce you to the powerful Developer Data Platform of MongoDB and how their cloud-hosted products, including Realm can allow you to easily store, query and manipulate data, with automatic online/offline sync, authentication and more.\r\nYou will go away feeling more confident to turn your back on SQL and embrace the power of the document data model!",
+      "startsAt": "2023-02-06T14:40:00",
+      "endsAt": "2023-02-06T15:30:00",
+      "speakers": [
+        "79741134-06bb-4596-bc44-40edd9e03f6b"
+      ]
+    }
+  ],
+  "galleryAlbumId": "cologne-2023"
+}

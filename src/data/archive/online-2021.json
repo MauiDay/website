@@ -1,0 +1,255 @@
+{
+  "id": "online-2021",
+  "title": "XamExpertDay 2021 Online",
+  "date": "2021-06-11",
+  "location": {
+    "name": "Online",
+    "address": true,
+    "mapsEmbedUrl": ""
+  },
+  "sponsors": [],
+  "speakers": [
+    {
+      "id": "0abca831-4ccc-4347-b7e8-7c4f40de70ad",
+      "fullName": "Allan Ritchie",
+      "tagLine": "CTO - ACR Software",
+      "profilePicture": "https://sessionize.com/image/d0b6-400o400o1-31-4ccc-4347-b7e8-7c4f40de70ad.884187ab-69bb-4753-b4d0-931e7fc125f6.jpg"
+    },
+    {
+      "id": "a75b444d-594c-41f8-9047-8f0a70d31df0",
+      "fullName": "Andrea Marcelli",
+      "tagLine": "Senior .NET Developer with WPF expertise",
+      "profilePicture": "https://sessionize.com/image/2085-400o400o1-abfdb107-e743-41ce-87cc-a5c93db7e8f3.jpg"
+    },
+    {
+      "id": "d10888f1-fc98-4d5e-bfa3-aa0077fe0d7a",
+      "fullName": "Charlin Agramonte",
+      "tagLine": "Microsoft MVP | Crossgeeks CO-Founder",
+      "profilePicture": "https://sessionize.com/image/fd3e-400o400o1-f1-fc98-4d5e-bfa3-aa0077fe0d7a.16e42450-6fa0-4562-ad9b-ccdeb01b6c36.jpg"
+    },
+    {
+      "id": "f44807b4-db9f-42ea-a5d4-bcc50c224d57",
+      "fullName": "Daniele Fontani",
+      "tagLine": "CTO building a better tomorrow",
+      "profilePicture": "https://sessionize.com/image/8e4a-400o400o1-b4-db9f-42ea-a5d4-bcc50c224d57.e53acdec-024a-4733-ab21-813548a0c333.png"
+    },
+    {
+      "id": "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15",
+      "fullName": "David Ortinau",
+      "tagLine": "Principal Program Manager at Microsoft",
+      "profilePicture": "https://sessionize.com/image/faf7-400o400o1-46-6e2a-4eae-9b6d-9cf8ff0ecf15.9864fb21-e931-4e29-a40d-21791a131de8.png"
+    },
+    {
+      "id": "6b783b32-45c1-4df5-8cde-0906ffa6f94c",
+      "fullName": "Javier Suárez Ruiz",
+      "tagLine": "Software Engineer at Microsoft",
+      "profilePicture": "https://sessionize.com/image/d59d-400o400o1-HUr6EoR5xogsvkdEvvWsrt.jpg"
+    },
+    {
+      "id": "449ac870-2956-4434-a66c-e3b264538d8d",
+      "fullName": "Jose Javier Columbie",
+      "tagLine": "Senior Software Engineer - DevExpress & Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/8be4-400o400o1-70-2956-4434-a66c-e3b264538d8d.3423bbb5-8ae1-4e90-b7ab-7ac32dca06b2.jpg"
+    },
+    {
+      "id": "b8ef9417-ccbc-48aa-8e0d-f7f1447d3fcb",
+      "fullName": "Konrad Müller",
+      "tagLine": "Software engineer",
+      "profilePicture": "https://sessionize.com/image/6c2a-400o400o1-17-ccbc-48aa-8e0d-f7f1447d3fcb.332934c8-2276-4b96-909d-e3dc71f2d4e7.jpg"
+    },
+    {
+      "id": "a782df6e-ce00-46db-9ffa-8cb3f2e9d0ca",
+      "fullName": "Luis Beltran",
+      "tagLine": "Microsoft MVP, Xamarin Certified Mobile Developer",
+      "profilePicture": "https://sessionize.com/image/8e34-400o400o1-6e-ce00-46db-9ffa-8cb3f2e9d0ca.b7115887-cc1d-4635-ac04-f9b9f02c599f.jpg"
+    },
+    {
+      "id": "a0dc3822-2379-40ff-8ba4-08f28269c4c5",
+      "fullName": "Maddy Montaquila",
+      "tagLine": "Program Manager, Mobile Dev Tools/Xamarin.Forms Tooling at Microsoft",
+      "profilePicture": "https://sessionize.com/image/8b52-400o400o1-22-2379-40ff-8ba4-08f28269c4c5.b9d59a13-f4c1-4f14-b735-c25d2efad143.jpg"
+    },
+    {
+      "id": "df2bc5ca-5a6b-48a9-87ac-71c817d7b240",
+      "fullName": "Mark Allibone",
+      "tagLine": "Lead Mobile Developer Rey Technology, Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/ab07-400o400o1-ca-5a6b-48a9-87ac-71c817d7b240.41b186a0-9d62-449a-90de-a16a94894db1.jpg"
+    },
+    {
+      "id": "5cec8286-18d8-4ddc-8ed5-49a0d3949012",
+      "fullName": "Pedro Jesus",
+      "tagLine": "Soft. Eng. at ArcTouch",
+      "profilePicture": "https://sessionize.com/image/6669-400o400o1-KC3kr6SYBHENpQhSzuLinM.jpeg"
+    },
+    {
+      "id": "35737ef4-4a9a-4eef-ae1c-633db8c21458",
+      "fullName": "Rachel Kang (SHE/HER)",
+      "tagLine": "Software Engineer @ Microsoft | Xamarin.Forms",
+      "profilePicture": "https://sessionize.com/image/1f22-400o400o1-L58JpjG6qZzByF3wbJAb4i.jpg"
+    },
+    {
+      "id": "3b188df6-1f4a-4bcb-86d9-5e8ccd12a34e",
+      "fullName": "Rendy Del Rosario",
+      "tagLine": "Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/2cb1-400o400o1-f6-1f4a-4bcb-86d9-5e8ccd12a34e.1b607a7a-cb4f-40d9-90c3-ec5dffb52ef7.jpg"
+    },
+    {
+      "id": "026d9d74-9779-4ae3-9a28-c39de86f0cda",
+      "fullName": "Saamer Mansoor",
+      "tagLine": "Lead Mobile Engineer, Robotics Tinkerer",
+      "profilePicture": "https://sessionize.com/image/3590-400o400o1-74-9779-4ae3-9a28-c39de86f0cda.0f2422f4-a3fd-48ed-914e-f1876d31c7a7.jpg"
+    },
+    {
+      "id": "fc1d0cd3-9675-4188-aa98-e0088069f1a4",
+      "fullName": "Sam Basu",
+      "tagLine": "Developer Advocate",
+      "profilePicture": "https://sessionize.com/image/9947-400o400o1-d3-9675-4188-aa98-e0088069f1a4.0788eacd-acef-44d2-868e-cf111b1f2516.jpg"
+    },
+    {
+      "id": "1289f6c9-230a-4d4b-a9a6-cae75a58f047",
+      "fullName": "Shaun Lawrence",
+      "tagLine": "Independent Software Engineer",
+      "profilePicture": "https://sessionize.com/image/1c84-400o400o1-WQ88sQeiNiSMx2CSQzq9DM.jpg"
+    }
+  ],
+  "sessions": [
+    {
+      "title": "Adding authentication to your mobile app",
+      "description": "So writing .Net mobile apps allows your customers to enjoy them on the go with their iOS and Android devices. But let's face it what is a business app these days without proper authentication? And adding a can be an intimidating thought at first. This session will look at how you can implement authentication using the OpenID Connect & OAuth standard in your mobile apps. We will look at credentials and how we can keep the user authenticated even without having to ask for credentials over and over. So let's make sure your authentication security is just as pleasing to your customer as the rest of the app.\r\n",
+      "startsAt": "2021-10-01T10:15:00",
+      "endsAt": "2021-10-01T11:00:00",
+      "speakers": [
+        "df2bc5ca-5a6b-48a9-87ac-71c817d7b240"
+      ]
+    },
+    {
+      "title": "Drawn controls in .NET MAUI",
+      "description": "In this session we are going to learn all the basics of .NET MAUI Graphics, a new cross-platform graphics library included with .NET MAUI as well as use this library to create fully drawn controls. We will see what advantages brings this new way of creating controls and we will analyze concepts such as performance and other related aspects.",
+      "startsAt": "2021-10-01T10:15:00",
+      "endsAt": "2021-10-01T11:00:00",
+      "speakers": [
+        "6b783b32-45c1-4df5-8cde-0906ffa6f94c"
+      ]
+    },
+    {
+      "title": "Building a mobile game with Xamarin.Forms",
+      "description": "I would like to take you through how we built a wordsearch game for Android and iOS with Xamarin.Forms. We will explore some of the key elements of the game and how parts of the framework and/or open source community helped us to achieve our goals.\r\n\r\nThe key elements at present are:\r\n- The use of SkiaSharp and a custom particle effect to achieve a rewarding user experience (https://twitter.com/Bijington/status/1364712969507135490?s=20)\r\n- The use of Lottie animations (https://twitter.com/Bijington/status/1399851581378633730?s=20)\r\n- Building for speed and accepting that some conventions (MVVM) will ultimately be broken\r\n\r\nIdeally I would like to have a play with testing bits in MAUI before the time this event occurs, if so then I would like to consider including that as part if time allows.",
+      "startsAt": "2021-10-01T11:00:00",
+      "endsAt": "2021-10-01T11:45:00",
+      "speakers": [
+        "1289f6c9-230a-4d4b-a9a6-cae75a58f047"
+      ]
+    },
+    {
+      "title": "An introduction to modern desktop app development with .NET and MAUI",
+      "description": "In this session, we will take a look at the desktop development updates MAUI will bring to us and take a peek at other modern ways to develop for desktop with .NET. Get ready for a session full of old and new friends like UWP, WPF, Mac Catalyst, Blazor, PWAs and more!",
+      "startsAt": "2021-10-01T11:00:00",
+      "endsAt": "2021-10-01T11:45:00",
+      "speakers": [
+        "b8ef9417-ccbc-48aa-8e0d-f7f1447d3fcb"
+      ]
+    },
+    {
+      "title": "Creating PDF files in mobile apps with PdfSharpCore and MigraDocCore",
+      "description": "PDFsharpCore and MigraDocCore are Open Source .NET libraries that can be used to easily create and processes PDF documents on the fly in our Xamarin applications. \r\n\r\nHandling documents with paragraphs, tables, styles, images, etc. and rendering them into PDF is possible with these libraries for free even in commercial applications, so in this session we'll see what it takes to develop a mobile application that creates PDF documents in several scenarios.",
+      "startsAt": "2021-10-01T11:45:00",
+      "endsAt": "2021-10-01T12:30:00",
+      "speakers": [
+        "a782df6e-ce00-46db-9ffa-8cb3f2e9d0ca"
+      ]
+    },
+    {
+      "title": "There's more to Xamarin than UI, let's do some background magic with Shiny.NET",
+      "description": "Shiny 2.0 makes working with background tasks & device services a snap.  In this session, we'll take a look at how to setup our project to use Shiny, do some basic background jobs and take a look at what else Shiny has to offer",
+      "startsAt": "2021-10-01T12:30:00",
+      "endsAt": "2021-10-01T13:15:00",
+      "speakers": [
+        "0abca831-4ccc-4347-b7e8-7c4f40de70ad"
+      ]
+    },
+    {
+      "title": "From WPF to MAUI: a porting of a web server based GUI",
+      "description": "In this talk, we will present the real use case of porting a WPF Windows application to MAUI.\r\n\r\n\r\nThe project we present is the open-source app manager called JSOS (https://github.com/zeppaman/jSOS).\r\n\r\nJSOS is a tool for creating apps and overcome classical browser limitations. The initial version of JSOS was written in pure WPF with framework 3.1, but now MAUI is there and we decided to take all the advantages of MAUI!\r\n\r\n\r\nWe will see all the compatibility issues and the steps for update the project and this will lead to the best practices for converting projects to MAUI. \r\n\r\n\r\n\r\n",
+      "startsAt": "2021-10-01T12:30:00",
+      "endsAt": "2021-10-01T13:15:00",
+      "speakers": [
+        "f44807b4-db9f-42ea-a5d4-bcc50c224d57",
+        "a75b444d-594c-41f8-9047-8f0a70d31df0"
+      ]
+    },
+    {
+      "title": "Porting your Custom Renderer to Handler",
+      "description": ".NET MAUI introduced a new architecture for controls, I'm talking about Handlers! This talk will show you how you can migrate your Renderers to Handlers and take advantave of all goodness!",
+      "startsAt": "2021-10-01T14:15:00",
+      "endsAt": "2021-10-01T15:00:00",
+      "speakers": [
+        "5cec8286-18d8-4ddc-8ed5-49a0d3949012"
+      ]
+    },
+    {
+      "title": "Improving the UX of our Xamarin Forms Apps",
+      "description": "User experience is one of the most important areas to have in consideration when developing Mobile Applications. The ideal scenario is to have a UI/UX expert as part of our team that will address this concern, but what happens if we don't have one?  In this talk, we are going to show you some tips on how to improve the UX of your Xamarin Forms App, so that you can deliver a better user experience to your users. ",
+      "startsAt": "2021-10-01T14:15:00",
+      "endsAt": "2021-10-01T15:00:00",
+      "speakers": [
+        "d10888f1-fc98-4d5e-bfa3-aa0077fe0d7a",
+        "3b188df6-1f4a-4bcb-86d9-5e8ccd12a34e"
+      ]
+    },
+    {
+      "title": "MVVM vs MVU",
+      "description": "Depending on who you ask, Design Patterns are either dead or super useful. Design patterns are supposed to make sense, fit the app/platform/framework naturally and make life easier for developers. Anything else, and we’re likely doing it wrong. \r\n\r\nLet’s explore two rather popular design patterns – MVVM & MVU, and pitch them against each other. .NET mobile/desktop stacks prefer MVVM, web technologies like Blazor/JS SPA are more natural fits with MVU, and .NET MAUI welcomes both. How much of the design pattern is open to interpretation? How much is baked in, when do you bring in frameworks and how is the tooling/ecosystem? This will be an honest fight for developer productivity – you game?\r\n",
+      "startsAt": "2021-10-01T15:00:00",
+      "endsAt": "2021-10-01T15:45:00",
+      "speakers": [
+        "fc1d0cd3-9675-4188-aa98-e0088069f1a4"
+      ]
+    },
+    {
+      "title": "Building Accessible Apps with .NET MAUI",
+      "description": "Come join me on the journey to building accessible apps, and learn more about how you can leverage new APIs in .NET MAUI to do so more easily than ever before!",
+      "startsAt": "2021-10-01T15:00:00",
+      "endsAt": "2021-10-01T15:45:00",
+      "speakers": [
+        "35737ef4-4a9a-4eef-ae1c-633db8c21458"
+      ]
+    },
+    {
+      "title": "Building Your Next .NET MAUI App",
+      "description": ".NET MAUI provides an extremely flexible and powerful way to create apps for Android, iOS, macOS, and Windows, from very simple to extremely robust and complex. Is this one size fits all? Where should you start? In this session I'll run through how you can quickly get started, and then grow your solution as you need to in order to optimize your productivity and still hit all your product requirements. ",
+      "startsAt": "2021-10-01T15:45:00",
+      "endsAt": "2021-10-01T16:30:00",
+      "speakers": [
+        "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15"
+      ]
+    },
+    {
+      "title": "Raspberry-Pi hand sanitizer controlled by Mobile Apps",
+      "description": "A walkthrough where attendees will learn about IoT, connecting software with electronics, and setting up a Raspberry pi device so that it can be controlled using iOS & Android mobile apps.",
+      "startsAt": "2021-10-01T16:30:00",
+      "endsAt": "2021-10-01T17:15:00",
+      "speakers": [
+        "026d9d74-9779-4ae3-9a28-c39de86f0cda"
+      ]
+    },
+    {
+      "title": "MAUI Blazor - One App that runs everywhere",
+      "description": "Did you know you can now host Blazor components in .NET MAUI apps to build cross-platform native apps? In this introductory session we will cover everything you need to get your app running everywhere. Yes, MAUI Blazor apps can run in Windows, Mac, iOS, and Android. If you like Blazor you will love MAUI.",
+      "startsAt": "2021-10-01T16:30:00",
+      "endsAt": "2021-10-01T17:15:00",
+      "speakers": [
+        "449ac870-2956-4434-a66c-e3b264538d8d"
+      ]
+    },
+    {
+      "title": "Hello, .NET MAUI Expert Day!",
+      "description": "It's not goodbye Xamarin, it's hello .NET MAUI! Maddy Leger, Xamarin - uhhh, .NET MAUI - Program Manager, will wrap up the \"final\" XamExpertDay with a look back on some of the major highlights over the past decade of Xamarin, and share some of her vision for the future of .NET!",
+      "startsAt": "2021-10-01T17:15:00",
+      "endsAt": "2021-10-01T18:00:00",
+      "speakers": [
+        "a0dc3822-2379-40ff-8ba4-08f28269c4c5"
+      ]
+    }
+  ],
+  "galleryAlbumId": ""
+}
