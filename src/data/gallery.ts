@@ -33,6 +33,13 @@ export function getAlbumImageUrls(album: Album): string[] {
     .map((name) => `${RAW_BASE}/${album.id}/${name}`);
 }
 
+export function getAlbumThumbUrls(album: Album): string[] {
+  if (!album.images || album.images.length === 0) return [];
+  return album.images
+    .filter((name) => IMAGE_EXTENSIONS.some((ext) => name.toLowerCase().endsWith(ext)))
+    .map((name) => `${RAW_BASE}/thumbs/${album.id}/${name}`);
+}
+
 export function getAlbumThumbnail(album: Album, imageUrls: string[]): string {
   if (album.thumbnail) {
     const match = imageUrls.find((url) => url.endsWith(`/${album.thumbnail}`));

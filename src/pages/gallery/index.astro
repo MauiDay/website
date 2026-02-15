@@ -1,12 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { fetchAlbums, getAlbumImageUrls, getAlbumThumbnail } from "../../data/gallery";
+import { fetchAlbums, getAlbumThumbUrls, getAlbumThumbnail } from "../../data/gallery";
 
 const albums = await fetchAlbums();
 
 const albumsWithThumbnails = albums.map((album) => {
-  const imageUrls = getAlbumImageUrls(album);
-  return { ...album, thumbnailUrl: getAlbumThumbnail(album, imageUrls), imageCount: imageUrls.length };
+  const thumbUrls = getAlbumThumbUrls(album);
+  return { ...album, thumbnailUrl: getAlbumThumbnail(album, thumbUrls), imageCount: (album.images || []).length };
 });
 ---
 

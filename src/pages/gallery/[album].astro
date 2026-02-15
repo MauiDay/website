@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { fetchAlbums, getAlbumImageUrls } from "../../data/gallery";
+import { fetchAlbums, getAlbumImageUrls, getAlbumThumbUrls } from "../../data/gallery";
 
 export async function getStaticPaths() {
   const albums = await fetchAlbums();
@@ -12,6 +12,7 @@ export async function getStaticPaths() {
 
 const { title, date, album: albumData } = Astro.props;
 const images = getAlbumImageUrls(albumData);
+const thumbs = getAlbumThumbUrls(albumData);
 const formattedDate = new Date(date).toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
@@ -40,14 +41,15 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
         <p class="text-white text-md italic text-center">No photos have been added to this album yet. Check back soon!</p>
       ) : (
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {images.map((src, i) => (
+          {thumbs.map((thumbSrc, i) => (
             <button
               type="button"
               class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square bg-brand-dark border border-white/10 p-0"
               data-index={i}
+              data-full={images[i]}
             >
               <img
-                src={src}
+                src={thumbSrc}
                 alt={`${title} photo ${i + 1}`}
                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 loading="lazy"
@@ -80,9 +82,9 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
     let currentIndex = 0;
     let lastFocusedElement: HTMLElement | null = null;
 
-    // Build images array from DOM instead of inlining via define:vars
-    const images = Array.from(document.querySelectorAll<HTMLImageElement>(".gallery-item img"))
-      .map((img) => img.src);
+    // Build full-size image URLs from data attributes, thumbs from img src
+    const galleryItems = document.querySelectorAll<HTMLElement>(".gallery-item");
+    const images = Array.from(galleryItems).map((item) => item.dataset.full!);
 
     function showImage(index: number) {
       currentIndex = index;
