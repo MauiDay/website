@@ -1,15 +1,13 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { fetchAlbums, fetchAlbumImages, getAlbumThumbnail } from "../../data/gallery";
+import { fetchAlbums, getAlbumImageUrls, getAlbumThumbnail } from "../../data/gallery";
 
 const albums = await fetchAlbums();
 
-const albumsWithThumbnails = await Promise.all(
-  albums.map(async (album) => {
-    const images = await fetchAlbumImages(album.id);
-    return { ...album, thumbnail: getAlbumThumbnail(album, images), imageCount: images.length };
-  })
-);
+const albumsWithThumbnails = albums.map((album) => {
+  const imageUrls = getAlbumImageUrls(album);
+  return { ...album, thumbnailUrl: getAlbumThumbnail(album, imageUrls), imageCount: imageUrls.length };
+});
 ---
 
 <Layout isStaticHeader={true} pageTitle="Gallery | .NET MAUI Day">
@@ -30,7 +28,7 @@ const albumsWithThumbnails = await Promise.all(
               <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-brand-dark border border-white/10">
                 {album.imageCount > 0 ? (
                   <img
-                    src={album.thumbnail}
+                    src={album.thumbnailUrl}
                     alt={album.title}
                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"

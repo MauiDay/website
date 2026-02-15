@@ -1,18 +1,17 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { fetchAlbums, fetchAlbumImages } from "../../data/gallery";
+import { fetchAlbums, getAlbumImageUrls } from "../../data/gallery";
 
 export async function getStaticPaths() {
   const albums = await fetchAlbums();
   return albums.map((album) => ({
     params: { album: album.id },
-    props: { title: album.title, date: album.date },
+    props: { title: album.title, date: album.date, album },
   }));
 }
 
-const { album } = Astro.params;
-const { title, date } = Astro.props;
-const images = await fetchAlbumImages(album!);
+const { title, date, album: albumData } = Astro.props;
+const images = getAlbumImageUrls(albumData);
 const formattedDate = new Date(date).toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
