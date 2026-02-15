@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { fetchAlbums, getAlbumImageUrls, getAlbumThumbUrls } from "../../data/gallery";
+import { fetchAlbums, getAlbumImageUrls, getAlbumThumbUrls, getAlbumMediumUrls } from "../../data/gallery";
 
 export async function getStaticPaths() {
   const albums = await fetchAlbums();
@@ -13,6 +13,7 @@ export async function getStaticPaths() {
 const { title, date, album: albumData } = Astro.props;
 const images = getAlbumImageUrls(albumData);
 const thumbs = getAlbumThumbUrls(albumData);
+const mediums = getAlbumMediumUrls(albumData);
 const formattedDate = new Date(date).toLocaleDateString("en-US", {
   year: "numeric",
   month: "long",
@@ -47,6 +48,8 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
               class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square bg-brand-dark border border-white/10 p-0"
               data-index={i}
               data-full={images[i]}
+              data-medium={mediums[i]}
+              data-thumb={thumbSrc}
             >
               <img
                 src={thumbSrc}
@@ -63,33 +66,75 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
 
   <!-- Lightbox -->
   <div id="lightbox" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center" role="dialog" aria-modal="true" aria-label="Image lightbox">
-    <button id="lightbox-close" class="absolute top-4 right-4 text-white text-3xl hover:text-brand-extra transition" aria-label="Close">
+    <button id="lightbox-close" class="absolute top-4 right-4 text-white text-3xl hover:text-brand-extra transition z-10" aria-label="Close">
       <i class="fa-solid fa-xmark"></i>
     </button>
-    <button id="lightbox-prev" class="absolute left-4 text-white text-3xl hover:text-brand-extra transition" aria-label="Previous">
+    <button id="lightbox-prev" class="absolute left-4 text-white text-3xl hover:text-brand-extra transition z-10" aria-label="Previous">
       <i class="fa-solid fa-chevron-left"></i>
     </button>
-    <button id="lightbox-next" class="absolute right-4 text-white text-3xl hover:text-brand-extra transition" aria-label="Next">
+    <button id="lightbox-next" class="absolute right-4 text-white text-3xl hover:text-brand-extra transition z-10" aria-label="Next">
       <i class="fa-solid fa-chevron-right"></i>
     </button>
-    <img id="lightbox-img" class="max-h-[90vh] max-w-[90vw] object-contain" alt="" />
+    <a id="lightbox-download" href="" download class="absolute bottom-4 right-4 text-white text-lg hover:text-brand-extra transition z-10 flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2" aria-label="Download full resolution">
+      <i class="fa-solid fa-download"></i>
+      <span class="text-sm font-bold">Full res</span>
+    </a>
+    <div class="relative max-h-[90vh] max-w-[90vw]">
+      <img id="lightbox-thumb" class="max-h-[90vh] max-w-[90vw] object-contain blur-sm scale-[1.02]" alt="" />
+      <img id="lightbox-img" class="absolute inset-0 max-h-[90vh] max-w-[90vw] object-contain opacity-0 transition-opacity duration-300" alt="" />
+      <div id="lightbox-spinner" class="absolute inset-0 flex items-center justify-center">
+        <i class="fa-solid fa-spinner fa-spin text-white text-3xl"></i>
+      </div>
+    </div>
+    <div id="lightbox-counter" class="absolute bottom-4 left-4 text-white/60 text-sm font-bold z-10"></div>
   </div>
 
   <script>
     const lightbox = document.getElementById("lightbox")!;
+    const lightboxThumb = document.getElementById("lightbox-thumb") as HTMLImageElement;
     const lightboxImg = document.getElementById("lightbox-img") as HTMLImageElement;
+    const lightboxSpinner = document.getElementById("lightbox-spinner")!;
+    const lightboxDownload = document.getElementById("lightbox-download") as HTMLAnchorElement;
+    const lightboxCounter = document.getElementById("lightbox-counter")!;
     const closeBtn = document.getElementById("lightbox-close")!;
     let currentIndex = 0;
     let lastFocusedElement: HTMLElement | null = null;
 
-    // Build full-size image URLs from data attributes, thumbs from img src
     const galleryItems = document.querySelectorAll<HTMLElement>(".gallery-item");
-    const images = Array.from(galleryItems).map((item) => item.dataset.full!);
+    const fullUrls = Array.from(galleryItems).map((item) => item.dataset.full!);
+    const mediumUrls = Array.from(galleryItems).map((item) => item.dataset.medium!);
+    const thumbUrls = Array.from(galleryItems).map((item) => item.dataset.thumb!);
 
     function showImage(index: number) {
       currentIndex = index;
-      lightboxImg.src = images[index];
-      lightboxImg.alt = `Photo ${index + 1}`;
+
+      // Show thumbnail immediately as blurred placeholder
+      lightboxThumb.src = thumbUrls[index];
+      lightboxThumb.alt = `Photo ${index + 1}`;
+      lightboxImg.style.opacity = "0";
+      lightboxSpinner.style.display = "flex";
+
+      // Load medium version on top
+      const medImg = new Image();
+      medImg.onload = () => {
+        lightboxImg.src = medImg.src;
+        lightboxImg.alt = `Photo ${index + 1}`;
+        lightboxImg.style.opacity = "1";
+        lightboxSpinner.style.display = "none";
+      };
+      medImg.onerror = () => {
+        // Fallback to full if medium not available yet
+        lightboxImg.src = fullUrls[index];
+        lightboxImg.alt = `Photo ${index + 1}`;
+        lightboxImg.style.opacity = "1";
+        lightboxSpinner.style.display = "none";
+      };
+      medImg.src = mediumUrls[index];
+
+      // Update download link and counter
+      lightboxDownload.href = fullUrls[index];
+      lightboxCounter.textContent = `${index + 1} / ${fullUrls.length}`;
+
       lightbox.classList.remove("hidden");
       lightbox.classList.add("flex");
       document.body.style.overflow = "hidden";
@@ -100,10 +145,12 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
       lightbox.classList.add("hidden");
       lightbox.classList.remove("flex");
       document.body.style.overflow = "";
+      lightboxImg.src = "";
+      lightboxThumb.src = "";
       lastFocusedElement?.focus();
     }
 
-    document.querySelectorAll<HTMLElement>(".gallery-item").forEach((item) => {
+    galleryItems.forEach((item) => {
       item.addEventListener("click", () => {
         lastFocusedElement = item;
         showImage(parseInt(item.dataset.index!));
@@ -112,10 +159,10 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
 
     closeBtn.addEventListener("click", closeLightbox);
     document.getElementById("lightbox-prev")!.addEventListener("click", () => {
-      showImage((currentIndex - 1 + images.length) % images.length);
+      showImage((currentIndex - 1 + fullUrls.length) % fullUrls.length);
     });
     document.getElementById("lightbox-next")!.addEventListener("click", () => {
-      showImage((currentIndex + 1) % images.length);
+      showImage((currentIndex + 1) % fullUrls.length);
     });
 
     lightbox.addEventListener("click", (e) => {
@@ -125,8 +172,8 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
     document.addEventListener("keydown", (e) => {
       if (lightbox.classList.contains("hidden")) return;
       if (e.key === "Escape") closeLightbox();
-      if (e.key === "ArrowLeft") showImage((currentIndex - 1 + images.length) % images.length);
-      if (e.key === "ArrowRight") showImage((currentIndex + 1) % images.length);
+      if (e.key === "ArrowLeft") showImage((currentIndex - 1 + fullUrls.length) % fullUrls.length);
+      if (e.key === "ArrowRight") showImage((currentIndex + 1) % fullUrls.length);
     });
   </script>
 </Layout>
