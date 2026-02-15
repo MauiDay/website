@@ -50,6 +50,7 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
               data-full={images[i]}
               data-medium={mediums[i]}
               data-thumb={thumbSrc}
+              aria-label={`Open photo ${i + 1} of ${images.length}`}
             >
               <img
                 src={thumbSrc}
@@ -97,8 +98,29 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
     const lightboxDownload = document.getElementById("lightbox-download") as HTMLAnchorElement;
     const lightboxCounter = document.getElementById("lightbox-counter")!;
     const closeBtn = document.getElementById("lightbox-close")!;
+    const prevBtn = document.getElementById("lightbox-prev")!;
+    const nextBtn = document.getElementById("lightbox-next")!;
     let currentIndex = 0;
     let lastFocusedElement: HTMLElement | null = null;
+
+    // Focus trap: cycle through interactive elements in the lightbox
+    const focusableElements = [closeBtn, prevBtn, nextBtn, lightboxDownload];
+    function trapFocus(e: KeyboardEvent) {
+      if (e.key !== "Tab" || lightbox.classList.contains("hidden")) return;
+      const first = focusableElements[0];
+      const last = focusableElements[focusableElements.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
 
     const galleryItems = document.querySelectorAll<HTMLElement>(".gallery-item");
     const fullUrls = Array.from(galleryItems).map((item) => item.dataset.full!);
@@ -158,10 +180,10 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
     });
 
     closeBtn.addEventListener("click", closeLightbox);
-    document.getElementById("lightbox-prev")!.addEventListener("click", () => {
+    prevBtn.addEventListener("click", () => {
       showImage((currentIndex - 1 + fullUrls.length) % fullUrls.length);
     });
-    document.getElementById("lightbox-next")!.addEventListener("click", () => {
+    nextBtn.addEventListener("click", () => {
       showImage((currentIndex + 1) % fullUrls.length);
     });
 
@@ -171,6 +193,7 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
 
     document.addEventListener("keydown", (e) => {
       if (lightbox.classList.contains("hidden")) return;
+      trapFocus(e);
       if (e.key === "Escape") closeLightbox();
       if (e.key === "ArrowLeft") showImage((currentIndex - 1 + fullUrls.length) % fullUrls.length);
       if (e.key === "ArrowRight") showImage((currentIndex + 1) % fullUrls.length);

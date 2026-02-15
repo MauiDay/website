@@ -18,12 +18,15 @@ export interface AlbumWithImages extends Album {
 export async function fetchAlbums(): Promise<Album[]> {
   const response = await fetch(`${RAW_BASE}/albums.json`);
   if (!response.ok) {
-    console.error('Failed to fetch albums.json');
-    return [];
+    throw new Error(`Failed to fetch albums.json: ${response.status} ${response.statusText}`);
   }
 
-  const albums: Album[] = await response.json();
-  return albums.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const data: unknown = await response.json();
+  if (!Array.isArray(data)) {
+    throw new Error('Invalid albums.json format: expected an array');
+  }
+
+  return (data as Album[]).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export function getAlbumImageUrls(album: Album): string[] {

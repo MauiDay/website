@@ -61,13 +61,13 @@ let accentColor = isStaticHeader ? 'brand-extra' : 'brand-light';
         <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
         <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
       </p>
-      <div class="relative group/more">
-        <button class={`hover:text-${accentColor} cursor-pointer transition font-bold font-sans flex items-center gap-1`}>
+      <div class="relative group/more" id="more-dropdown">
+        <button id="more-toggle" aria-expanded="false" aria-haspopup="true" class={`hover:text-${accentColor} focus:text-${accentColor} cursor-pointer transition font-bold font-sans flex items-center gap-1`}>
           More <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover/more:rotate-180"></i>
         </button>
-        <div class={`absolute right-0 top-full mt-2 w-48 rounded-lg shadow-lg ${isStaticHeader ? 'bg-white' : 'bg-brand-dark'} border ${isStaticHeader ? 'border-gray-200' : 'border-white/10'} opacity-0 invisible group-hover/more:opacity-100 group-hover/more:visible transition-all duration-200 py-2`}>
-          <a href=`/gallery` class={`block px-4 py-2 hover:text-${accentColor} hover:${isStaticHeader ? 'bg-gray-50' : 'bg-white/5'} transition`}>Gallery</a>
-          <a href=`/code-of-conduct` class={`block px-4 py-2 hover:text-${accentColor} hover:${isStaticHeader ? 'bg-gray-50' : 'bg-white/5'} transition`}>Code of Conduct</a>
+        <div id="more-menu" role="menu" class={`absolute right-0 top-full mt-2 w-48 rounded-lg shadow-lg ${isStaticHeader ? 'bg-white' : 'bg-brand-dark'} border ${isStaticHeader ? 'border-gray-200' : 'border-white/10'} opacity-0 invisible group-hover/more:opacity-100 group-hover/more:visible focus-within:opacity-100 focus-within:visible transition-all duration-200 py-2`}>
+          <a href=`/gallery` role="menuitem" class={`block px-4 py-2 hover:text-${accentColor} focus:text-${accentColor} hover:${isStaticHeader ? 'bg-gray-50' : 'bg-white/5'} focus:${isStaticHeader ? 'bg-gray-50' : 'bg-white/5'} transition outline-none`}>Gallery</a>
+          <a href=`/code-of-conduct` role="menuitem" class={`block px-4 py-2 hover:text-${accentColor} focus:text-${accentColor} hover:${isStaticHeader ? 'bg-gray-50' : 'bg-white/5'} focus:${isStaticHeader ? 'bg-gray-50' : 'bg-white/5'} transition outline-none`}>Code of Conduct</a>
         </div>
       </div>
     </nav>
@@ -180,5 +180,51 @@ let accentColor = isStaticHeader ? 'brand-extra' : 'brand-light';
 
   menuToggle?.addEventListener("click", () => {
     mobileMenu?.classList.toggle("hidden");
+  });
+
+  // More dropdown keyboard support
+  const moreToggle = document.getElementById("more-toggle");
+  const moreMenu = document.getElementById("more-menu");
+  const moreItems = moreMenu?.querySelectorAll<HTMLElement>("[role='menuitem']");
+
+  function openMoreMenu() {
+    moreMenu?.classList.add("!opacity-100", "!visible");
+    moreToggle?.setAttribute("aria-expanded", "true");
+    moreItems?.[0]?.focus();
+  }
+
+  function closeMoreMenu() {
+    moreMenu?.classList.remove("!opacity-100", "!visible");
+    moreToggle?.setAttribute("aria-expanded", "false");
+  }
+
+  moreToggle?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " " || e.key === "ArrowDown") {
+      e.preventDefault();
+      openMoreMenu();
+    }
+  });
+
+  moreMenu?.addEventListener("keydown", (e) => {
+    const items = Array.from(moreItems || []);
+    const index = items.indexOf(document.activeElement as HTMLElement);
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      items[(index + 1) % items.length]?.focus();
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      items[(index - 1 + items.length) % items.length]?.focus();
+    } else if (e.key === "Escape") {
+      e.preventDefault();
+      closeMoreMenu();
+      moreToggle?.focus();
+    }
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener("click", (e) => {
+    if (!document.getElementById("more-dropdown")?.contains(e.target as Node)) {
+      closeMoreMenu();
+    }
   });
 </script>
