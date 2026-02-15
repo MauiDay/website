@@ -42,8 +42,9 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
       ) : (
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {images.map((src, i) => (
-            <div
-              class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square bg-brand-dark border border-white/10"
+            <button
+              type="button"
+              class="gallery-item cursor-pointer overflow-hidden rounded-lg aspect-square bg-brand-dark border border-white/10 p-0"
               data-index={i}
             >
               <img
@@ -52,7 +53,7 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
                 class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 loading="lazy"
               />
-            </div>
+            </button>
           ))}
         </div>
       )}
@@ -60,7 +61,7 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
   </section>
 
   <!-- Lightbox -->
-  <div id="lightbox" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
+  <div id="lightbox" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center" role="dialog" aria-modal="true" aria-label="Image lightbox">
     <button id="lightbox-close" class="absolute top-4 right-4 text-white text-3xl hover:text-brand-extra transition" aria-label="Close">
       <i class="fa-solid fa-xmark"></i>
     </button>
@@ -73,37 +74,46 @@ const formattedDate = new Date(date).toLocaleDateString("en-US", {
     <img id="lightbox-img" class="max-h-[90vh] max-w-[90vw] object-contain" alt="" />
   </div>
 
-  <script define:vars={{ images }}>
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
+  <script>
+    const lightbox = document.getElementById("lightbox")!;
+    const lightboxImg = document.getElementById("lightbox-img") as HTMLImageElement;
+    const closeBtn = document.getElementById("lightbox-close")!;
     let currentIndex = 0;
+    let lastFocusedElement: HTMLElement | null = null;
 
-    function showImage(index) {
+    // Build images array from DOM instead of inlining via define:vars
+    const images = Array.from(document.querySelectorAll<HTMLImageElement>(".gallery-item img"))
+      .map((img) => img.src);
+
+    function showImage(index: number) {
       currentIndex = index;
       lightboxImg.src = images[index];
       lightboxImg.alt = `Photo ${index + 1}`;
       lightbox.classList.remove("hidden");
       lightbox.classList.add("flex");
       document.body.style.overflow = "hidden";
+      closeBtn.focus();
     }
 
     function closeLightbox() {
       lightbox.classList.add("hidden");
       lightbox.classList.remove("flex");
       document.body.style.overflow = "";
+      lastFocusedElement?.focus();
     }
 
-    document.querySelectorAll(".gallery-item").forEach((item) => {
+    document.querySelectorAll<HTMLElement>(".gallery-item").forEach((item) => {
       item.addEventListener("click", () => {
-        showImage(parseInt(item.dataset.index));
+        lastFocusedElement = item;
+        showImage(parseInt(item.dataset.index!));
       });
     });
 
-    document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
-    document.getElementById("lightbox-prev").addEventListener("click", () => {
+    closeBtn.addEventListener("click", closeLightbox);
+    document.getElementById("lightbox-prev")!.addEventListener("click", () => {
       showImage((currentIndex - 1 + images.length) % images.length);
     });
-    document.getElementById("lightbox-next").addEventListener("click", () => {
+    document.getElementById("lightbox-next")!.addEventListener("click", () => {
       showImage((currentIndex + 1) % images.length);
     });
 
