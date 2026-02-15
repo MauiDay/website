@@ -1,0 +1,63 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getArchiveEvents } from "../../data/archive";
+import { fetchAlbums, getAlbumThumbUrls, getAlbumThumbnail } from "../../data/gallery";
+
+const events = getArchiveEvents();
+const albums = await fetchAlbums();
+
+const eventsWithThumbs = events.map((event) => {
+  const album = albums.find((a) => a.id === event.galleryAlbumId);
+  let thumbnail = '/images/default.png';
+  if (album) {
+    const thumbUrls = getAlbumThumbUrls(album);
+    thumbnail = getAlbumThumbnail(album, thumbUrls);
+  }
+  return { ...event, thumbnail };
+});
+---
+
+<Layout isStaticHeader={true} pageTitle="Archive | .NET MAUI Day">
+  <section class="bg-brand-dark py-24">
+    <div class="container max-w-5xl mx-auto px-4 text-center">
+      <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">Looking Back</p>
+      <h2 class="text-white text-4xl uppercase font-header font-bold mb-4">Event Archive</h2>
+      <p class="text-white text-base text-md mb-12">
+        Browse past .NET MAUI Day and XamExpertDay events.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+        {eventsWithThumbs.map((event) => (
+          <a href={`/archive/${event.id}`} class="group block">
+            <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-brand-dark border border-white/10">
+              {event.thumbnail !== '/images/default.png' ? (
+                <img
+                  src={event.thumbnail}
+                  alt={event.title}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center text-gray-400">
+                  <i class="fa-solid fa-calendar-days text-4xl"></i>
+                </div>
+              )}
+            </div>
+            <h3 class="mt-3 text-lg font-bold text-white font-header group-hover:text-brand-extra transition-colors">
+              {event.title}
+            </h3>
+            <p class="text-sm text-brand-light/70">
+              {new Date(event.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+              {event.location.name && ` · ${event.location.name}`}
+            </p>
+            <p class="text-xs text-brand-light/50 mt-1">
+              {event.speakers.length > 0 && `${event.speakers.length} speakers`}
+              {event.speakers.length > 0 && event.sessions.length > 0 && ' · '}
+              {event.sessions.length > 0 && `${event.sessions.length} sessions`}
+            </p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

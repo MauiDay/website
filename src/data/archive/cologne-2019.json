@@ -1,0 +1,196 @@
+{
+  "id": "cologne-2019",
+  "title": "XamExpertDay 2019 Cologne",
+  "date": "2019-10-04",
+  "location": {
+    "name": "Microsoft Office Cologne",
+    "address": "Holzmarkt 2, 50676 Köln, Germany",
+    "mapsEmbedUrl": ""
+  },
+  "sponsors": [],
+  "speakers": [
+    {
+      "id": "1df97ab4-43df-4b8b-a78c-805eac480c3d",
+      "fullName": "Almir Vuk",
+      "tagLine": "Microsoft MVP, Software Development Engineer at App Impact d.o.o Sarajevo",
+      "profilePicture": "https://sessionize.com/image/6752-400o400o1-b4-43df-4b8b-a78c-805eac480c3d.6d9b18b9-156e-4c2c-bc98-4cb220bc697d.jpg"
+    },
+    {
+      "id": "95beb657-d231-4867-8a6a-acab2d5ceb7a",
+      "fullName": "Arne De Cock",
+      "tagLine": "Info Support NV",
+      "profilePicture": "https://sessionize.com/image/7582-400o400o1-57-d231-4867-8a6a-acab2d5ceb7a.abd904f2-ed2d-47a9-b17b-3fa8237f9d24.jpg"
+    },
+    {
+      "id": "d2367df0-3627-4f29-9021-5b92db6d6745",
+      "fullName": "Codrina Merigo",
+      "tagLine": "Sw engineer, Xamarin developer @ Fresenius Medical Care",
+      "profilePicture": "https://sessionize.com/image/2b22-400o400o1-5857e413-ec9d-48bb-934f-d0c53570253d.jpg"
+    },
+    {
+      "id": "67a075a3-a111-4116-bd44-a25a01485959",
+      "fullName": "Dennie Declercq",
+      "tagLine": "Developer & President DDSoft",
+      "profilePicture": "https://sessionize.com/image/2c3a-400o400o1-8bfc401c-4f95-4a05-b08c-181809cb681f.jpg"
+    },
+    {
+      "id": "0eb331c1-e952-495e-880f-0f688347888b",
+      "fullName": "James Montemagno",
+      "tagLine": "Principal Program Manager for Client Developer Tools at Microsoft",
+      "profilePicture": "https://sessionize.com/image/d663-400o400o1-c8-199a-444d-bfaf-e8f8cd8a6248.9230af17-d1e6-4730-a3f7-08518dc29205.jpg"
+    },
+    {
+      "id": "b7f7d2a2-73f9-4eaa-8971-d328d43cd820",
+      "fullName": "Jean-Marie Alfonsi",
+      "tagLine": "Freelance software engineer at Sharpnado",
+      "profilePicture": "https://sessionize.com/image/a85b-400o400o1-d350ec2b-34f3-4aab-a169-9e602777f3cd.jpg"
+    },
+    {
+      "id": "b8ef9417-ccbc-48aa-8e0d-f7f1447d3fcb",
+      "fullName": "Konrad Müller",
+      "tagLine": "Software engineer",
+      "profilePicture": "https://sessionize.com/image/8d98-400o400o1-17-ccbc-48aa-8e0d-f7f1447d3fcb.58ffe1cc-485d-4df2-9420-bd36afbdaa72.jpg"
+    },
+    {
+      "id": "79741134-06bb-4596-bc44-40edd9e03f6b",
+      "fullName": "Luce Carter",
+      "tagLine": "Microsoft MVP and lover of code, sunshine and trains.",
+      "profilePicture": "https://sessionize.com/image/ae1a-400o400o1-34-06bb-4596-bc44-40edd9e03f6b.d01df39f-d077-4912-93e5-783d23ce649e.jpg"
+    },
+    {
+      "id": "df2bc5ca-5a6b-48a9-87ac-71c817d7b240",
+      "fullName": "Mark Allibone",
+      "tagLine": "Lead Mobile Developer Rey Automation, Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/ab07-400o400o1-ca-5a6b-48a9-87ac-71c817d7b240.41b186a0-9d62-449a-90de-a16a94894db1.jpg"
+    },
+    {
+      "id": "9c0df06d-560b-4f1c-8ac7-83a072ba9e34",
+      "fullName": "Sandra Ahlgrimm",
+      "tagLine": "Cloud Developer Advocate at Microsoft",
+      "profilePicture": "https://sessionize.com/image/492e-400o400o1-c8-199a-444d-bfaf-e8f8cd8a6248.e192e92f-7b80-4d13-8be7-0070af1d5076.jpg"
+    },
+    {
+      "id": "b7a70ce8-9c7d-4760-aefb-e9fc2dfc5a3a",
+      "fullName": "Stefanija Popovska",
+      "tagLine": "Xamarin Developer @ MCA dooel",
+      "profilePicture": "https://sessionize.com/image/626e-400o400o1-e8-9c7d-4760-aefb-e9fc2dfc5a3a.f6e4e965-1a3c-482b-8ef4-c2cb7d3dbe9d.jpeg"
+    },
+    {
+      "id": "09ff94a6-2d04-412b-bfff-8e29ba138de4",
+      "fullName": "Tomasz Cielecki",
+      "tagLine": "Software Developer at TrackMan. Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/9bcb-400o400o1-a6-2d04-412b-bfff-8e29ba138de4.c180fa8c-8a5b-406c-8cd1-f038ed921416.jpg"
+    }
+  ],
+  "sessions": [
+    {
+      "title": "Containers; Local and in Cloud for Development, Testing and Production",
+      "description": "Every mobile app will need a backend at some point. That needs to run somewhere and somehow. We actually don’t care as long as it is fast, reliable and preferably cheap. Containers allow us a lightweight execution. In this keynote Microsoft’s Cloud Developer Advocate Sandra Ahlgrimm will guide you through the journey of container usage on your local dev machine and in the cloud for development, testing and production.",
+      "startsAt": "2019-10-25T09:15:00",
+      "endsAt": "2019-10-25T10:05:00",
+      "speakers": [
+        "9c0df06d-560b-4f1c-8ac7-83a072ba9e34"
+      ]
+    },
+    {
+      "title": "An introduction to authentication with OpenID Connect",
+      "description": "Nearly every modern connected app needs to have a secure authentication mechanism, either to simply authenticate the user or to allow further authorization to access data. This talk will present the OpenID Connect standard as an authentication solution for your app and how it integrates in your backend system.",
+      "startsAt": "2019-10-25T10:10:00",
+      "endsAt": "2019-10-25T11:00:00",
+      "speakers": [
+        "b8ef9417-ccbc-48aa-8e0d-f7f1447d3fcb"
+      ]
+    },
+    {
+      "title": "Building your IoT front end with Xamarin Froms",
+      "description": "Have you ever wondered how hard it would be to build to your own little internet-connected sensor system? See how to connect devices to the cloud with Azure IoT. Moreover, once in the cloud, how the data can be processed. By using SignalR clients are provided with a continuous stream of data and insights. \r\nDiscover how to build a small scale monitoring system and observe it on a mobile app developed with Xamarin Forms.",
+      "startsAt": "2019-10-25T10:10:00",
+      "endsAt": "2019-10-25T11:00:00",
+      "speakers": [
+        "df2bc5ca-5a6b-48a9-87ac-71c817d7b240"
+      ]
+    },
+    {
+      "title": "Improve people with disabilities life with Xamarin.Essentials",
+      "description": "This talk is for the makers! For the makers who are making apps for people with disabilities. Apps to give quality of life to people who aren’t used to use a smartphone. In this talk we are going to focus on how Xamarin.Essentials can make steps to develop accessible apps a lot more easy. Xamarin.Essentials is a NuGet package you can download in combination with Xamarin.Android, Xamarin.iOS and Xamarin.Forms. This is going to be an awesome session that combines technical stuff  and non-technical “social care”. ",
+      "startsAt": "2019-10-25T11:10:00",
+      "endsAt": "2019-10-25T12:00:00",
+      "speakers": [
+        "67a075a3-a111-4116-bd44-a25a01485959"
+      ]
+    },
+    {
+      "title": "Implementing push notifications with VS App Center in Xamarin.Forms apps",
+      "description": "Visual Studio App Center is constantly evolving and getting better. One of the greatest features of VS App Center is that you can use it to send Push Notifications to your cross-platform mobile apps and engage users with them. We all can agree that push notifications are very important and useful when we speak about mobile apps. Using VS App Center you can send notifications through the UI of VS App Center, but most importantly you have availability to send them from your backend using VS App Center REST API. In this session I will cover all steps required for implementing push notification feature in Xamarin.Forms apps using Visual Studio App Center.",
+      "startsAt": "2019-10-25T11:10:00",
+      "endsAt": "2019-10-25T12:00:00",
+      "speakers": [
+        "1df97ab4-43df-4b8b-a78c-805eac480c3d"
+      ]
+    },
+    {
+      "title": "What's New, Hot, & Awesome for Xamarin Developers!",
+      "description": "Join Microsoft’s James Montemagno for a special presentation showing off all of the amazing advancements that are happening for mobile development with Xamarin and .NET. In this packed session James will show off everything that you need to know that is coming for Xamarin developers in the SDKs, Ecosystem Tooling, and much more! You don’t want to miss out!",
+      "startsAt": "2019-10-25T13:00:00",
+      "endsAt": "2019-10-25T13:50:00",
+      "speakers": [
+        "0eb331c1-e952-495e-880f-0f688347888b"
+      ]
+    },
+    {
+      "title": "Coming out of your Shell - What's new in Xamarin.Forms 4.0",
+      "description": "Xamarin.Forms 4.0 came out in May 2019 and with it, a load of new features to make your life easier as a developer.\r\nIn this talk, Luce will discuss the new features including Shell, a navigation framework taking away some of the complexities when developing UI's that all link together.",
+      "startsAt": "2019-10-25T14:00:00",
+      "endsAt": "2019-10-25T14:50:00",
+      "speakers": [
+        "79741134-06bb-4596-bc44-40edd9e03f6b"
+      ]
+    },
+    {
+      "title": "MVVM async loading: free yourself from IsBusy = true",
+      "description": "This session talks about the issue of using two much inheritance in the view models and brings technical solutions to solve this by composition.\r\n\r\nIt focus on the async loading of the view models and the handling of the result (error, empty state).\r\n\r\nThe target audience is MVVM/Xaml developers (UWP/WPF/Xamarin.Forms).\r\n\r\n## Common inheritance scenario\r\n\r\nWe'll start by seeing how the async loading view model initialization is done most of the time:\r\n\r\n### excerpts\r\n\r\n*So, here is our shameless initialization code (spoiler alert: this is wrong).*\r\n\r\n```csharp\r\npublic async void Initialize(object parameter)\r\n{\r\n  await InitializationCodeAsync((int)parameter);\r\n}\r\n```\r\n\r\n*This is a little better:*\r\n\r\n```csharp\r\npublic async void Initialize(object parameter)\r\n{\r\n  try\r\n  {\r\n    await InitializationCodeAsync((int)parameter);\r\n  }\r\n  catch (Exception exception)\r\n  {\r\n    ExceptionHandler.Handle(exception);\r\n  }\r\n}\r\n\r\n```\r\n\r\n*But wait, I want to give a UI feedback to the user:*\r\n\r\n```csharp\r\npublic async void Initialize(object parameter)\r\n{\r\n  IsBusy = true;\r\n  HasErrors = false;\r\n  try\r\n  {\r\n    await InitializationCodeAsync((int)parameter);\r\n  }\r\n  catch (Exception exception)\r\n  {\r\n    ExceptionHandler.Handle(exception);\r\n    HasErrors = true;\r\n    ErrorMessage =\r\n  }\r\n  finally\r\n  {\r\n    IsBusy = false;\r\n  }\r\n}\r\n```\r\n\r\n*Pfew, this is a lot of copy paste on each of my VM, I will create a base VM for this, and all my VM will inherit from that.*\r\n\r\n*Then stop it, stop that nonsense. Just use Composition over Inheritance.*\r\n\r\n## Compostion\r\n\r\nWe'll compare this code to the use of a component responsible for the view model state management:\r\n\r\n```csharp\r\npublic ViewModelLoader < ObservableCollection < SillyDudeVmo > >\r\nSillyPeopleLoader { get; }\r\n\r\npublic void Initialize(object parameter)\r\n{\r\nSillyPeopleLoader.Load(LoadSillyPeopleAsync);\r\n}\r\n```\r\n\r\n\r\n### NotifyTask\r\n\r\nThen we will deconstruct the ViewModelLoader object piece by piece to show its true nature:\r\n\r\n#### excerpts\r\n\r\n*The ViewModelLoader is built around A Task wrapper implementing INotifyPropertyChanged: the NotifyTask.*\r\n\r\n*This component has been created by Stephen Cleary years ago (https://msdn.microsoft.com/en-us/magazine/dn605875.aspx).*\r\n\r\n*It handles all the common states of a ViewModel loading:*\r\n\r\n1. Loading\r\n2. Success\r\n3. Empty state\r\n4. Error (and all sub exceptions with a ErrorHandler: Func < Exception, string >)\r\n5. Refresh\r\n\r\n*So instead of giving to a parent view model the responsibility to handle all these for us, we just create a reusable component to do so, achieving a clearer architecture.*\r\n\r\n## The View side\r\n\r\nWe'll then finish by a showcase of a component I wrote for Xamarin.Forms:\r\n\r\n### excerpts\r\n\r\n*The TaskLoaderView (https://www.sharpnado.com/taskloaderview-async-init-made-easy/) is the natural brother of the ViewModelLoader: you bind a ViewModelLoader to a TaskLoaderView.*\r\n\r\n*This component removes the async initialization pain from the view models (try catch / async void / IsBusy / IsInitialized / base view models / ...), and the IsVisible properties from the Views, by using Composition.*\r\n\r\n*Now prepare to be be dazzled!*\r\n\r\n*Dazzling demo*\r\n\r\nClap, clap, clap.\r\nTHE END.",
+      "startsAt": "2019-10-25T14:00:00",
+      "endsAt": "2019-10-25T14:50:00",
+      "speakers": [
+        "b7f7d2a2-73f9-4eaa-8971-d328d43cd820"
+      ]
+    },
+    {
+      "title": "DevOps: Continuous delivery for Xamarin application, Azure DevOps and App Center",
+      "description": "Manual distribution on mobile applications can be a tedious process for all stakeholders (developers, testers, clients). The process of building, testing, packaging & distribution needs to be streamlined to the point where it’s a single push of a button. I will tackle the problems that need to be addressed in the entire flow such that the developers will focus on delivering new functionality, rather than repeating the same brittle delivery procedure.\r\n\r\nThe presentation will include a use case where I’ll demo the entire process of a CI/CT/CD hands-on. I’ll develop a sample application from “New Project” to Production.",
+      "startsAt": "2019-10-25T15:00:00",
+      "endsAt": "2019-10-25T15:50:00",
+      "speakers": [
+        "b7a70ce8-9c7d-4760-aefb-e9fc2dfc5a3a"
+      ]
+    },
+    {
+      "title": "Industry 4.0: Standalone smartwatches, are we there yet?",
+      "description": "What seemed like a nice gizmo from James Bond movies is now part of everyday life. Smartwatches are seeing major adoption on the streets and they do not seem to be \"just a fad\". But... are they ready to be used in industrial environments? Will the factory-worker of the future have this companion on his/her wrist or will it be stuck in the consumer-only market forever?\r\n\r\nTo jump with both feet into the future, we challenged ourselves to build a stand-alone smartwatch app for WearOS and Tizen to support factory workers in a construction plant. Xamarin being our framework of choice. \r\n\r\nFrom the start, this project raised a ton of questions:\r\n\r\n- How do we connect the application to all the machines we got?\r\n- What tweaks you need to make the battery last a full 8-hour shift?\r\n- How to stop the app from getting killed by the OS?\r\n- How do we make sure employees can not use the watch to surf the web?\r\n- Can we provision 100s of devices in a quick and simple way?\r\n- ... and many more.\r\n\r\nDuring this talk we will answer all these questions, show you our setup and architecture for the project and give you our view on the future of \"smartwatches for industry 4.0\".",
+      "startsAt": "2019-10-25T15:00:00",
+      "endsAt": "2019-10-25T15:50:00",
+      "speakers": [
+        "95beb657-d231-4867-8a6a-acab2d5ceb7a"
+      ]
+    },
+    {
+      "title": "Debugging Android UI",
+      "description": "Improve performance of your Android UI, using the wealth of tools provided in Android Studio and on your device.",
+      "startsAt": "2019-10-25T16:00:00",
+      "endsAt": "2019-10-25T16:50:00",
+      "speakers": [
+        "09ff94a6-2d04-412b-bfff-8e29ba138de4"
+      ]
+    },
+    {
+      "title": "UI Testing with Xamarin.Forms",
+      "description": "Learn more about the UI Test for Xamarin.Forms using a BDD approach. Also a demo on writing and have all green tests for your app.",
+      "startsAt": "2019-10-25T16:00:00",
+      "endsAt": "2019-10-25T16:50:00",
+      "speakers": [
+        "d2367df0-3627-4f29-9021-5b92db6d6745"
+      ]
+    }
+  ],
+  "galleryAlbumId": "cologne-2019"
+}

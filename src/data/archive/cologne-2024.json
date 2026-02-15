@@ -1,0 +1,191 @@
+{
+  "id": "cologne-2024",
+  "title": ".NET MAUI Day Cologne 2024",
+  "date": "2024-10-11",
+  "location": {
+    "name": "Microsoft Office in Cologne",
+    "address": "Microsoft Cologne Office - 5th Floor Holzmarkt 2, 50676 Köln Germany",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.709543368347!2d6.963219500000001!3d50.9290898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf25b4bb4cf92b%3A0x80c4f5fba887b23b!2sMicrosoft%20Germany%20GmbH!5e0!3m2!1sen!2snl!4v1704618839331!5m2!1sen!2snl"
+  },
+  "sponsors": [
+    {
+      "name": "Microsoft",
+      "logo": "microsoft",
+      "url": "https://www.microsoft.com",
+      "boost": false
+    },
+    {
+      "name": "Syncfusion",
+      "logo": "syncfusion",
+      "url": "https://syncfusion.com/",
+      "boost": false
+    },
+    {
+      "name": "MSG",
+      "logo": "msg",
+      "url": "https://www.msg.group/de/",
+      "boost": false
+    },
+    {
+      "name": "Grial UI Kit",
+      "logo": "grial",
+      "url": "https://grialkit.com/",
+      "boost": false
+    },
+    {
+      "name": "Telerik",
+      "logo": "telerik",
+      "url": "https://www.telerik.com/maui-ui",
+      "boost": false
+    },
+    {
+      "name": "JetBrains",
+      "logo": "jetbrains",
+      "url": "https://jetbrains.com/",
+      "boost": false
+    },
+    {
+      "name": "Sessionize",
+      "logo": "sessionize",
+      "url": "https://sessionize.com",
+      "boost": false
+    }
+  ],
+  "speakers": [
+    {
+      "id": "ef8b6ff6-13ba-451c-8e49-d22ffffe9cbe",
+      "fullName": "Damian Antonowicz",
+      "tagLine": "SAFe System Architect",
+      "profilePicture": "https://sessionize.com/image/f8d5-400o400o1-NcyLJHKWB7zQEW1K3Qcyxk.jpg"
+    },
+    {
+      "id": "403a5ba3-d18d-4d10-9f42-0387d545f2fb",
+      "fullName": "Dan Ciprian Ardelean",
+      "tagLine": "Owner of Mahiz Srl",
+      "profilePicture": "https://sessionize.com/image/e3f8-400o400o1-9gzKXWBmEEhyLFPckqUHYF.jpg"
+    },
+    {
+      "id": "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15",
+      "fullName": "David Ortinau",
+      "tagLine": "Principal Product Manager at Microsoft",
+      "profilePicture": "https://sessionize.com/image/faf7-400o400o1-46-6e2a-4eae-9b6d-9cf8ff0ecf15.9864fb21-e931-4e29-a40d-21791a131de8.png"
+    },
+    {
+      "id": "a0dc3822-2379-40ff-8ba4-08f28269c4c5",
+      "fullName": "Maddy Montaquila",
+      "tagLine": "Senior Product Manager, .NET at Microsoft",
+      "profilePicture": "https://sessionize.com/image/8b52-400o400o1-22-2379-40ff-8ba4-08f28269c4c5.b9d59a13-f4c1-4f14-b735-c25d2efad143.jpg"
+    },
+    {
+      "id": "df2bc5ca-5a6b-48a9-87ac-71c817d7b240",
+      "fullName": "Mark Allibone",
+      "tagLine": "Technical Lead at Rey Technology, Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/ab07-400o400o1-ca-5a6b-48a9-87ac-71c817d7b240.41b186a0-9d62-449a-90de-a16a94894db1.jpg"
+    },
+    {
+      "id": "28fcff43-a3db-4eeb-bc74-a9cb943cfb2c",
+      "fullName": "Sweekriti Satpathy",
+      "tagLine": "Principal Software Engineer at Microsoft",
+      "profilePicture": "https://sessionize.com/image/a580-400o400o1-43-a3db-4eeb-bc74-a9cb943cfb2c.bc630319-2584-4c58-a364-a441dfd4a803.jpg"
+    }
+  ],
+  "sessions": [
+    {
+      "title": "Walk-in & Registration",
+      "description": "Welcome, come in! It's so nice to see you!",
+      "startsAt": "2024-10-11T08:00:00",
+      "endsAt": "2024-10-11T08:45:00",
+      "speakers": []
+    },
+    {
+      "title": "Shaping the Future of .NET MAUI",
+      "description": "What can you expect to see from .NET MAUI now that we have shipped 4 major releases since Xamarin and .NET Framework? As we have seen so many companies journey through these releases and achieve great production success, we are optimistically setting our sights on what we can do next to help you improve your apps and daily productivity. Join me for a look into potential futures for building client applications with .NET MAUI, and lend your voice to the conversation.",
+      "startsAt": "2024-10-11T08:45:00",
+      "endsAt": "2024-10-11T09:45:00",
+      "speakers": [
+        "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15"
+      ]
+    },
+    {
+      "title": "Lessons learned from migrating to .NET MAUI",
+      "description": "During the session I will present our experiences and lessons learned from migrating Demant mobile application from Xamarin.Forms to .NET MAUI, which is being used by hundreds of thousands of our hearing aids users around the world. OneApp is consisting of 12 separated modules and was migrated by 7 Agile Teams across two Agile Release Trains working in SAFe methodology.",
+      "startsAt": "2024-10-11T09:45:00",
+      "endsAt": "2024-10-11T10:45:00",
+      "speakers": [
+        "ef8b6ff6-13ba-451c-8e49-d22ffffe9cbe"
+      ]
+    },
+    {
+      "title": "Short break",
+      "description": "Really short. Not sure if you will have time to get coffee _and_ go to the bathroom so... Choose wisely!",
+      "startsAt": "2024-10-11T10:45:00",
+      "endsAt": "2024-10-11T11:00:00",
+      "speakers": []
+    },
+    {
+      "title": "Enterprise applications with .NET MAUI",
+      "description": "Remember the excitement of finally shipping your application, thinking that the main challenge left is addressing some minor bugs during its normal lifecycle? However, imagine your client is a bank or an airport that requires a Mobile Application Penetration Test (MAPT). Suddenly, you realize there are critical security considerations you haven't accounted for.\r\n\r\nIn this session, we will explore essential security aspects for your .NET MAUI application. Topics include reverse engineering, code obfuscation, code injection using FridaX, and man-in-the-middle attacks. Join us to understand how to fortify your application against sophisticated security threats and ensure its robustness in high-stakes environments.",
+      "startsAt": "2024-10-11T11:00:00",
+      "endsAt": "2024-10-11T12:00:00",
+      "speakers": [
+        "403a5ba3-d18d-4d10-9f42-0387d545f2fb"
+      ]
+    },
+    {
+      "title": "Lunch",
+      "description": "Thank you so much Syncfusion for providing us with this delicious lunch! omnomnom...",
+      "startsAt": "2024-10-11T12:00:00",
+      "endsAt": "2024-10-11T13:00:00",
+      "speakers": []
+    },
+    {
+      "title": "How to Avoid a Mobile App-pocalypse: DevOps with Azure and GitHub",
+      "description": "Are you ready to take your .NET MAUI apps to the next level? Do you want to learn how to automate and streamline your development process with DevOps pipelines? If so, this session is for you!\r\n\r\nIn this session, we'll walk you through the steps of setting up DevOps pipelines for .NET MAUI apps using GitHub Actions and Azure DevOps. You'll learn how to build, test, and distribute your apps with ease and confidence. You'll also discover some tips and tricks to optimize your builds and reduce errors.\r\n\r\nBut wait, there's more! We'll also show you how to create DevOps pipelines for .NET MAUI Blazor Hybrid apps, which combine the power of .NET and web technologies. You'll see how to leverage the best of both worlds and create stunning cross-platform apps.\r\n\r\nDon't miss this opportunity to learn and improve your .NET MAUI DevOps skills. Checkout this fun and informative session and get ready to rock your DevOps pipelines!",
+      "startsAt": "2024-10-11T13:00:00",
+      "endsAt": "2024-10-11T14:00:00",
+      "speakers": [
+        "28fcff43-a3db-4eeb-bc74-a9cb943cfb2c"
+      ]
+    },
+    {
+      "title": "Let's turn your website into a hybrid .NET MAUI app",
+      "description": "Web apps are great and easy to deploy. However, they come with limitations, especially on mobile devices, where access to those platform features could be a real game changer for your users. This talk will discuss what it takes to embed your website into a .NET MAUI app. Whether your app is Angular, React or Vue - you will know your options and how to enhance your website with mobile features such as Bluetooth Low Energy (BLE), push notifications and friends using C# and .NET MAUI.",
+      "startsAt": "2024-10-11T14:00:00",
+      "endsAt": "2024-10-11T15:00:00",
+      "speakers": [
+        "df2bc5ca-5a6b-48a9-87ac-71c817d7b240"
+      ]
+    },
+    {
+      "title": "Intro to Aspire for .NET MAUI developers",
+      "description": "Explore the groundbreaking .NET Aspire technology stack designed for cloud-native development. We'll start from the basics - what even is cloud-native?! - and then dive into the various aspects of Aspire, including integrations, orchestration, the dashboard, and deployment.\r\n\r\nBut what does all of this mean for .NET MAUI developers? Can I even use this and what for?\r\n\r\nIn this session, join Maddy Montaquila, Senior .NET PM, to have all these questions and more answered!",
+      "startsAt": "2024-10-11T15:00:00",
+      "endsAt": "2024-10-11T16:00:00",
+      "speakers": [
+        "a0dc3822-2379-40ff-8ba4-08f28269c4c5"
+      ]
+    },
+    {
+      "title": "Another short break",
+      "description": "Need more coffee? Go get it now! And there might be a special treat somewhere too... 🤤",
+      "startsAt": "2024-10-11T15:55:00",
+      "endsAt": "2024-10-11T16:25:00",
+      "speakers": []
+    },
+    {
+      "title": "Open Forum/Q&A",
+      "description": "Join us for a group discussion. Ask the things you've always wanted to ask or say the things you've always wanted to say. Did we mention nothing on this day is recorded...? 👀",
+      "startsAt": "2024-10-11T16:25:00",
+      "endsAt": "2024-10-11T17:15:00",
+      "speakers": []
+    },
+    {
+      "title": "Auf Wiedersehen! Raffle and MAUI has left the building",
+      "description": "This is where we say goodbye! Thank you everyone for coming! But not before we raffle away some prizes and thank everyone of you.\n\nWe need to be out before 6pm though.",
+      "startsAt": "2024-10-11T17:15:00",
+      "endsAt": "2024-10-11T18:00:00",
+      "speakers": []
+    }
+  ],
+  "galleryAlbumId": "cologne-2024"
+}

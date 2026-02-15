@@ -1,0 +1,201 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getArchiveEvents } from "../../data/archive";
+import type { ArchiveEvent, Speaker } from "../../data/archive";
+
+export async function getStaticPaths() {
+  const events = getArchiveEvents();
+  return events.map((event) => ({
+    params: { event: event.id },
+    props: { event },
+  }));
+}
+
+const { event } = Astro.props as { event: ArchiveEvent };
+
+const formattedDate = new Date(event.date).toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+
+// Build speaker lookup for schedule
+const speakerMap = new Map(event.speakers.map((s) => [s.id, s]));
+
+// Sort sessions by start time
+const sortedSessions = [...event.sessions].sort(
+  (a, b) => new Date(a.startsAt).getTime() - new Date(b.startsAt).getTime()
+);
+
+function formatTime(iso: string) {
+  return new Date(iso).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" });
+}
+
+function sessionDuration(start: string, end: string) {
+  const mins = (new Date(end).getTime() - new Date(start).getTime()) / 60000;
+  return `${mins} min`;
+}
+---
+
+<Layout isStaticHeader={true} pageTitle={`${event.title} | Archive | .NET MAUI Day`}>
+  <!-- Hero -->
+  <section class="bg-brand-dark py-24">
+    <div class="container max-w-5xl mx-auto px-4">
+      <div class="mb-8">
+        <a href="/archive" class="text-brand-extra hover:underline text-sm font-bold">
+          <i class="fa-solid fa-arrow-left mr-1"></i> Back to Archive
+        </a>
+      </div>
+      <div class="text-center">
+        <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">{formattedDate}</p>
+        <h1 class="text-white text-4xl md:text-5xl uppercase font-header font-bold mb-4">{event.title}</h1>
+        {event.location.name && (
+          <p class="text-brand-light/70 text-lg">
+            <i class="fa-solid fa-location-dot mr-2"></i>{event.location.name}
+          </p>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- Speakers -->
+  {event.speakers.length > 0 && (
+    <section class="bg-brand-dark py-16 border-t border-white/10">
+      <div class="container max-w-5xl mx-auto px-4">
+        <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase text-center">Who Spoke</p>
+        <h2 class="text-white text-3xl uppercase font-header font-bold mb-12 text-center">Speakers</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+          {event.speakers.map((speaker) => (
+            <div class="text-center">
+              <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-2 border-brand-extra/30 bg-brand-dark">
+                {speaker.profilePicture ? (
+                  <img
+                    src={speaker.profilePicture}
+                    alt={speaker.fullName}
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center text-gray-400">
+                    <i class="fa-solid fa-user text-3xl"></i>
+                  </div>
+                )}
+              </div>
+              <h3 class="text-white font-bold font-header text-sm">{speaker.fullName}</h3>
+              {speaker.tagLine && (
+                <p class="text-brand-light/50 text-xs mt-1 line-clamp-2">{speaker.tagLine}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Schedule -->
+  {sortedSessions.length > 0 && (
+    <section class="bg-brand-dark py-16 border-t border-white/10">
+      <div class="container max-w-5xl mx-auto px-4">
+        <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase text-center">What Happened</p>
+        <h2 class="text-white text-3xl uppercase font-header font-bold mb-12 text-center">Schedule</h2>
+        <div class="space-y-4 max-w-3xl mx-auto">
+          {sortedSessions.map((session) => (
+            <div class="bg-white/5 rounded-lg p-5 border border-white/10">
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex-1">
+                  <h3 class="text-white font-bold font-header text-lg">{session.title}</h3>
+                  {session.speakers.length > 0 && (
+                    <p class="text-brand-extra text-sm mt-1">
+                      {session.speakers.map((sid) => speakerMap.get(sid)?.fullName).filter(Boolean).join(', ')}
+                    </p>
+                  )}
+                  {session.description && (
+                    <p class="text-brand-light/50 text-sm mt-2 line-clamp-3">{session.description}</p>
+                  )}
+                </div>
+                <div class="text-right shrink-0">
+                  <p class="text-brand-light/70 text-sm font-bold">
+                    {formatTime(session.startsAt)}
+                  </p>
+                  <p class="text-brand-light/50 text-xs">
+                    {sessionDuration(session.startsAt, session.endsAt)}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Location -->
+  {event.location.name && event.location.name !== 'Online' && (
+    <section class="bg-brand-dark py-16 border-t border-white/10">
+      <div class="container max-w-5xl mx-auto px-4">
+        <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase text-center">Where It Was</p>
+        <h2 class="text-white text-3xl uppercase font-header font-bold mb-12 text-center">Location</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-white font-bold font-header text-xl mb-2">{event.location.name}</h3>
+            {event.location.address && (
+              <p class="text-brand-light/70 text-md">{event.location.address}</p>
+            )}
+          </div>
+          {event.location.mapsEmbedUrl && (
+            <div class="rounded-lg overflow-hidden border border-white/10">
+              <iframe
+                src={event.location.mapsEmbedUrl}
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Sponsors -->
+  {event.sponsors.length > 0 && (
+    <section class="bg-brand-dark py-16 border-t border-white/10">
+      <div class="container max-w-5xl mx-auto px-4">
+        <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase text-center">Made Possible By</p>
+        <h2 class="text-white text-3xl uppercase font-header font-bold mb-12 text-center">Sponsors</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 items-center justify-items-center">
+          {event.sponsors.map((sponsor) => (
+            <a href={sponsor.url} target="_blank" rel="noopener noreferrer" class="block p-4 hover:opacity-80 transition">
+              <img
+                src={`/images/sponsors/${sponsor.logo}.png`}
+                alt={sponsor.name}
+                class="max-h-16 max-w-[160px] object-contain"
+                loading="lazy"
+              />
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Gallery Link -->
+  {event.galleryAlbumId && (
+    <section class="bg-brand-dark py-16 border-t border-white/10">
+      <div class="container max-w-5xl mx-auto px-4 text-center">
+        <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">Relive The Moments</p>
+        <h2 class="text-white text-3xl uppercase font-header font-bold mb-8">Photos</h2>
+        <a
+          href={`/gallery/${event.galleryAlbumId}`}
+          class="inline-flex items-center gap-2 bg-brand-extra hover:bg-brand-extraDark text-white font-bold py-3 px-8 rounded-lg transition"
+        >
+          <i class="fa-solid fa-images"></i>
+          View Photo Gallery
+        </a>
+      </div>
+    </section>
+  )}
+</Layout>

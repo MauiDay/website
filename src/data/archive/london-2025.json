@@ -1,0 +1,150 @@
+{
+  "id": "london-2025",
+  "title": ".NET MAUI Day London 2025",
+  "date": "2025-03-14",
+  "location": {
+    "name": "Skills Matter | CodeNode",
+    "address": "10 South Pl, London EC2M 7EB, United Kingdom",
+    "mapsEmbedUrl": ""
+  },
+  "sponsors": [],
+  "speakers": [
+    {
+      "id": "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15",
+      "fullName": "David Ortinau",
+      "tagLine": "Principal Product Manager at Microsoft",
+      "profilePicture": "https://sessionize.com/image/faf7-400o400o1-46-6e2a-4eae-9b6d-9cf8ff0ecf15.9864fb21-e931-4e29-a40d-21791a131de8.png"
+    },
+    {
+      "id": "09c0e65a-d15f-4b71-98c2-473a3b6d21a9",
+      "fullName": "Gerald Versluis",
+      "tagLine": "Senior Software Engineer @ Microsoft",
+      "profilePicture": "https://sessionize.com/image/b201-400o400o1-ntLMbbjJuj72fQ7cHYjWRN.jpg"
+    },
+    {
+      "id": "f071a684-5463-472e-88f5-34bcf5deb95c",
+      "fullName": "Guy Barker",
+      "tagLine": "An Explorer in Accessibility",
+      "profilePicture": "https://sessionize.com/image/7782-400o400o1-JC2bYQszPeCPDPchdUrVA4.jpg"
+    },
+    {
+      "id": "b7f7d2a2-73f9-4eaa-8971-d328d43cd820",
+      "fullName": "Jean-Marie Alfonsi",
+      "tagLine": "Freelance software engineer at Sharpnado",
+      "profilePicture": "https://sessionize.com/image/a26d-400o400o1-KksBbheQncy22i5MFFDpiQ.png"
+    },
+    {
+      "id": "13697e91-5397-4ecb-85f4-1cbfe3f28ba3",
+      "fullName": "Maddy Montaquila",
+      "tagLine": "Senior PM at Microsoft",
+      "profilePicture": "https://sessionize.com/image/92c3-400o400o1-UhP8TiUoZYaK1QXDboFLde.jpg"
+    },
+    {
+      "id": "df2bc5ca-5a6b-48a9-87ac-71c817d7b240",
+      "fullName": "Mark Allibone",
+      "tagLine": "Technical Lead at Rey Technology, Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/ab07-400o400o1-ca-5a6b-48a9-87ac-71c817d7b240.41b186a0-9d62-449a-90de-a16a94894db1.jpg"
+    },
+    {
+      "id": "bf8fcb98-bdff-4eb5-b208-325c6af57606",
+      "fullName": "Matt Lacey",
+      "tagLine": "Independent developer and author",
+      "profilePicture": "https://sessionize.com/image/0702-400o400o1-98-bdff-4eb5-b208-325c6af57606.eee72e8d-1040-4e6a-86e4-f638ec26b61a.jpg"
+    },
+    {
+      "id": "15d72802-a7a1-4901-8e20-a3520013466f",
+      "fullName": "Norman Mackay",
+      "tagLine": "Living and breathing Xamarin/MAUI since 2014",
+      "profilePicture": "https://sessionize.com/image/5d7e-400o400o1-BmUwj5ZzZgn8s2QhAyjGh.jpg"
+    },
+    {
+      "id": "dec27ceb-32fb-4bc8-b45d-352a52e0191a",
+      "fullName": "Rogier van der Hee",
+      "tagLine": "Full stack developer and entrepeneur",
+      "profilePicture": "https://sessionize.com/image/b22b-400o400o1-s7WZfzPRwDndTVHi59ugfo.jpg"
+    }
+  ],
+  "sessions": [
+    {
+      "title": "Registration",
+      "description": "Come along to register and network before the content starts",
+      "startsAt": "2025-03-14T08:30:00",
+      "endsAt": "2025-03-14T09:00:00",
+      "speakers": []
+    },
+    {
+      "title": ".NET MAUI Now and Next",
+      "description": "We continue to pursue our mission to delight developers and empower you to achieve more with our SDKs and tools. While .NET 9 is still new and shiny, we are already working on .NET 10. In this session I'll share the product highlights and candidly share our vision for the future of mobile and desktop cross-platform development. ",
+      "startsAt": "2025-03-14T09:00:00",
+      "endsAt": "2025-03-14T10:00:00",
+      "speakers": [
+        "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15"
+      ]
+    },
+    {
+      "title": "Be bold: animate!",
+      "description": "Most devs shy away from animations thinking it's too complicated...\r\nBut thanks to Tasks and async await, it's super easy to create basic animations: translating, fading, scaling...\r\nWe will see how we can use those animations for creating real-world components, like an animated floating button, or a scrolling-based toolbar revealer.\r\nThroughout the session, we will slowly accumulate confidence until becoming a true animation master \\o/\r\n",
+      "startsAt": "2025-03-14T10:15:00",
+      "endsAt": "2025-03-14T11:00:00",
+      "speakers": [
+        "b7f7d2a2-73f9-4eaa-8971-d328d43cd820"
+      ]
+    },
+    {
+      "title": "Rethinking UI code",
+      "description": "We all know the challenges and limitations of XAML. So, let me show you how to think about UI code in a way that overcomes these issues and enables you to create UI code that is easy to write and maintain.\r\nWe'll look at XAML, C#Markup, and more(!) and see how to write code unlike anything you've written before. ",
+      "startsAt": "2025-03-14T11:30:00",
+      "endsAt": "2025-03-14T12:15:00",
+      "speakers": [
+        "bf8fcb98-bdff-4eb5-b208-325c6af57606"
+      ]
+    },
+    {
+      "title": "How hard can it be? Porting 2 apps from Forms to MAUI",
+      "description": "For a small company in the Netherlands, two apps were created in 2014-2015 to accompany custom hardware. One is for an electronic ignition system for classic cars, the other for a Battery Management System (BMS) for lithium cells. Both have a custom serial protocol on top of Bluetooth Low Energy. \r\n\r\nBoth apps have been in the Stores for 10 years, first launched in 2014 using Forms 1.3 on iOS 8 and Android 5. For all these years they have been extended, updated to modern apps running on Forms 5.\r\n\r\nIn this talk we’re going to show you the hardware & apps and take you through our porting journey. What was our plan? What decisions did we take along the way? What did surprise us – even after having experience already with porting several apps previously? With both developers having 10+ years of Xamarin and mobile dev experience as well as MAUI porting experience, how hard can it be? The good, the bad and the ugly of porting.\r\n\r\nAs the saying goes, “a plan never survives contact with the enemy”, in this case was it us or MAUI?\r\n",
+      "startsAt": "2025-03-14T12:30:00",
+      "endsAt": "2025-03-14T13:15:00",
+      "speakers": [
+        "dec27ceb-32fb-4bc8-b45d-352a52e0191a",
+        "15d72802-a7a1-4901-8e20-a3520013466f"
+      ]
+    },
+    {
+      "title": "Lunch",
+      "description": "Lunch sponsored by Syncfusion",
+      "startsAt": "2025-03-14T13:15:00",
+      "endsAt": "2025-03-14T14:30:00",
+      "speakers": []
+    },
+    {
+      "title": "Figuring out what just happened in your .NET MAUI app",
+      "description": "You’ve just happily released your app, only to discover that users are encountering issues. But what’s going wrong? User feedback can be unpredictable. With Serilog, we have the foundation for creating informative, structured logs. In this session, we’ll explore how structured logs can be a game changer. You’ll learn how to leverage logs not just in production but also during development. We’ll also look at options for viewing logs and some best practices. By the end of this session, you’ll know how to use logs effectively to enhance your users’ experience without getting lost in a sea of log messages.",
+      "startsAt": "2025-03-14T14:30:00",
+      "endsAt": "2025-03-14T15:15:00",
+      "speakers": [
+        "df2bc5ca-5a6b-48a9-87ac-71c817d7b240"
+      ]
+    },
+    {
+      "title": "Building .NET MAUI Apps for Everyone",
+      "description": ".NET MAUI often makes it trivial for devs to make their apps more usable to more people, regardless of how people interact with their devices. So if different end-users prefer different colours and sizes of UI, or use a screen reader, or speech input, or a switch device to control their apps, .NET MAUI can help you support them. What’s more, if you don’t leverage some of the powerful and easy-to-use features that .NET MAUI has to offer, you might end up shipping an app that’s as unusable as many Store apps are today. .NET MAUI is here to help you and ALL your users!\r\n\r\nAt this session I’ll discuss the accessibility-related code in the Accessible Solitaire app, and demonstrate the impact of that code in the running app. Some details of this app are at https://www.linkedin.com/pulse/accessible-solitaire-ios-android-reaching-starting-line-guy-barker-8ad9e. By the end of the session, you’ll be able to consider how you can make your own .NET MAUI apps more usable to more people!",
+      "startsAt": "2025-03-14T15:30:00",
+      "endsAt": "2025-03-14T16:30:00",
+      "speakers": [
+        "f071a684-5463-472e-88f5-34bcf5deb95c"
+      ]
+    },
+    {
+      "title": "MAUI Q&A Panel",
+      "description": "This is your chance to put your burning questions to the MAUI team.",
+      "startsAt": "2025-03-14T16:40:00",
+      "endsAt": "2025-03-14T17:25:00",
+      "speakers": [
+        "09c0e65a-d15f-4b71-98c2-473a3b6d21a9",
+        "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15",
+        "13697e91-5397-4ecb-85f4-1cbfe3f28ba3"
+      ]
+    }
+  ],
+  "galleryAlbumId": "london-2025"
+}
