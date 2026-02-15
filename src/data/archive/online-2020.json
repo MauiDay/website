@@ -8,7 +8,144 @@
     "mapsEmbedUrl": ""
   },
   "sponsors": [],
-  "speakers": [],
-  "sessions": [],
+  "speakers": [
+    {
+      "id": "3f5cafb2-ab4b-48e7-8897-b6956e733ed3",
+      "fullName": "Alexandre Santos Costa",
+      "tagLine": "Xamarin Chapter Lead",
+      "profilePicture": "https://sessionize.com/image/9bd5-400o400o1-b2-ab4b-48e7-8897-b6956e733ed3.f7e3e9c6-7088-4ff5-b6cd-d71045cf85d3.JPG"
+    },
+    {
+      "id": "d2367df0-3627-4f29-9021-5b92db6d6745",
+      "fullName": "Codrina Merigo",
+      "tagLine": "Microsoft MVP - Sw Engineer, Xamarin developer @ Fresenius Medical Care",
+      "profilePicture": "https://sessionize.com/image/2b22-400o400o1-5857e413-ec9d-48bb-934f-d0c53570253d.jpg"
+    },
+    {
+      "id": "ef8b6ff6-13ba-451c-8e49-d22ffffe9cbe",
+      "fullName": "Damian Antonowicz",
+      "tagLine": "Microsoft MVP & Solutions Architect",
+      "profilePicture": "https://sessionize.com/image/8262-400o400o1-99ffac49-424f-4c9f-93f4-c29f73890751.jpg"
+    },
+    {
+      "id": "79f09910-342f-40eb-afca-334b8626200e",
+      "fullName": "Dan Siegel",
+      "tagLine": "Xamarin Consultant - Microsoft MVP - Prism Maintainer",
+      "profilePicture": "https://sessionize.com/image/2fbd-400o400o1-10-342f-40eb-afca-334b8626200e.3248abb2-0c1a-4031-9fa0-a88375c25dfc.jpg"
+    },
+    {
+      "id": "48bd99c4-b937-4a5a-9d02-e8e5a7b0c344",
+      "fullName": "Daniel Hindrikes",
+      "tagLine": "App Innovation Developer",
+      "profilePicture": "https://sessionize.com/image/b1e4-400o400o1-c4-b937-4a5a-9d02-e8e5a7b0c344.b10cfd0a-880d-44aa-bb9e-a1bafa0b3861.png"
+    },
+    {
+      "id": "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15",
+      "fullName": "David Ortinau",
+      "tagLine": "Principal Program Manager for .NET at Microsoft",
+      "profilePicture": "https://sessionize.com/image/b7d9-400o400o1-46-6e2a-4eae-9b6d-9cf8ff0ecf15.63f5eb2f-49f4-4508-b078-5f56020bc0b4.png"
+    },
+    {
+      "id": "69a76e8f-89f8-4702-a047-abcdc2a59d88",
+      "fullName": "Hussain Abbasi",
+      "tagLine": "Head of Technology at ChaiOne",
+      "profilePicture": "https://sessionize.com/image/2b62-400o400o1-8f-89f8-4702-a047-abcdc2a59d88.eefaf8ed-41bc-408a-8ec2-9a20ddc759b0.jpg"
+    },
+    {
+      "id": "3407f562-b144-492e-bc45-c6c8d067e4be",
+      "fullName": "James Clancey",
+      "tagLine": "PM Architect at Microsoft",
+      "profilePicture": "https://sessionize.com/image/6c7d-400o400o1-62-b144-492e-bc45-c6c8d067e4be.3d57ca0a-128f-4c18-88ed-c030c422a0cf.png"
+    },
+    {
+      "id": "b8ef9417-ccbc-48aa-8e0d-f7f1447d3fcb",
+      "fullName": "Konrad Müller",
+      "tagLine": "Software engineer",
+      "profilePicture": "https://sessionize.com/image/8699-400o400o1-17-ccbc-48aa-8e0d-f7f1447d3fcb.6f92ca9c-f9d1-44ed-854e-41f97faffce2.jpg"
+    }
+  ],
+  "sessions": [
+    {
+      "title": ".Net Maui MVU",
+      "description": "Get to know the \"Ins and Outs\" of MVU",
+      "startsAt": "2020-10-02T09:15:00",
+      "endsAt": "2020-10-02T10:00:00",
+      "speakers": [
+        "3407f562-b144-492e-bc45-c6c8d067e4be"
+      ]
+    },
+    {
+      "title": "Drawing advanced UIs in Xamarin",
+      "description": "When the default controls of Xamarin reach their limits, different drawing APIs can be utilized to create advanced UI components.\r\nWe will take a look at the current available options and explore how and when to use them.",
+      "startsAt": "2020-10-02T10:00:00",
+      "endsAt": "2020-10-02T10:45:00",
+      "speakers": [
+        "b8ef9417-ccbc-48aa-8e0d-f7f1447d3fcb"
+      ]
+    },
+    {
+      "title": "TinyMvvm for Xamarin.Forms",
+      "description": "TinyMvvm is an open-source library created by Daniel Hindrikes when he realized that he spends a lot of time writing the same code over and over again when he started new apps but also in the same app when adding new views and ViewModels.\r\n\r\nSome of the futures in TinyMvvm:\r\n* NavigationHelper that supports both Shell and the classic NavigationService.\r\n* Passing objects as parameters, both when using Shell and classic navigation.\r\n* ViewModel navigation with Shell.\r\n* Add BindingContext in View, but still be able to use DI in VIewModels.\r\n* Lifecycle events in ViewModels.\r\n* INotiftyPropertyChanged implementation.\r\n\r\nIn this session, Daniel will show you how to use TinyMvvm but also how it is built to get a deeper understanding of how it works under the hood.",
+      "startsAt": "2020-10-02T10:45:00",
+      "endsAt": "2020-10-02T11:30:00",
+      "speakers": [
+        "48bd99c4-b937-4a5a-9d02-e8e5a7b0c344"
+      ]
+    },
+    {
+      "title": "The recipe for Cake and Xamarin",
+      "description": "Creating cross-platform scripts in C#? It's easy with Cake! I will show how to create your first Cake script for building and deploying Xamarin apps. Tasty!",
+      "startsAt": "2020-10-02T11:30:00",
+      "endsAt": "2020-10-02T12:15:00",
+      "speakers": [
+        "ef8b6ff6-13ba-451c-8e49-d22ffffe9cbe"
+      ]
+    },
+    {
+      "title": "Accessibility in Xamarin.Forms",
+      "description": "Xamarin.Forms let us create great apps that our users love but how to bre prepared for different kind of users and disabilities? In this session I will demonstrate how to unleash all the power of XAML and the native platforms to make you apps sexy for all",
+      "startsAt": "2020-10-02T13:15:00",
+      "endsAt": "2020-10-02T14:00:00",
+      "speakers": [
+        "3f5cafb2-ab4b-48e7-8897-b6956e733ed3"
+      ]
+    },
+    {
+      "title": "Use AI In your Xamarin.Forms app to create a chatbot",
+      "description": "How to integrate a ChatBot in you Xamarin.Forms cross-platform application using Luis.AI and let your users communicate with your ChatBot using natural language.",
+      "startsAt": "2020-10-02T14:00:00",
+      "endsAt": "2020-10-02T14:45:00",
+      "speakers": [
+        "d2367df0-3627-4f29-9021-5b92db6d6745"
+      ]
+    },
+    {
+      "title": "Supercharge You Custom Controls With Control Templates",
+      "description": "What are Control Templates?\r\nControl Templates are a great way to customize your app’s view with themes and custom layouts. Xamarin.Forms has Control Templates that allow for separation of the presentation layer from the control. This enables the configuration of the UI at runtime.\r\n\r\nCan I bind my data to them?\r\nControl templates support template binding that allows data binding to the UI. This enables the control to present data bound to a binding context, and present different UIs for same data model.\r\n\r\nHow do they work?\r\nIn this session, we will go over the concept and examples of creating and consuming Control Templates. We will live code a responsive UI that is configured at runtime. You don’t want to miss it.",
+      "startsAt": "2020-10-02T14:45:00",
+      "endsAt": "2020-10-02T15:30:00",
+      "speakers": [
+        "69a76e8f-89f8-4702-a047-abcdc2a59d88"
+      ]
+    },
+    {
+      "title": "Mobile DevOps with Xamarin Applications",
+      "description": "Gone are the days of needing to Right-Click-Publish. Mobile DevOps bring certain challenges not faced by desktop and web. Learn about the best practices for Mobile DevOps and explore how to set up your own CI/CD pipelines with Azure DevOps and App Center.",
+      "startsAt": "2020-10-02T15:30:00",
+      "endsAt": "2020-10-02T16:15:00",
+      "speakers": [
+        "79f09910-342f-40eb-afca-334b8626200e"
+      ]
+    },
+    {
+      "title": "Introducing .NET MAUI",
+      "description": "Come learn how Microsoft is evolving Xamarin.Forms into the next generation application development toolkit. Whether you are buildings an app for one platform or many, .NET MAUI will deliver the most productive development experience as you target Android, iOS, macOS, Windows, and beyond. The future of .NET app development is being shaped in the open, and we want you to be involved!",
+      "startsAt": "2020-10-02T16:15:00",
+      "endsAt": "2020-10-02T17:00:00",
+      "speakers": [
+        "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15"
+      ]
+    }
+  ],
   "galleryAlbumId": "online-2020"
 }
