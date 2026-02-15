@@ -8,7 +8,99 @@
     "mapsEmbedUrl": ""
   },
   "sponsors": [],
-  "speakers": [],
-  "sessions": [],
+  "speakers": [
+    {
+      "id": "d2367df0-3627-4f29-9021-5b92db6d6745",
+      "fullName": "Codrina Merigo",
+      "tagLine": "Digital Product Manager @ Fresenius Medical Care",
+      "profilePicture": "https://sessionize.com/image/f599-400o400o1-aPk87jjGqT1mnD3N4HHPNK.jpg"
+    },
+    {
+      "id": "b7f7d2a2-73f9-4eaa-8971-d328d43cd820",
+      "fullName": "Jean-Marie Alfonsi",
+      "tagLine": "Freelance software engineer at Sharpnado",
+      "profilePicture": "https://sessionize.com/image/dad2-400o400o1-spJm6PSpr8R9CcSStaMQKL.png"
+    },
+    {
+      "id": "b8ef9417-ccbc-48aa-8e0d-f7f1447d3fcb",
+      "fullName": "Konrad Müller",
+      "tagLine": "Software engineer",
+      "profilePicture": "https://sessionize.com/image/6c2a-400o400o1-17-ccbc-48aa-8e0d-f7f1447d3fcb.332934c8-2276-4b96-909d-e3dc71f2d4e7.jpg"
+    },
+    {
+      "id": "a0dc3822-2379-40ff-8ba4-08f28269c4c5",
+      "fullName": "Maddy Montaquila",
+      "tagLine": "Senior Product Manager, .NET MAUI at Microsoft",
+      "profilePicture": "https://sessionize.com/image/8b52-400o400o1-22-2379-40ff-8ba4-08f28269c4c5.b9d59a13-f4c1-4f14-b735-c25d2efad143.jpg"
+    },
+    {
+      "id": "df2bc5ca-5a6b-48a9-87ac-71c817d7b240",
+      "fullName": "Mark Allibone",
+      "tagLine": "Technical Lead at Rey Technology, Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/ab07-400o400o1-ca-5a6b-48a9-87ac-71c817d7b240.41b186a0-9d62-449a-90de-a16a94894db1.jpg"
+    },
+    {
+      "id": "1289f6c9-230a-4d4b-a9a6-cae75a58f047",
+      "fullName": "Shaun Lawrence",
+      "tagLine": "Senior Software Engineer working in all things .NET at Tinysoft ltd",
+      "profilePicture": "https://sessionize.com/image/40e8-400o400o1-Q7TJJ7f58EPFhcJmrXD2Gh.png"
+    }
+  ],
+  "sessions": [
+    {
+      "title": "What’s New and What's Next with .NET MAUI",
+      "description": "Welcome to .NET MAUI Day 2024! Join Maddy Montaquila, .NET MAUI Product Manager, for a whirlwind tour of the latest .NET MAUI features in .NET 8, new and improved tools for developers using both Visual Studio and VS Code, and a sneak peek into the team's .NET 9 planning!",
+      "startsAt": "2024-02-06T08:45:00",
+      "endsAt": "2024-02-06T09:45:00",
+      "speakers": [
+        "a0dc3822-2379-40ff-8ba4-08f28269c4c5"
+      ]
+    },
+    {
+      "title": "Use AI In your .NET MAUI  app to create a chatbot",
+      "description": "How to integrate a ChatBot in your .NET MAUI?\r\nIn your cross-platform application created using the latest technologies and learn how to let your users communicate with your ChatBot using natural language.",
+      "startsAt": "2024-02-06T10:45:00",
+      "endsAt": "2024-02-06T11:45:00",
+      "speakers": [
+        "d2367df0-3627-4f29-9021-5b92db6d6745"
+      ]
+    },
+    {
+      "title": "Mvvm Flux: a one way update architecture for MAUI",
+      "description": "Mvvm is nice, but not enough...\r\nWe will explorer all the architectural patterns we need to implement to obtain a consistent state throughout our MAUI apps.\r\n\r\nThe key here is the \"flux\" pattern, the propagation of updates from commands to the domain, and back to the subscribed view models, that will trigger the UI update.\r\n\r\nWe'll see how to handle different use cases such as:\r\n* loading data\r\n* updating data\r\n* error when loading\r\n* error when updating\r\n* error when updating\r\n\r\nWe'll see how the sharpnado's TaskLoaderView (https://github.com/roubachof/Sharpnado.TaskLoaderView) can help to elegantly implementing all those use cases.\r\n\r\nThrough all the presentation a PoC will be showcased to demonstrate those principles.",
+      "startsAt": "2024-02-06T12:45:00",
+      "endsAt": "2024-02-06T13:45:00",
+      "speakers": [
+        "b7f7d2a2-73f9-4eaa-8971-d328d43cd820"
+      ]
+    },
+    {
+      "title": "MVU who?",
+      "description": "Model View Update (MVU) is a UI architecture pattern that has gained popularity lately. Every C# developer can write MVU-oriented .NET MAUI apps. So let's look at how MVU stacks up to the well-known Model View ViewModel (MVVM) pattern. And, of course, we will want to see how MVU holds up when writing apps for the real word.",
+      "startsAt": "2024-02-06T13:45:00",
+      "endsAt": "2024-02-06T14:45:00",
+      "speakers": [
+        "df2bc5ca-5a6b-48a9-87ac-71c817d7b240"
+      ]
+    },
+    {
+      "title": "Choose your own adventure",
+      "description": "Growing up I used to love diving into a ‘choose your own adventure’ style book and then later on in life, the same concept in video game form. I would like to apply this concept in today’s talk… \r\n\r\nJoin me in learning about how we can build video games with .NET MAUI in the form of a ‘choose your own adventure’ style game. You as the collective audience will be able to choose the paths that we go down and influence the content that gets presented.\r\n\r\nLearn through our own voting system how we can combine technology such as SignalR to provide real time multi-player support into our .NET MAUI based games as well as many other cool techniques to really make our games or applications feel alive.\r\n",
+      "startsAt": "2024-02-06T15:15:00",
+      "endsAt": "2024-02-06T16:15:00",
+      "speakers": [
+        "1289f6c9-230a-4d4b-a9a6-cae75a58f047"
+      ]
+    },
+    {
+      "title": "CommunityToolkit.Mvvm is the only mvvm framework you’ll need",
+      "description": "In the past, powerful mvvm frameworks were an essential part of nearly all xamarin applications. But these might be a thing of the past, because nowadays, one toolkit can solve most of our mvvm needs.",
+      "startsAt": "2024-02-06T16:15:00",
+      "endsAt": "2024-02-06T17:15:00",
+      "speakers": [
+        "b8ef9417-ccbc-48aa-8e0d-f7f1447d3fcb"
+      ]
+    }
+  ],
   "galleryAlbumId": "cologne-feb-2024"
 }
