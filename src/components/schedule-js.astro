@@ -9,10 +9,17 @@ const config = await loadConfig();
       <!-- Section Title -->
       <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">Where to go and when</p>
       <h2 class="text-brand-dark text-4xl md:text-4xl uppercase font-header font-bold mb-4">The Schedule</h2>
-      <p class="text-brand-dark text-base text-md mb-12">
+      <p class="text-brand-dark text-base text-md mb-8">
         Check out our schedule below to plan your day and make the most of this event. See you there!
       </p>
-      <p>Doors open at 8:30am</p>
+      <div class="bg-gradient-to-r from-brand-extra/10 to-brand-light/10 rounded-lg p-6 mb-12 border border-brand-extra/20 max-w-2xl mx-auto">
+        <p class="text-brand-dark text-lg font-bold mb-2">
+          <i class="fa-solid fa-door-open mr-2 text-brand-extra"></i>Doors open at 8:30am
+        </p>
+        <p class="text-gray-600 text-sm">
+          Arrive early to register, grab some coffee, and network with fellow attendees before the sessions begin!
+        </p>
+      </div>
       <div id="custom-schedule" data-sessionize-id=`${config.sessionizeId}`></div>
     </div>  
 </section>
