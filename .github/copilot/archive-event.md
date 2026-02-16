@@ -2,7 +2,7 @@
 
 ## Description
 
-Archives a past .NET MAUI Day event by snapshotting its Sessionize data, sponsors, location, and gallery link into a static JSON file. This creates an archive page on the website.
+Archives a past MAUI Day event by snapshotting its Sessionize data, sponsors, location, and gallery link into a static JSON file. This creates an archive page on the website.
 
 ## Trigger
 

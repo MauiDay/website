@@ -10,7 +10,6 @@ const {
   pageDescription = siteMeta.description,
   pageUrl = siteMeta.url,
   pageImage = siteMeta.image,
-  isStaticHeader,
 } = Astro.props;
 ---
 
@@ -38,7 +37,7 @@ const {
     />
   </head>
   <body>
-    <Navigation {isStaticHeader} />
+    <Navigation />
     <slot />
     <Footer />
     <button

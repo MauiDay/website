@@ -4,3 +4,40 @@
 #grecaptcha-badge {
   visibility: hidden;
 }
+
+/* Glass navigation effect */
+.glass-nav {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)
+}
+
+.hero {
+  background-image: url('/images/banner.webp');
+  background-size: cover;
+  overflow: hidden;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.75) 0%, rgba(0,0,0,.35) 60%, rgba(0,0,0,.15) 100%);
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index: 0;
+  background: rgba(20,120,255,.14); /* brand tint */
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}

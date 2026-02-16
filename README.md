@@ -1,6 +1,6 @@
-# .NET Maui Day Website
+# Maui Day Website
 
-Welcome to the official website repository for the .NET MAUI Conference, the only conference dedicated to all things .NET MAUI!
+Welcome to the official website repository for the MAUI Day, the only conference dedicated to all things .NET MAUI!
 
 ## 🚀 Project Structure
 

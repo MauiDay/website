@@ -10,13 +10,13 @@ const albumsWithThumbnails = albums.map((album) => {
 });
 ---
 
-<Layout isStaticHeader={true} pageTitle="Gallery | .NET MAUI Day">
-  <section class="bg-brand-dark py-24">
+<Layout pageTitle="Gallery | MAUI Day">
+  <section class="bg-brand-dark py-40">
     <div class="container max-w-5xl mx-auto px-4 text-center">
       <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">Our Memories</p>
       <h2 class="text-white text-4xl md:text-4xl uppercase font-header font-bold mb-4">Event Gallery</h2>
       <p class="text-white text-base text-md mb-12">
-        Relive the moments from our .NET MAUI Day events around the world.
+        Relive the moments from our MAUI Day events around the world.
       </p>
 
       {albumsWithThumbnails.length === 0 ? (
@@ -25,7 +25,7 @@ const albumsWithThumbnails = albums.map((album) => {
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
           {albumsWithThumbnails.map((album) => (
             <a href={`/gallery/${album.id}`} class="group block">
-              <div class="overflow-hidden rounded-lg shadow-md aspect-[4/3] bg-brand-dark border border-white/10">
+              <div class="overflow-hidden rounded-3xl shadow-md aspect-[4/3] bg-brand-dark border border-white/10">
                 {album.imageCount > 0 ? (
                   <img
                     src={album.thumbnailUrl}

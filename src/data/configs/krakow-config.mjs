@@ -8,11 +8,16 @@ export default {
     hasAnnouncedSchedule: false,
     location: "Politechnika Krakowska",
     mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.760429914753!2d19.940189276500035!3d50.07204811453742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b04a4a0d5bf%3A0x41a815e1860a19eb!2sCracow%20University%20of%20Technology!5e0!3m2!1sen!2suk!4v1769458350879!5m2!1sen!2suk",
+    mapsLinkUrl: "https://maps.app.goo.gl/mhhxuMZjsCb32LTL8",
     ticketUrl: "https://www.eventbrite.nl/e/net-maui-day-krakow-2026-tickets-1981602150375",
     locationNote:"",
+    badge:"krakow26.png",
+    locationParking: 'Public parking nearby',
+    locationTransit: 'Train station 10 min walk',
+    locationCapacity: '150 seats',
     locationAddress: `
-        <b>Politechnika Krakowska</b><br/>
-        Warszawska 24, Kraków<br/>
+        Warszawska 24,<br/>
+        31-155 Kraków,<br/>
         Poland
     `,
     codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a> (not part of the London organizers, but involved)`,

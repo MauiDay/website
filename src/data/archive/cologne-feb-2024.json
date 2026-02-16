@@ -1,6 +1,6 @@
 {
   "id": "cologne-feb-2024",
-  "title": ".NET MAUI Day Cologne February 2024",
+  "title": "MAUI Day Cologne February 2024",
   "date": "2024-02-09",
   "location": {
     "name": "Microsoft Office Cologne",
@@ -92,7 +92,7 @@
   "sessions": [
     {
       "title": "What’s New and What's Next with .NET MAUI",
-      "description": "Welcome to .NET MAUI Day 2024! Join Maddy Montaquila, .NET MAUI Product Manager, for a whirlwind tour of the latest .NET MAUI features in .NET 8, new and improved tools for developers using both Visual Studio and VS Code, and a sneak peek into the team's .NET 9 planning!",
+      "description": "Welcome to MAUI Day 2024! Join Maddy Montaquila, .NET MAUI Product Manager, for a whirlwind tour of the latest .NET MAUI features in .NET 8, new and improved tools for developers using both Visual Studio and VS Code, and a sneak peek into the team's .NET 9 planning!",
       "startsAt": "2024-02-06T08:45:00",
       "endsAt": "2024-02-06T09:45:00",
       "speakers": [
