@@ -3,39 +3,95 @@ import loadConfig from '../configLoader';
 
 const config = await loadConfig();
 
-const { location, locationNote, locationAddress, mapsEmbedUrl } = config;
+const { location, locationNote, locationAddress, mapsLinkUrl, locationParking, locationTransit, locationCapacity, mapsEmbedUrl } = config;
 ---
 
-<section id="location" class="bg-brand-light py-16 pb-0 px-0">
+<section id="location" class="bg-brand-light py-16 px-0">
   <!-- Content Container -->
-  <div class="container max-w-4xl mx-auto px-4 text-center">
-    <!-- Section Title -->
-    <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">
-      Where we are
-    </p>
-    <h2
-      class="text-brand-dark text-4xl md:text-4xl uppercase font-header font-bold mb-4"
-    >
-      The Location
-    </h2>
-    <p class="text-brand-dark text-base text-md mb-8">
-      The .NET MAUI Day will take place in the {location}. Find
-      the exact details below. <br />
-      <span set:html={locationNote}></span>
-    </p>
-    <p class="text-brand-dark text-base text-md mb-12" set:html={locationAddress}>
-      
-    </p>
-  </div>
-  <div class="mx-auto p-0 m-0">
-    <iframe
+  <div class="container max-w-4xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-20 items-center">
+<!-- Left Column: Content -->
+<div class="lg:col-span-2 space-y-8 animate-fade-in-up">
+<!-- Header Group -->
+<div class="space-y-2">
+ <p
+          class="text-brand-extra font-bold mb-4 text-xl font-header uppercase"
+        >
+                        Where we are
+</p>
+        <h2
+          class="text-brand-dark text-4xl md:text-4xl uppercase font-header font-bold mb-4"
+        >
+    The Venue
+</h2>
+</div>
+<!-- Venue Details -->
+<div class="space-y-6">
+<div>
+<h3 class="text-2xl font-bold mb-2">
+                            {location}
+                        </h3>
+<div class="flex items-start">
+<span class="text-brand-extra mr-2 mt-0.5 text-xl">
+  <svg xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24"><path fill="currentColor" d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4s-4 1.794-4 4s1.794 4 4 4m0-6c1.103 0 2 .897 2 2s-.897 2-2 2s-2-.897-2-2s.897-2 2-2"/><path fill="currentColor" d="M11.42 21.814a1 1 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819M12 4c3.309 0 6 2.691 6 6.005c.021 4.438-4.388 8.423-6 9.73c-1.611-1.308-6.021-5.294-6-9.735c0-3.309 2.691-6 6-6"/></svg>
+</span>
+<span class="text-lg leading-snug" set:html={locationAddress}></span>
+</div>
+</div>
+<p class="text-lg leading-relaxed max-w-lg" set:html={locationNote}></p>
+</div>
+<!-- Action Area -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-2">
+<a class="btn-gradient px-8 py-4 rounded-full font-bold text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transform hover:-translate-y-0.5 transition-all duration-300 inline-flex items-center gap-2 group"
+ href={mapsLinkUrl} target="_blank">
+<span>Get Directions</span>
+<svg xmlns="http://www.w3.org/2000/svg" class="size-5" viewBox="0 0 24 24"><path fill="currentColor" d="M2.002 9.63c-.023.411.207.794.581.966l7.504 3.442l3.442 7.503c.164.356.52.583.909.583l.057-.002a1 1 0 0 0 .894-.686l5.595-17.032c.117-.358.023-.753-.243-1.02s-.66-.358-1.02-.243L2.688 8.736a1 1 0 0 0-.686.894m16.464-3.971l-4.182 12.73l-2.534-5.522a1 1 0 0 0-.492-.492L5.734 9.841z"/></svg>
+</a>
+</div>
+<!-- Quick Stats / Additional Info (Optional Visual Enhancement) -->
+<div class="pt-6 border-t border-brand-dark/20 space-y-2">
+<div class="flex items-center gap-3 p-3 rounded-lg border border-purple-100/50">
+<div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24"><path fill="currentColor" d="M16 17v2H2v-2s0-4 7-4s7 4 7 4m-3.5-9.5A3.5 3.5 0 1 0 9 11a3.5 3.5 0 0 0 3.5-3.5m3.44 5.5A5.32 5.32 0 0 1 18 17v2h4v-2s0-3.63-6.06-4M15 4a3.4 3.4 0 0 0-1.93.59a5 5 0 0 1 0 5.82A3.4 3.4 0 0 0 15 11a3.5 3.5 0 0 0 0-7"/></svg>
+</div>
+<div class="flex-1">
+<p class="text-xs text-purple-600 uppercase tracking-wider font-semibold">Capacity</p>
+<p class="text-lg font-bold text-gray-900">{locationCapacity}</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg border border-blue-100/50">
+<div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24"><path fill="currentColor" d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16m11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5s1.5.67 1.5 1.5s-.67 1.5-1.5 1.5M5 11l1.5-4.5h11L19 11z"/></svg>
+</div>
+<div class="flex-1">
+<p class="text-xs text-blue-600 uppercase tracking-wider font-semibold">Parking</p>
+<p class="text-lg font-bold text-gray-900">{locationParking}</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg border border-emerald-100/50">
+<div class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center">
+<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2c-4 0-8 .5-8 4v9.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h2l2-2h4l2 2h2v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-4-4-8-4M7.5 17c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17m3.5-7H6V6h5zm5.5 7c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5s1.5.67 1.5 1.5s-.67 1.5-1.5 1.5m2.5-7h-5V6h5z"/></svg>
+</div>
+<div class="flex-1">
+<p class="text-xs text-emerald-600 uppercase tracking-wider font-semibold">Transit</p>
+<p class="text-lg font-bold text-gray-900">{locationTransit}</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Map -->
+<div class="lg:col-span-3 relative h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl bg-gray-100 border border-gray-200 group">
+ <iframe
       src={mapsEmbedUrl}
       width="100%"
-      height="450"
+      height="100%"
       class="bg-brand-light"
       style="border:0;"
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+</div>
+</div>
+</div>
+</div>
 </section>

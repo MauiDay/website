@@ -39,20 +39,20 @@
         const speakersHTML = data.speakers
             .map(
                 (speaker) => `
-              <div class="flex flex-col items-center text-white">
+              <div class="flex flex-col items-center text-white" style="width: 100%; max-width: 250px;">
                 <div class="w-32 h-32 rounded-full overflow-hidden mb-4">
                   <img src="${speaker.profilePicture || '/images/default-profile.png'}" 
                        alt="${speaker.fullName}" 
                        class="w-full h-full object-cover" />
                 </div>
                 <h4 class="font-bold text-lg">${speaker.fullName}</h4>
-                <p class="text-sm">${speaker.tagLine || ''}</p>
+                <p class="text-sm text-brand-extra">${speaker.tagLine || ''}</p>
               </div>
             `
             )
             .join("");
 
-        container.innerHTML = `<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">${speakersHTML}</div>`;
+        container.innerHTML = `<div class="flex flex-wrap justify-center gap-8">${speakersHTML}</div>`;
     }
 
     const data = await fetchSpeakerData();

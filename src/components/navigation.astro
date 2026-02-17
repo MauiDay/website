@@ -1,180 +1,256 @@
 ---
 import { config } from "../../mauiday.config.mjs";
-import loadConfig from '../configLoader';
+import loadConfig from "../configLoader";
 
 const confConfig = await loadConfig();
-
-// Add a prop to determine if the header should be styled differently
-const { isStaticHeader = false } = Astro.props;
-
-let accentColor = isStaticHeader ? 'brand-extra' : 'brand-light';
 ---
-<header class={`${
-  isStaticHeader ? 'bg-white text-brand-dark' : 'bg-transparent absolute text-white'
-} top-0 left-0 w-full z-10 font-header`}
+
+<nav
+  class="fixed top-0 text-white w-full z-50 glass-nav border-b border-white/10"
 >
-  <div class="container max-w-5xl mx-auto px-4 flex items-center justify-between py-4">
-    <!-- Logo -->
-    <div class="flex items-center space-x-2 h-12">
-      <a href={`/`} class="cursor-pointer">
-        <img src={`/images/logo${isStaticHeader ? '-darktext' : '-lighttext' }.svg`} class="h-[40px] object-contain" alt=".NET MAUI Day" />
+  <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <a href="/" class="cursor-pointer">
+        <img
+          src={`/images/logo-lighttext.svg`}
+          alt="MAUI Day Logo"
+          class="h-10"
+        />
       </a>
     </div>
 
-    <!-- Navigation Menu -->
-    <nav class="hidden md:flex space-x-6 font-bold font-sans text-md">
-      <p class={`group hover:text-${accentColor} relative`}>
-        <a href=`/` class="cursor-pointer transition">Home</a>
-        <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
-        <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
-      </p>      
-      {!confConfig.hasCfs ? (
-        <>
-        {confConfig.hasAnnouncedSpeakers ? (
-        <p class={`group hover:text-${accentColor} relative`}>
-          <a href=`/#speakers` class="cursor-pointer transition">Speakers</a>
-          <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
-          <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
-        </p> ) : <></> }
-        {confConfig.hasAnnouncedSchedule ? (
-        <p class={`group hover:text-${accentColor} relative`}>
-          <a href=`/#schedule` class="cursor-pointer transition">Schedule</a>
-          <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
-          <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
-        </p> ) : <></> }
-        </>
-      ) : (        
-        <p class={`group hover:text-${accentColor} relative`}>
-          <a href=`/#call-for-speakers` class="cursor-pointer transition">Call for Speakers</a>
-          <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
-          <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
-        </p>
-      )}
-      
-      <p class={`group hover:text-${accentColor} relative`}>
-        <a href=`/#location` class="cursor-pointer transition">Location</a>
-        <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
-        <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
-      </p>
-      <p class={`group hover:text-${accentColor} relative`}>
-        <a href=`/#sponsors` class="cursor-pointer transition">Sponsors</a>
-        <span class={`absolute -bottom-1 left-1/2 w-0 transition-all h-0.5 bg-${accentColor} group-hover:w-3/6`}></span>
-        <span class={`absolute -bottom-1 right-1/2 w-0 transition-all h-0.5 bg-${accentColor}  group-hover:w-3/6`}></span>
-      </p>
-      <div class="relative group/more" id="more-dropdown">
-        <button id="more-toggle" aria-expanded="false" aria-haspopup="true" class={`hover:text-${accentColor} focus:text-${accentColor} cursor-pointer transition font-bold font-sans flex items-center gap-1`}>
-          More <i class="fa-solid fa-chevron-down text-xs transition-transform group-hover/more:rotate-180"></i>
-        </button>
-        <div id="more-menu" role="menu" class={`absolute right-0 top-full mt-2 w-48 rounded-lg shadow-lg ${isStaticHeader ? 'bg-white' : 'bg-brand-dark'} border ${isStaticHeader ? 'border-gray-200' : 'border-white/10'} opacity-0 invisible group-hover/more:opacity-100 group-hover/more:visible focus-within:opacity-100 focus-within:visible transition-all duration-200 py-2`}>
-          <a href=`/gallery` role="menuitem" class={`block px-4 py-2 hover:text-${accentColor} focus:text-${accentColor} hover:${isStaticHeader ? 'bg-gray-50' : 'bg-white/5'} focus:${isStaticHeader ? 'bg-gray-50' : 'bg-white/5'} transition outline-none`}>Gallery</a>
-          <a href=`/archive` role="menuitem" class={`block px-4 py-2 hover:text-${accentColor} focus:text-${accentColor} hover:${isStaticHeader ? 'bg-gray-50' : 'bg-white/5'} focus:${isStaticHeader ? 'bg-gray-50' : 'bg-white/5'} transition outline-none`}>Archive</a>
-          <a href=`/code-of-conduct` role="menuitem" class={`block px-4 py-2 hover:text-${accentColor} focus:text-${accentColor} hover:${isStaticHeader ? 'bg-gray-50' : 'bg-white/5'} focus:${isStaticHeader ? 'bg-gray-50' : 'bg-white/5'} transition outline-none`}>Code of Conduct</a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Social Icons -->
-    <div class="hidden md:flex space-x-4">
+    <div class="hidden lg:flex items-center gap-8">
       <a
-        href={config.BLUESKY_LINK}
-        target="_blank"
-        aria-label="BlueSky"
-        class="text-gray-400 hover:text-white"
-      >
-        <i class="fa-brands fa-bluesky text-2xl"></i>
-      </a>
+        class="text-sm font-medium hover:text-pink-400 transition-colors"
+        href="/">Home</a>
+      {
+        confConfig.hasCfs ? (
+          <a
+            class="text-sm font-medium hover:text-pink-400 transition-colors"
+            href="/#call-for-speakers"
+          >
+            Call for Speakers
+          </a>
+        ) : (
+          <>
+            {confConfig.hasAnnouncedSpeakers && (
+              <a
+                class="text-sm font-medium hover:text-pink-400 transition-colors"
+                href="/#speakers"
+              >
+                Speakers
+              </a>
+            )}
+            {confConfig.hasAnnouncedSchedule && (
+              <a
+                class="text-sm font-medium hover:text-pink-400 transition-colors"
+                href="/#schedule"
+              >
+                Schedule
+              </a>
+            )}
+          </>
+        )
+      }
       <a
-        href={config.X_LINK}
-        target="_blank"
-        aria-label="X"
-        class="text-gray-400 hover:text-white"
-      >
-        <i class="fa-brands fa-x-twitter text-2xl"></i>
-      </a>
+        class="text-sm font-medium hover:text-pink-400 transition-colors"
+        href="/#location">Location</a>
       <a
-        href={config.GITHUB_LINK}
-        target="_blank"
-        aria-label="GitHub"
-        class="text-gray-400 hover:text-white"
-      >
-        <i class="fa-brands fa-github text-2xl"></i>
-      </a>
+        class="text-sm font-medium hover:text-pink-400 transition-colors"
+        href="/#sponsors">Sponsors</a>
       <a
-        href={config.LINKEDIN_LINK}
-        target="_blank"
-        aria-label="LinkedIn"
-        class="text-gray-400 hover:text-white"
-      >
-        <i class="fa-brands fa-linkedin text-2xl"></i>
-      </a>
+        class="text-sm font-medium hover:text-pink-400 transition-colors"
+        href="/code-of-conduct">Code of Conduct</a>
       <a
-        href={config.FLICKR_LINK}
-        target="_blank"
-        aria-label="Flickr"
-        class="text-gray-400 hover:text-white"
-      >
-        <i class="fa-brands fa-flickr text-2xl"></i>
-      </a>
+        class="text-sm font-medium hover:text-pink-400 transition-colors"
+        href="/gallery">Gallery</a>
       <a
-        href={config.INSTAGRAM_LINK}
-        target="_blank"
-        aria-label="Instagram"
-        class="text-gray-400 hover:text-white"
-      >
-        <i class="fa-brands fa-instagram text-2xl"></i>
-      </a>
+        class="text-sm font-medium hover:text-pink-400 transition-colors"
+        href="/archive">Archive</a>
     </div>
 
-    <!-- Mobile Menu Button -->
-    <button id="menu-toggle" class={`block md:hidden ${isStaticHeader ? 'text-brand-dark' : 'text-white'} text-2xl`}>
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </div>
-
-  <!-- Mobile Dropdown -->
-  <div id="mobile-menu" class="md:hidden hidden text-sans bg-brand-light text-brand-dark">
-    <nav class="flex flex-col space-y-4 px-4 py-4 font-bold font-sans text-md">
-      <a href=`/` class={`hover:text-${accentColor} cursor-pointer transition`}>Home</a>
-         
-      {!confConfig.hasCfs ? (
-        <>
-        {confConfig.hasAnnouncedSpeakers ? (<a href=`/#speakers` class={`hover:text-${accentColor} cursor-pointer transition`}>Speakers</a>) : <></> }
-        {confConfig.hasAnnouncedSchedule ? (<a href=`/#schedule` class={`hover:text-${accentColor} cursor-pointer transition`}>Schedule</a>) : <></> }
-        </>
-      ) : (  
-        <a href=`/#call-for-speakers` class={`hover:text-${accentColor} cursor-pointer transition`}>Call for Speakers</a>
-      )}
-      <a href=`/#location` class={`hover:text-${accentColor} cursor-pointer transition`}>Location</a>
-      <a href=`/#sponsors` class={`hover:text-${accentColor} cursor-pointer transition`}>Sponsors</a>
-      <a href=`/gallery` class={`hover:text-${accentColor} cursor-pointer transition`}>Gallery</a>
-      <a href=`/archive` class={`hover:text-${accentColor} cursor-pointer transition`}>Archive</a>
-      <a href=`/code-of-conduct` class={`hover:text-${accentColor} cursor-pointer transition`}>Code of Conduct</a>
-    </nav>
-    <div class="flex justify-center space-x-4 py-4">
+    <div class="hidden lg:flex text-lg items-center gap-4">
       <a
-        href={config.BLUESKY_LINK}
-        aria-label="BlueSky"
-        class={`hover:text-${accentColor} transition`}
-      >
-        <i class="fa-brands fa-bluesky"></i>
-      </a>
-      <a
+        aria-label="X (Twitter)"
+        class="hover:text-pink-400 transition-colors"
         href={config.X_LINK}
-        aria-label="X"
-        class={`hover:text-${accentColor} transition`}
+        target="_blank"
       >
         <i class="fa-brands fa-x-twitter"></i>
       </a>
       <a
-        href={config.GITHUB_LINK}
+        aria-label="LinkedIn"
+        class="hover:text-pink-400 transition-colors"
+        href={config.LINKEDIN_LINK}
+        target="_blank"
+      >
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a
         aria-label="GitHub"
-        class={`hover:text-${accentColor} transition`}
+        class="hover:text-pink-400 transition-colors"
+        href={config.GITHUB_LINK}
+        target="_blank"
       >
         <i class="fa-brands fa-github"></i>
       </a>
+      <a
+        aria-label="BlueSky"
+        class="hover:text-pink-400 transition-colors"
+        href={config.BLUESKY_LINK}
+        target="_blank"
+      >        
+        <i class="fa-brands fa-bluesky"></i>
+      </a>
+      <a
+        aria-label="Instagram"
+        class="hover:text-pink-400 transition-colors"
+        href={config.INSTAGRAM_LINK}
+        target="_blank"
+      >
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a
+        aria-label="Flickr"
+        class="hover:text-pink-400 transition-colors"
+        href={config.FLICKR_LINK}
+        target="_blank"
+      >
+        <i class="fa-brands fa-flickr"></i>
+      </a>
+    </div>
+
+    <div class="lg:hidden">
+      <button id="menu-toggle" class="text-white hover:text-pink-400">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
   </div>
-</header>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden glass-nav border-t border-white/10"
+  >
+    <nav class="container mx-auto px-6 py-4 flex flex-col gap-4">
+      <a
+        class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
+        href="/">Home</a
+      >
+      {
+        confConfig.hasCfs ? (
+          <a
+            class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
+            href="/#call-for-speakers"
+          >
+            Call for Speakers
+          </a>
+        ) : (
+          <>
+            {confConfig.hasAnnouncedSpeakers && (
+              <a
+                class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
+                href="/#speakers"
+              >
+                Speakers
+              </a>
+            )}
+            {confConfig.hasAnnouncedSchedule && (
+              <a
+                class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
+                href="/#schedule"
+              >
+                Schedule
+              </a>
+            )}
+          </>
+        )
+      }
+      <a
+        class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
+        href="/#location">Location</a
+      >
+      <a
+        class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
+        href="/#sponsors">Sponsors</a
+      >
+      <a
+        class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
+        href="/code-of-conduct">Code of Conduct</a
+      >
+      <a
+        class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
+        href="/gallery">Gallery</a
+      >
+      <a
+        class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
+        href="/archive">Archive</a
+      >
+
+      <div class="flex items-center gap-4 pt-4 border-t border-white/10">
+        <a
+          aria-label="X (Twitter)"
+          class="hover:text-pink-400 transition-colors"
+          href={config.X_LINK}
+          target="_blank"
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a
+          aria-label="LinkedIn"
+          class="hover:text-pink-400 transition-colors"
+          href={config.LINKEDIN_LINK}
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          aria-label="GitHub"
+          class="hover:text-pink-400 transition-colors"
+          href={config.GITHUB_LINK}
+          target="_blank"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a
+          aria-label="BlueSky"
+          class="hover:text-pink-400 transition-colors"
+          href={config.BLUESKY_LINK}
+          target="_blank"
+        >
+          <i class="fa-brands fa-bluesky"></i>
+        </a>
+        <a
+          aria-label="Instagram"
+          class="hover:text-pink-400 transition-colors"
+          href={config.INSTAGRAM_LINK}
+          target="_blank"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a
+          aria-label="Flickr"
+          class="hover:text-pink-400 transition-colors"
+          href={config.FLICKR_LINK}
+          target="_blank"
+        >
+          <i class="fa-brands fa-flickr"></i>
+        </a>
+      </div>
+    </nav>
+  </div>
+</nav>
 
 <script>
   const menuToggle = document.getElementById("menu-toggle");
@@ -182,51 +258,5 @@ let accentColor = isStaticHeader ? 'brand-extra' : 'brand-light';
 
   menuToggle?.addEventListener("click", () => {
     mobileMenu?.classList.toggle("hidden");
-  });
-
-  // More dropdown keyboard support
-  const moreToggle = document.getElementById("more-toggle");
-  const moreMenu = document.getElementById("more-menu");
-  const moreItems = moreMenu?.querySelectorAll<HTMLElement>("[role='menuitem']");
-
-  function openMoreMenu() {
-    moreMenu?.classList.add("!opacity-100", "!visible");
-    moreToggle?.setAttribute("aria-expanded", "true");
-    moreItems?.[0]?.focus();
-  }
-
-  function closeMoreMenu() {
-    moreMenu?.classList.remove("!opacity-100", "!visible");
-    moreToggle?.setAttribute("aria-expanded", "false");
-  }
-
-  moreToggle?.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " " || e.key === "ArrowDown") {
-      e.preventDefault();
-      openMoreMenu();
-    }
-  });
-
-  moreMenu?.addEventListener("keydown", (e) => {
-    const items = Array.from(moreItems || []);
-    const index = items.indexOf(document.activeElement as HTMLElement);
-    if (e.key === "ArrowDown") {
-      e.preventDefault();
-      items[(index + 1) % items.length]?.focus();
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      items[(index - 1 + items.length) % items.length]?.focus();
-    } else if (e.key === "Escape") {
-      e.preventDefault();
-      closeMoreMenu();
-      moreToggle?.focus();
-    }
-  });
-
-  // Close menu when clicking outside
-  document.addEventListener("click", (e) => {
-    if (!document.getElementById("more-dropdown")?.contains(e.target as Node)) {
-      closeMoreMenu();
-    }
   });
 </script>

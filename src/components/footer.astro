@@ -1,67 +1,112 @@
 ---
 import { config } from "../../mauiday.config.mjs";
+import loadConfig from '../configLoader';
+
+const confConfig = await loadConfig();
 ---
 
-<footer class="py-12 bg-black">
-  <div class="container mx-auto max-w-5xl px-4 flex items-center justify-between">
-    <div class="text-left">
-      <p class="text-md text-white">2026 © .NET Maui Day</p>
-      <p class="text-sm mt-1 text-gray-400">
-        The .NET MAUI day is in no way endorsed or supported by Microsoft and is not an official Microsoft event.
-      </p>
-      <p class="text-sm mt-1">
-        <a href="/privacy" class="text-brand-extra hover:text-white hover:no-underline">Privacy</a>
-      </p>
-    </div>
-    <div class="flex space-x-4">
-      <a
-        href={config.BLUESKY_LINK}
-        target="_blank"
-        aria-label="BlueSky"
-        class="text-gray-400 hover:text-white"
-      >
-        <i class="fa-brands fa-bluesky text-2xl"></i>
+
+<!-- Footer -->
+<footer class="bg-black text-white pt-16 pb-8 mt-auto">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+   <a href="/" class="cursor-pointer">
+        <img
+          src={`/images/logo-lighttext.svg`}
+          alt="MAUI Day Logo"
+          class="h-10"
+        />
       </a>
+</div>
+<p class="text-gray-400 text-sm leading-relaxed">
+  The MAUI Day is in no way endorsed or supported by Microsoft and is not an official Microsoft event.
+</p>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-primary">Explore</h4>
+<ul class="space-y-2 text-sm text-gray-400">
+{confConfig.hasCfs ? (
+  <li><a class="hover:text-white transition-colors" href="/#call-for-speakers">Call for Speakers</a></li>
+) : (
+  <>
+    {confConfig.hasAnnouncedSpeakers && <li><a class="hover:text-white transition-colors" href="/#speakers">Speakers</a></li>}
+    {confConfig.hasAnnouncedSchedule && <li><a class="hover:text-white transition-colors" href="/#schedule">Schedule</a></li>}
+  </>
+)}
+<li><a class="hover:text-white transition-colors" href="/#location">Location</a></li>
+<li><a class="hover:text-white transition-colors" href="/#sponsors">Sponsors</a></li>
+<li><a class="hover:text-white transition-colors" href="/code-of-conduct">Code of Conduct</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-primary">Editions</h4>
+<ul class="space-y-2 text-sm text-gray-400">
+<li><a class="hover:text-white transition-colors" href="/gallery">Gallery</a></li>
+<li><a class="hover:text-white transition-colors" href="/archive">Archive</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4 text-primary">Connect</h4>
+
+    <div class="flex text-lg items-center gap-4">
       <a
+        aria-label="X (Twitter)"
+        class="hover:text-pink-400 transition-colors"
         href={config.X_LINK}
         target="_blank"
-        aria-label="X"
-        class="text-gray-400 hover:text-white"
       >
-        <i class="fa-brands fa-x-twitter text-2xl"></i>
+        <i class="fa-brands fa-x-twitter"></i>
       </a>
       <a
-        href={config.GITHUB_LINK}
-        target="_blank"
-        aria-label="GitHub"
-        class="text-gray-400 hover:text-white"
-      >
-        <i class="fa-brands fa-github text-2xl"></i>
-      </a>
-      <a
+        aria-label="LinkedIn"
+        class="hover:text-pink-400 transition-colors"
         href={config.LINKEDIN_LINK}
         target="_blank"
-        aria-label="LinkedIn"
-        class="text-gray-400 hover:text-white"
       >
-        <i class="fa-brands fa-linkedin text-2xl"></i>
+        <i class="fa-brands fa-linkedin"></i>
       </a>
       <a
-        href={config.FLICKR_LINK}
+        aria-label="GitHub"
+        class="hover:text-pink-400 transition-colors"
+        href={config.GITHUB_LINK}
         target="_blank"
-        aria-label="Flickr"
-        class="text-gray-400 hover:text-white"
       >
-        <i class="fa-brands fa-flickr text-2xl"></i>
+        <i class="fa-brands fa-github"></i>
       </a>
       <a
+        aria-label="BlueSky"
+        class="hover:text-pink-400 transition-colors"
+        href={config.BLUESKY_LINK}
+        target="_blank"
+      >        
+        <i class="fa-brands fa-bluesky"></i>
+      </a>
+      <a
+        aria-label="Instagram"
+        class="hover:text-pink-400 transition-colors"
         href={config.INSTAGRAM_LINK}
         target="_blank"
-        aria-label="Instagram"
-        class="text-gray-400 hover:text-white"
       >
-        <i class="fa-brands fa-instagram text-2xl"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a
+        aria-label="Flickr"
+        class="hover:text-pink-400 transition-colors"
+        href={config.FLICKR_LINK}
+        target="_blank"
+      >
+        <i class="fa-brands fa-flickr"></i>
       </a>
     </div>
-  </div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+<p>© 2026 MAUI Day. All rights reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-white" href="/privacy">Privacy Policy</a>
+</div>
+</div>
+</div>
 </footer>
