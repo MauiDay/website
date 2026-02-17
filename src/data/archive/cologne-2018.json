@@ -1,0 +1,264 @@
+{
+  "id": "cologne-2018",
+  "title": "XamExpertDay 2018 Cologne",
+  "date": "2018-10-19",
+  "location": {
+    "name": "Microsoft Office Cologne",
+    "address": "Holzmarkt 2, 50676 Köln, Germany",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.709543368347!2d6.963219500000001!3d50.9290898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf25b4bb4cf92b%3A0x80c4f5fba887b23b!2sMicrosoft%20Germany%20GmbH!5e0!3m2!1sen!2snl!4v1704618839331!5m2!1sen!2snl"
+  },
+  "sponsors": [
+    {
+      "name": "JetBrains",
+      "logo": "jetbrains",
+      "url": "https://www.jetbrains.com/",
+      "boost": false
+    },
+    {
+      "name": "Syncfusion",
+      "logo": "syncfusion",
+      "url": "https://www.syncfusion.com/",
+      "boost": false
+    },
+    {
+      "name": "Microsoft",
+      "logo": "microsoft",
+      "url": "https://www.microsoft.com",
+      "boost": false
+    },
+    {
+      "name": "MSG",
+      "logo": "msg",
+      "url": "https://www.msg.group/en/",
+      "boost": false
+    },
+    {
+      "name": "Manning",
+      "logo": "manning",
+      "url": "https://manning.com/",
+      "boost": false
+    }
+  ],
+  "speakers": [
+    {
+      "id": "9c097fdd",
+      "fullName": "Jim Bennett",
+      "tagLine": "Developer Advocate at Microsoft",
+      "profilePicture": "https://sessionize.com/image/2a01-400o400o2-MgNDirDViegVKaHksj7oa2.jpg"
+    },
+    {
+      "id": "1a294c6f",
+      "fullName": "Glenn Versweyveld",
+      "tagLine": "System Expert at Baloise Insurances, Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/4f4b-400o400o2-hhjeqU2FcQgsw8RZH5v9FJ.jpeg"
+    },
+    {
+      "id": "93def58c",
+      "fullName": "Bart Lannoeye",
+      "tagLine": "Sirus",
+      "profilePicture": "https://sessionize.com/image/aa33-400o400o2-PVu1Hj9nEmAC8NbF59siZc.png"
+    },
+    {
+      "id": "2c3be5c0",
+      "fullName": "Geert van der Cruijsen",
+      "tagLine": "CEO at Zure Netherlands, Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/5f8b-400o400o2-JXXeFuFmNbuqSi4jDbcx7i.jpg"
+    },
+    {
+      "id": "20324cb7",
+      "fullName": "Gerald Versluis",
+      "tagLine": "Senior Software Engineer at Microsoft",
+      "profilePicture": "https://sessionize.com/image/f5f4-400o400o2-c8-199a-444d-bfaf-e8f8cd8a6248.a492ee56-53af-42fa-9a7f-45c7186ac12d.png"
+    },
+    {
+      "id": "aad73d24",
+      "fullName": "Thomas Burkhart",
+      "tagLine": "Google Developer Expert for Flutter & Dart",
+      "profilePicture": "https://sessionize.com/image/17bc-400o400o2-28216ab2-a4c2-4015-9e4e-e67601fd189f.jpg"
+    },
+    {
+      "id": "5ca5f30d",
+      "fullName": "Pieter Nijs",
+      "tagLine": ".NET Consultant at Xebia, Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/eab4-400o400o2-GjuHGmwxyVn9Vnp67JK791.jpg"
+    },
+    {
+      "id": "918a2e40",
+      "fullName": "Kerry W. Lothrop",
+      "tagLine": "Managing Engineer at DHL IT Services, Microsoft MVP",
+      "profilePicture": "https://avatars.githubusercontent.com/u/6199837?v=4"
+    },
+    {
+      "id": "5e309f31",
+      "fullName": "Luce Carter",
+      "tagLine": "Dunnhumby",
+      "profilePicture": "https://sessionize.com/image/4d2f-400o400o2-34-06bb-4596-bc44-40edd9e03f6b.1750062d-3714-47f7-ab0e-990f57e9a723.jpg"
+    },
+    {
+      "id": "dba798ed",
+      "fullName": "Mark Allibone",
+      "tagLine": "Noser Engineering",
+      "profilePicture": "https://sessionize.com/image/c235-400o400o2-ca-5a6b-48a9-87ac-71c817d7b240.41b186a0-9d62-449a-90de-a16a94894db1.jpg"
+    },
+    {
+      "id": "6aa29431",
+      "fullName": "Robin-Manuel Thiel",
+      "tagLine": "Microsoft",
+      "profilePicture": "https://avatars.githubusercontent.com/u/5874465?v=4"
+    },
+    {
+      "id": "a831b82b",
+      "fullName": "Mike James",
+      "tagLine": "",
+      "profilePicture": "https://sessionize.com/image/61d1-400o400o2-S1WGvVHG2nZccGXwN5DAwM.png"
+    },
+    {
+      "id": "6df02765",
+      "fullName": "Tobias Hoppenthaler",
+      "tagLine": "Lead IT Consultant at msg group",
+      "profilePicture": ""
+    }
+  ],
+  "sessions": [
+    {
+      "title": "Registration",
+      "description": "",
+      "startsAt": "2018-10-19T08:00:00",
+      "endsAt": "2018-10-19T09:00:00",
+      "speakers": []
+    },
+    {
+      "title": "Welcome Talk",
+      "description": "",
+      "startsAt": "2018-10-19T09:00:00",
+      "endsAt": "2018-10-19T09:15:00",
+      "speakers": [
+        "6df02765"
+      ]
+    },
+    {
+      "title": "Keynote: State of the Xamarin – Microsoft Union",
+      "description": "It's been 2 years since a small tech start-up tech from Seattle called Microsoft became a part of the Xamarin family, and this has led to many great things happening in the cross-platform mobile space. This keynote from Xamarin Developer Advocate Jim Bennett covers where we are now with Xamarin development across classic, forms and the tooling, and takes a glimpse into where Xamarin will be going in the future.",
+      "startsAt": "2018-10-19T09:15:00",
+      "endsAt": "2018-10-19T10:00:00",
+      "speakers": [
+        "9c097fdd"
+      ]
+    },
+    {
+      "title": "Introduction to the Actor Model through Akka.NET",
+      "description": "In this session, we'll go through what the actor model is all about and how it solves complex development problems. Afterwards, we'll tackle a small demo with the use of Akka.NET on a mobile app with Xamarin. The Actor Model provides a higher level of abstraction for writing concurrent and distributed systems. It alleviates the developer from having to deal with explicit locking and thread management, making it easier to write correct concurrent and parallel systems.",
+      "startsAt": "2018-10-19T10:10:00",
+      "endsAt": "2018-10-19T11:00:00",
+      "speakers": [
+        "1a294c6f",
+        "93def58c"
+      ]
+    },
+    {
+      "title": "Creating Airplane Mode Proof Xamarin Applications",
+      "description": "It has never been more important to create apps that also work offline. Mobile app users can flick that 'airplane mode' switch any given time and the cellular connection isn't as stable as it is at home. To ensure a great user-experience you, as a developer, need to account for these scenarios. In this session I will show you how to use awesome libraries like Akavache and Polly to create connected apps in a very easy way.",
+      "startsAt": "2018-10-19T10:10:00",
+      "endsAt": "2018-10-19T11:00:00",
+      "speakers": [
+        "20324cb7"
+      ]
+    },
+    {
+      "title": "Bots Are the New Apps? Building Chatbots from Idea to Production",
+      "description": "In this session Geert will explain how to build your own bots using .NET, C#, Azure and the Microsoft Bot Framework. During the session we will cover all areas involved in building a successful production ready bot. Starting from the initial idea to getting a prototype working as fast as possible to actually running it in production on channels such as Skype, Facebook or Telegram.",
+      "startsAt": "2018-10-19T11:10:00",
+      "endsAt": "2018-10-19T12:00:00",
+      "speakers": [
+        "2c3be5c0"
+      ]
+    },
+    {
+      "title": "Help, My Xamarin App Has Memory Issues!",
+      "description": "How is it possible that your app, written in a managed programming language, has memory issues? After all, isn't it the Garbage Collector's job to release unused or unreachable objects to free up memory? Pieter will investigate and try to find the culprits of different memory leaks, and their motives. This often requires a deep dive into some Xamarin/iOS/Android internals. After this session you should have a good understanding of how and why some types of memory leaks arise, how to search for them and how to avoid them in the future.",
+      "startsAt": "2018-10-19T11:10:00",
+      "endsAt": "2018-10-19T12:00:00",
+      "speakers": [
+        "5ca5f30d"
+      ]
+    },
+    {
+      "title": "Lunch",
+      "description": "",
+      "startsAt": "2018-10-19T12:00:00",
+      "endsAt": "2018-10-19T13:00:00",
+      "speakers": []
+    },
+    {
+      "title": "Keynote by Mike James",
+      "description": "",
+      "startsAt": "2018-10-19T13:00:00",
+      "endsAt": "2018-10-19T13:50:00",
+      "speakers": [
+        "a831b82b"
+      ]
+    },
+    {
+      "title": "Sharing Is Caring: Getting the Most out of .NET Code Sharing",
+      "description": "In the olden days, everything was simple: You use C# to write .NET applications that run under Windows. Nowadays, there are many possible target platforms that will run .NET applications, from UWP or Windows Store to iOS, Android, macOS, Linux, or even Tizen. To not re-implement your app for every platform there are many different code sharing strategies: Portable Class Libraries, Shared Projects, File Linking, .NET Standard, .NET Core. The talk will give you all the information you need to make the technology decision for your next project, enabling you to maximize your code sharing.",
+      "startsAt": "2018-10-19T14:00:00",
+      "endsAt": "2018-10-19T14:50:00",
+      "speakers": [
+        "918a2e40"
+      ]
+    },
+    {
+      "title": "Continuous Everything with Azure DevOps",
+      "description": "A deep dive into setting up a real-world end-to-end CI/CD pipeline from scratch. Want to trigger a cloud-hosted build just by checking in code to the master branch? Great, let's talk about Azure DevOps for Xamarin! Starting with automated Builds, over to triggering UI Tests on real devices and finally releasing in multiple stages to Testers first and the App Stores afterward.",
+      "startsAt": "2018-10-19T14:00:00",
+      "endsAt": "2018-10-19T14:50:00",
+      "speakers": [
+        "6aa29431"
+      ]
+    },
+    {
+      "title": "I Don't Speak German – How Cognitive Services Helps Me on My Travels",
+      "description": "As a Microsoft MVP and possessor of a UK passport, Luce is blessed with opportunities to speak all over the UK and now Europe. In this talk, she discusses how Xamarin and Microsoft Cognitive Services have allowed her to engage more with locals and not worry that she is only fluent in English.",
+      "startsAt": "2018-10-19T15:00:00",
+      "endsAt": "2018-10-19T15:50:00",
+      "speakers": [
+        "5e309f31"
+      ]
+    },
+    {
+      "title": "Pimp Your App with Lottie",
+      "description": "Like the animations from the Airbnb Apps? Want something like that in your own app? This talk will show you how you can integrate animations with Lottie in your app and where you can get them from if you do not have an Adobe wizard at your disposal.",
+      "startsAt": "2018-10-19T15:00:00",
+      "endsAt": "2018-10-19T15:50:00",
+      "speakers": [
+        "6df02765"
+      ]
+    },
+    {
+      "title": "Xamarin Everywhere",
+      "description": "Out of the box Xamarin Forms enables you to target Android, iOS and UWP/Windows 10. But thanks to an ever growing community effort you can easily expand your reach and target platforms such as WPF, macOS, Linux, your Samsung TV and even the web. Breaking out of a mobile only world comes with its own sets of challenges when it comes to the UI. During this session we will see how we can extend Xamarin Forms to target new platforms, scale your UI and avoid a UX nightmare.",
+      "startsAt": "2018-10-19T16:00:00",
+      "endsAt": "2018-10-19T16:50:00",
+      "speakers": [
+        "dba798ed"
+      ]
+    },
+    {
+      "title": "Flutter for the Xamarin Developer",
+      "description": "",
+      "startsAt": "2018-10-19T16:00:00",
+      "endsAt": "2018-10-19T16:50:00",
+      "speakers": [
+        "aad73d24"
+      ]
+    },
+    {
+      "title": "Closing Keynote, Socializing and Drinks 🍻",
+      "description": "",
+      "startsAt": "2018-10-19T17:00:00",
+      "endsAt": "2018-10-19T18:00:00",
+      "speakers": []
+    }
+  ],
+  "galleryAlbumId": ""
+}

@@ -1,10 +1,10 @@
 {
   "id": "online-2021",
   "title": "XamExpertDay 2021 Online",
-  "date": "2021-06-11",
+  "date": "2021-10-01",
   "location": {
     "name": "Online",
-    "address": true,
+    "address": "",
     "mapsEmbedUrl": ""
   },
   "sponsors": [],
