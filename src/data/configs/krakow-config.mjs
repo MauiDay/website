@@ -23,12 +23,12 @@ export default {
     codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a> (not part of the London organizers, but involved)`,
     codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:tony@mauiday.net">Tony Edwards</a> (note: part of the London crew)`,
     sponsors: [
-        // {
-        //     name: "Syncfusion",
-        //     logo: "syncfusion",
-        //     url: "https://syncfusion.com/",
-        //     boost: true,
-        // },       
+        {
+            name: "Syncfusion",
+            logo: "syncfusion",
+            url: "https://syncfusion.com/",
+            boost: true,
+        },       
         // {
         //     name: "Telerik",
         //     logo: "progress",
@@ -58,20 +58,26 @@ export default {
             logo: "sessionize",
             url: "https://sessionize.com",
             boost: false,   
-        }
+        },
         // ,
         // {
         //     name: "JetBrains",
         //     logo: "jetbrains",
         //     url: "https://www.jetbrains.com/",
         //     boost: false,
-        // }
-        //,
-        // {
-        //     name: "UX Divers",
-        //     logo: "ux-divers",
-        //     url: "https://uxdivers.com/",
-        // }
+        // },
+        {
+            name: "Grial UI Kit",
+            logo: "grial",
+            url: "https://grialkit.com/",
+            boost: false,
+        },
+        {
+            name: "UX Divers",
+            logo: "ux-divers",
+            url: "https://uxdivers.com/",
+            boost: false,
+        }
     ],
   };
 
