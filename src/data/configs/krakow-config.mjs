@@ -29,18 +29,24 @@ export default {
             url: "https://syncfusion.com/",
             boost: true,
         },       
-        // {
-        //     name: "Telerik",
-        //     logo: "progress",
-        //     url: "https://www.telerik.com/maui-ui",
-        //     boost: true,
-        // },
+        {
+            name: "Telerik",
+            logo: "progress",
+            url: "https://www.telerik.com/maui-ui",
+            boost: true,
+        },
         // {
         //     name: "Sentry",
         //     logo: "sentry",
         //     url: "https://sentry.io",
         //     boost: true,
         // },
+        {
+            name: "Software Mind",
+            logo: "software-mind",
+            url: "https://softwaremind.com/",
+            boost: false,
+        },
         {
             name: "Microsoft",
             logo: "microsoft",
