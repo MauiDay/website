@@ -1,0 +1,377 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { krakowGuide } from "../data/city-guide";
+
+const transportCategory = krakowGuide.categories.find((category) => category.view === "transport");
+const linksCategories = krakowGuide.categories.filter((category) => category.view === "links");
+const mapCategories = krakowGuide.categories.filter((category) => category.view === "map" || !category.view);
+const firstMapItem = mapCategories[0]?.items[0];
+
+const initialMapUrl = firstMapItem
+  ? `https://www.google.com/maps?q=${encodeURIComponent(`${firstMapItem.name}, ${firstMapItem.address}, ${krakowGuide.city}`)}&output=embed`
+  : "";
+---
+
+<Layout pageTitle={`${krakowGuide.city} Guide | MAUI Day`}>
+  <section class="bg-brand-dark py-40">
+    <div class="container max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">For Attendees</p>
+        <h1 class="text-white text-4xl md:text-5xl uppercase font-header font-bold mb-4">
+          {krakowGuide.city} Guide
+        </h1>
+        <p class="text-brand-light/80 text-base max-w-3xl mx-auto">
+          {krakowGuide.intro}
+        </p>
+      </div>
+
+      <section class="mb-12 rounded-3xl border border-brand-extra/40 bg-brand-extra/10 p-6 md:p-8">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <p class="text-brand-extra font-bold uppercase text-xs mb-2">
+              <i class="fa-solid fa-champagne-glasses mr-2"></i>Official Afterparty
+            </p>
+            <h2 class="text-white text-2xl md:text-3xl font-header font-bold mb-2">Drevny Kocur</h2>
+            <p class="text-brand-light/90 text-sm md:text-base mb-1">
+              <i class="fa-solid fa-clock mr-2 text-brand-extra"></i>
+              Right after the conference — <span class="font-bold">18:00</span>
+            </p>
+            <p class="text-brand-light/90 text-sm md:text-base">
+              <i class="fa-solid fa-key mr-2 text-brand-extra"></i>
+              Use password <span class="font-bold">"maui day"</span> at the entrance
+            </p>
+          </div>
+          <a
+            href="https://www.google.com/maps?q=Drevny+Kocur+Krak%C3%B3w"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-5 py-3 rounded-full font-bold text-sm bg-brand-extra hover:bg-brand-extraDark text-white transition inline-flex items-center gap-2 self-start md:self-auto whitespace-nowrap"
+          >
+            <i class="fa-solid fa-map-location-dot"></i>
+            Open in Google Maps
+          </a>
+        </div>
+      </section>
+
+      {krakowGuide.quickFacts && krakowGuide.quickFacts.length > 0 && (
+        <section class="mb-12">
+          <h2 class="text-white text-3xl uppercase font-header font-bold mb-4 text-center">Quick Facts</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {krakowGuide.quickFacts.map((fact) => (
+              <article class="bg-white/5 border border-white/10 rounded-2xl p-4">
+                <p class="text-brand-extra text-xs uppercase font-bold mb-1">{fact.label}</p>
+                <p class="text-brand-light/90 text-sm">{fact.value}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {
+        transportCategory && (
+          <section id={transportCategory.id} class="mb-12 bg-white/5 border border-white/10 rounded-3xl p-6 md:p-8">
+            <div class="mb-6">
+              <p class="text-brand-extra font-bold mb-2 text-sm uppercase">Getting around</p>
+              <h2 class="text-white text-3xl uppercase font-header font-bold mb-2">{transportCategory.label}</h2>
+              {transportCategory.description && (
+                <p class="text-brand-light/80 text-sm max-w-3xl">{transportCategory.description}</p>
+              )}
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {transportCategory.items.map((item, index) => (
+                <article class="bg-brand-dark/70 border border-white/10 rounded-2xl p-5">
+                  <p class="text-brand-extra text-xs font-bold uppercase mb-2">Step {index + 1}</p>
+                  <h3 class="text-white text-xl font-header font-bold leading-tight mb-2">{item.name}</h3>
+                  <p class="text-brand-light/70 text-sm mb-2">
+                    <i class="fa-solid fa-location-dot mr-1 text-brand-extra"></i>
+                    {item.locationName}
+                  </p>
+                  <p class="text-brand-light/90 text-sm mb-3">{item.shortDescription}</p>
+                  <p class="text-brand-light/70 text-sm mb-4">{item.description}</p>
+
+                  {item.tips && item.tips.length > 0 && (
+                    <ul class="space-y-2 mb-5">
+                      {item.tips.map((tip) => (
+                        <li class="text-brand-light/70 text-sm flex items-start gap-2">
+                          <i class="fa-solid fa-circle-check text-brand-extra mt-0.5"></i>
+                          <span>{tip}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <div class="flex flex-wrap gap-2">
+                    {item.actionLinks && item.actionLinks.length > 0 ? (
+                      item.actionLinks.map((link) => (
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="px-4 py-2 rounded-full font-bold text-sm bg-brand-extra hover:bg-brand-extraDark text-white transition inline-flex items-center gap-2"
+                        >
+                          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                          {link.label}
+                        </a>
+                      ))
+                    ) : (
+                      <a
+                        href={item.mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="px-4 py-2 rounded-full font-bold text-sm bg-brand-extra hover:bg-brand-extraDark text-white transition inline-flex items-center gap-2"
+                      >
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        Open details
+                      </a>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div class="mt-5 rounded-2xl border border-brand-extra/40 bg-brand-extra/10 p-4">
+              <p class="text-white text-sm md:text-base">
+                <i class="fa-solid fa-person-walking text-brand-extra mr-2"></i>
+                From <span class="font-bold">Kraków Główny</span> station to the venue (<span class="font-bold">Politechnika Krakowska, Warszawska 24</span>) it is about a <span class="font-bold">10-minute walk</span>.
+              </p>
+            </div>
+          </section>
+        )
+      }
+
+      {linksCategories.map((category) => (
+        <section id={category.id} class="mb-12">
+          <div class="mb-5 text-center">
+            <h2 class="text-white text-3xl uppercase font-header font-bold">{category.label}</h2>
+            {category.description && <p class="text-brand-light/70 text-sm mt-2">{category.description}</p>}
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {category.items.map((item) => (
+              <article class="bg-white/5 border border-white/10 rounded-2xl p-5">
+                <h3 class="text-white text-xl font-header font-bold mb-2">{item.name}</h3>
+                <p class="text-brand-light/70 text-sm mb-3">{item.shortDescription}</p>
+                <div class="flex flex-wrap gap-2">
+                  {item.actionLinks && item.actionLinks.length > 0 ? (
+                    item.actionLinks.map((link) => (
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="px-4 py-2 rounded-full font-bold text-sm bg-brand-extra hover:bg-brand-extraDark text-white transition inline-flex items-center gap-2"
+                      >
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        {link.label}
+                      </a>
+                    ))
+                  ) : (
+                    <a
+                      href={item.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="px-4 py-2 rounded-full font-bold text-sm bg-brand-extra hover:bg-brand-extraDark text-white transition inline-flex items-center gap-2"
+                    >
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      Open website
+                    </a>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      ))}
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10 items-start">
+        <div class="lg:col-span-2 space-y-10">
+          {mapCategories.map((category) => (
+            <section id={category.id}>
+              <div class="mb-5">
+                <h2 class="text-white text-2xl uppercase font-header font-bold">{category.label}</h2>
+                {category.description && (
+                  <p class="text-brand-light/70 text-sm mt-2">{category.description}</p>
+                )}
+              </div>
+
+              <div class="space-y-4">
+                {category.items.map((item) => (
+                  <article
+                    id={`guide-card-${item.id}`}
+                    class="guide-card bg-white/5 border border-white/10 rounded-2xl overflow-hidden"
+                    data-name={item.name}
+                    data-location={item.locationName}
+                    data-address={item.address}
+                    data-short-description={item.shortDescription}
+                    data-description={item.description}
+                    data-image={item.imageUrl}
+                    data-map-url={item.mapUrl}
+                    data-map-embed={`https://www.google.com/maps?q=${encodeURIComponent(`${item.name}, ${item.address}, ${krakowGuide.city}`)}&output=embed`}
+                  >
+                    <button
+                      type="button"
+                      class="guide-select w-full text-left"
+                      aria-label={`Show ${item.name} on map`}
+                    >
+                      <div class="grid grid-cols-[104px_1fr] gap-4 p-3 items-center">
+                        <div class="aspect-square rounded-xl overflow-hidden">
+                          <img
+                            src={item.imageUrl}
+                            alt={item.name}
+                            class="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div>
+                          <h3 class="text-white text-lg font-header font-bold leading-tight">{item.name}</h3>
+                          <p class="text-brand-extra text-sm mt-1">
+                            <i class="fa-solid fa-location-dot mr-1"></i>{item.locationName}
+                          </p>
+                          <p class="text-brand-light/70 text-xs mt-2">{item.shortDescription}</p>
+                        </div>
+                      </div>
+                    </button>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+
+        <div id="guide-map-panel" class="lg:col-span-3 lg:sticky lg:top-28 scroll-mt-24 lg:scroll-mt-0">
+          <div class="bg-white/5 border border-white/10 rounded-3xl overflow-hidden">
+            <div class="aspect-[16/10] bg-brand-dark border-b border-white/10 relative overflow-hidden">
+              <iframe
+                id="guide-map-a"
+                src={initialMapUrl}
+                title="Selected place map"
+                width="100%"
+                height="100%"
+                class="absolute inset-0 w-full h-full opacity-100 transition-opacity duration-200"
+                style="border:0;"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                id="guide-map-b"
+                title="Selected place map"
+                width="100%"
+                height="100%"
+                class="absolute inset-0 w-full h-full opacity-0 pointer-events-none transition-opacity duration-200"
+                style="border:0;"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div class="p-6">
+              <p class="text-brand-extra text-sm mb-2 font-bold uppercase">Selected place</p>
+              <h3 id="guide-selected-name" class="text-white text-3xl font-header font-bold mb-2">
+                {firstMapItem?.name}
+              </h3>
+              <p id="guide-selected-location" class="text-brand-light/70 text-sm mb-2">
+                <i class="fa-solid fa-location-dot mr-1 text-brand-extra"></i>
+                {firstMapItem?.locationName}
+              </p>
+              <p id="guide-selected-address" class="text-brand-light/70 text-sm mb-4">
+                {firstMapItem?.address}
+              </p>
+              <p id="guide-selected-description" class="text-brand-light/90 text-sm mb-5">
+                {firstMapItem?.description}
+              </p>
+
+              <a
+                id="guide-selected-map-link"
+                href={firstMapItem?.mapUrl || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-5 py-3 rounded-full font-bold text-sm bg-brand-extra hover:bg-brand-extraDark text-white transition inline-flex items-center gap-2"
+              >
+                <i class="fa-solid fa-map-location-dot"></i>
+                Open in Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const mapFrameA = document.getElementById("guide-map-a") as HTMLIFrameElement | null;
+    const mapFrameB = document.getElementById("guide-map-b") as HTMLIFrameElement | null;
+    let activeMapFrame: HTMLIFrameElement | null = mapFrameA;
+    let passiveMapFrame: HTMLIFrameElement | null = mapFrameB;
+    let pendingMapToken = 0;
+    const selectedName = document.getElementById("guide-selected-name");
+    const selectedLocation = document.getElementById("guide-selected-location");
+    const selectedAddress = document.getElementById("guide-selected-address");
+    const selectedDescription = document.getElementById("guide-selected-description");
+    const selectedMapLink = document.getElementById("guide-selected-map-link") as HTMLAnchorElement | null;
+    const mapPanel = document.getElementById("guide-map-panel");
+    const mobileLayoutQuery = window.matchMedia("(max-width: 1023px)");
+    const cards = document.querySelectorAll<HTMLElement>(".guide-card");
+
+    const setActiveCard = (activeCard: HTMLElement) => {
+      cards.forEach((card) => {
+        card.classList.remove("ring-2", "ring-brand-extra", "border-brand-extra/50");
+      });
+      activeCard.classList.add("ring-2", "ring-brand-extra", "border-brand-extra/50");
+    };
+
+    if (cards.length > 0) {
+      setActiveCard(cards[0]);
+    }
+
+    const swapMapWithoutBlink = (nextSrc: string) => {
+      if (!activeMapFrame || !passiveMapFrame) return;
+      if (activeMapFrame.src === nextSrc) return;
+
+      const token = ++pendingMapToken;
+      const frameToShow = passiveMapFrame;
+      const frameToHide = activeMapFrame;
+
+      frameToShow.onload = () => {
+        if (token !== pendingMapToken) return;
+        frameToShow.classList.remove("opacity-0", "pointer-events-none");
+        frameToShow.classList.add("opacity-100");
+
+        frameToHide.classList.remove("opacity-100");
+        frameToHide.classList.add("opacity-0", "pointer-events-none");
+
+        activeMapFrame = frameToShow;
+        passiveMapFrame = frameToHide;
+      };
+
+      frameToShow.src = nextSrc;
+    };
+
+    cards.forEach((card) => {
+
+      card.querySelector<HTMLButtonElement>(".guide-select")?.addEventListener("click", () => {
+        const mapEmbed = card.dataset.mapEmbed;
+        const mapUrl = card.dataset.mapUrl;
+        const name = card.dataset.name;
+        const location = card.dataset.location;
+        const address = card.dataset.address;
+        const description = card.dataset.description;
+
+        if (mapEmbed) swapMapWithoutBlink(mapEmbed);
+        if (selectedMapLink && mapUrl) selectedMapLink.href = mapUrl;
+        if (selectedName && name) selectedName.textContent = name;
+        if (selectedLocation && location) {
+          selectedLocation.innerHTML = `<i class="fa-solid fa-location-dot mr-1 text-brand-extra"></i>${location}`;
+        }
+        if (selectedAddress && address) selectedAddress.textContent = address;
+        if (selectedDescription && description) selectedDescription.textContent = description;
+
+        setActiveCard(card);
+
+        if (mobileLayoutQuery.matches && mapPanel) {
+          mapPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+  </script>
+</Layout>
