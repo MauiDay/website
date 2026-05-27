@@ -35,6 +35,12 @@ export default {
             url: "https://www.telerik.com/maui-ui",
             boost: true,
         },
+        {
+            name: "Golden Ore ITC",
+            logo: "golden-ore-itc",
+            url: "https://www.goldenoreitc.pl/",
+            boost: true,
+        },
         // {
         //     name: "Sentry",
         //     logo: "sentry",
