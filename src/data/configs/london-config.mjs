@@ -19,8 +19,8 @@ export default {
         London N1C 4DA,<br/>
         United Kingdom
     `,
-    codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a> (not part of the London organizers, but involved)`,
-    codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:tony@mauiday.net">Tony Edwards</a> (note: part of the London crew)`,
+    codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a>`,
+    codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:tony@mauiday.net">Tony Edwards</a> `,
     sponsors: [
         {
             name: "Syncfusion",

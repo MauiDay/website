@@ -11,7 +11,7 @@ export default {
     mapsLinkUrl: "https://maps.app.goo.gl/svuLsiq8zKZaVxY19",
     ticketUrl: "https://www.eventbrite.nl/e/net-maui-day-cologne-2026-tickets-1990687626278",
     locationNote:"",
-    badge:"krakow26.png",
+    badge:"cologne26.webp",
     locationParking: 'Public parking nearby',
     locationTransit: 'Train station 15 min walk',
     locationCapacity: '160 seats',
@@ -20,8 +20,8 @@ export default {
         50676 Köln,<br/>
         Germany
     `,
-    codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a> (not part of the London organizers, but involved)`,
-    codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:tony@mauiday.net">Tony Edwards</a> (note: part of the London crew)`,
+    codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a>`,
+    codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:shaun@mauiday.net">Shaun Lawrence/a> `,
     sponsors: [
         // {
         //     name: "Syncfusion",
