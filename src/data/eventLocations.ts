@@ -1,17 +1,5 @@
 export const eventLocations = [
   {
-    slug: "cologne",
-    config: "cologne",
-    city: "Cologne",
-    country: "Germany",
-    date: "October 23rd, 2026",
-    name: "MAUI Day Cologne",
-    headline: "Next event: October 23rd, 2026 in Cologne!",
-    image: "cologne26.webp",
-    description:
-      "Join us in Cologne for a full day of .NET MAUI sessions, community, and hallway-track conversations.",
-  },
-  {
     slug: "chennai",
     config: "chennai",
     city: "Chennai",
@@ -22,5 +10,17 @@ export const eventLocations = [
     image: "cologne26.webp",
     description:
       "MAUI Day is coming to Chennai, India. More details will be announced soon.",
+  },
+  {
+    slug: "cologne",
+    config: "cologne",
+    city: "Cologne",
+    country: "Germany",
+    date: "October 23rd, 2026",
+    name: "MAUI Day Cologne",
+    headline: "Next event: October 23rd, 2026 in Cologne!",
+    image: "cologne26.webp",
+    description:
+      "Join us in Cologne for a full day of .NET MAUI sessions, community, and hallway-track conversations.",
   },
 ] as const;
