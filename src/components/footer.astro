@@ -2,7 +2,13 @@
 import { config } from "../../mauiday.config.mjs";
 import loadConfig from '../configLoader';
 
-const confConfig = await loadConfig();
+const {
+  eventConfig,
+  eventBasePath = "",
+  landing = false,
+} = Astro.props;
+const confConfig = eventConfig ?? await loadConfig();
+const sectionHref = (id: string) => `${eventBasePath || ""}/#${id}`;
 ---
 
 
@@ -27,16 +33,22 @@ const confConfig = await loadConfig();
 <div>
 <h4 class="font-bold mb-4 text-primary">Explore</h4>
 <ul class="space-y-2 text-sm text-gray-400">
-{confConfig.hasCfs ? (
-  <li><a class="hover:text-white transition-colors" href="/#call-for-speakers">Call for Speakers</a></li>
+{landing ? (
+  <li><a class="hover:text-white transition-colors" href="/#locations">Locations</a></li>
 ) : (
   <>
-    {confConfig.hasAnnouncedSpeakers && <li><a class="hover:text-white transition-colors" href="/#speakers">Speakers</a></li>}
-    {confConfig.hasAnnouncedSchedule && <li><a class="hover:text-white transition-colors" href="/#schedule">Schedule</a></li>}
+{confConfig.hasCfs ? (
+  <li><a class="hover:text-white transition-colors" href={sectionHref("call-for-speakers")}>Call for Speakers</a></li>
+) : (
+  <>
+    {confConfig.hasAnnouncedSpeakers && <li><a class="hover:text-white transition-colors" href={sectionHref("speakers")}>Speakers</a></li>}
+    {confConfig.hasAnnouncedSchedule && <li><a class="hover:text-white transition-colors" href={sectionHref("schedule")}>Schedule</a></li>}
   </>
 )}
-<li><a class="hover:text-white transition-colors" href="/#location">Location</a></li>
-<li><a class="hover:text-white transition-colors" href="/#sponsors">Sponsors</a></li>
+<li><a class="hover:text-white transition-colors" href={sectionHref("location")}>Location</a></li>
+<li><a class="hover:text-white transition-colors" href={sectionHref("sponsors")}>Sponsors</a></li>
+  </>
+)}
 <li><a class="hover:text-white transition-colors" href="/code-of-conduct">Code of Conduct</a></li>
 </ul>
 </div>

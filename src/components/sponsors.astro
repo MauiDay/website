@@ -2,7 +2,7 @@
 import loadConfig from "../configLoader";
 import type { Sponsor } from "../types";
 
-const config = await loadConfig();
+const config = Astro.props.config ?? await loadConfig();
 const sponsors: Sponsor[] = config.sponsors;
 const boostedSponsors = sponsors.filter(s => s.boost);
 const regularSponsors = sponsors.filter(s => !s.boost);

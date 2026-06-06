@@ -1,25 +1,80 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/hero.astro';
-import About from '../components/about.astro';
-import Location from '../components/location.astro';
-import CFS from '../components/cfs.astro';
-import Sponsors from '../components/sponsors.astro';
-import Speakers from '../components/speakers-js.astro';
-import Schedule from '../components/schedule-js.astro';
-import Newsletter from '../components/newsletter.astro';
-import loadConfig from '../configLoader';
+import { eventLocations } from '../data/eventLocations';
 
-const config = await loadConfig();
+const locations = eventLocations;
 ---
 
-<Layout>
-	<Hero />
-	<About />
-	{config.hasCfs ? ( <CFS /> ) : <></>}
-	{config.hasAnnouncedSpeakers ? ( <Speakers /> ) : <></>}
-	{config.hasAnnouncedSchedule ? ( <Schedule /> ) : <></>}
-	<Location />
-	<Sponsors />
-	<Newsletter />
+<Layout landing={true}>
+<section class="relative bg-cover bg-center hero min-h-screen flex items-center">
+<div class="absolute inset-0 bg-black/50"></div>
+<div
+class="absolute inset-0 z-0"
+style={{
+background: "radial-gradient(125% 125% at 50% 10%, transparent 40%, #C93CAD77 100%)",
+}}
+/>
+<div
+class="absolute inset-0 z-0"
+style={{
+backgroundImage: `
+linear-gradient(to right, #e7e5e411 1px, transparent 1px),
+linear-gradient(to bottom, #e7e5e411 1px, transparent 1px)
+`,
+backgroundSize: "20px 20px",
+}}
+/>
+
+<div class="container relative z-10 max-w-6xl mx-auto px-8 py-40">
+<div class="max-w-3xl mx-auto text-center mb-16">
+<div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-purple-500/30 bg-purple-900/20 backdrop-blur-sm mb-6">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500"></span>
+</span>
+<span class="text-sm font-semibold tracking-widest uppercase text-pink-300">Choose your MAUI Day location</span>
+</div>
+<h1 class="text-white text-4xl md:text-6xl uppercase font-header font-bold mb-6">
+.NET MAUI events around the world
+</h1>
+<p class="text-white text-lg md:text-xl">
+MAUI Day is a one-day, in-person event dedicated to cross-platform development with .NET MAUI. Pick the location that works best for you.
+</p>
+</div>
+
+<div id="locations" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+{locations.map((location) => (
+<a
+href={`/${location.slug}`}
+class="group rounded-3xl border border-white/15 bg-white/10 backdrop-blur-md p-8 shadow-2xl hover:bg-white/15 hover:-translate-y-1 transition-all duration-300"
+>
+<div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+<div class="shrink-0 rounded-full bg-white/10 p-4 ring-1 ring-white/20 group-hover:scale-105 transition-transform duration-300">
+<img
+class="size-32"
+src={`/images/editions/${location.image}`}
+alt={`${location.name} badge`}
+/>
+</div>
+<div class="text-center sm:text-left">
+<p class="text-pink-300 text-sm font-bold tracking-widest uppercase mb-3">
+{location.date}
+</p>
+<h2 class="text-white text-3xl font-header font-bold uppercase mb-3">
+{location.city}, {location.country}
+</h2>
+<p class="text-white/80 leading-relaxed mb-6">
+{location.description}
+</p>
+<span class="btn-gradient px-6 py-3 rounded-full font-bold text-white shadow-lg shadow-pink-500/30 inline-flex items-center gap-2">
+<span>View Location</span>
+<span class="text-sm group-hover:translate-x-1 transition-transform">→</span>
+</span>
+</div>
+</div>
+</a>
+))}
+</div>
+</div>
+</section>
 </Layout>
