@@ -10,6 +10,9 @@ const {
   pageDescription = siteMeta.description,
   pageUrl = siteMeta.url,
   pageImage = siteMeta.image,
+  eventConfig,
+  eventBasePath = "",
+  landing = false,
 } = Astro.props;
 ---
 
@@ -37,9 +40,9 @@ const {
     />
   </head>
   <body>
-    <Navigation />
+    <Navigation eventConfig={eventConfig} eventBasePath={eventBasePath} landing={landing} />
     <slot />
-    <Footer />
+    <Footer eventConfig={eventConfig} eventBasePath={eventBasePath} landing={landing} />
     <button
       id="scrollToTopButton"
       class="hidden fixed bottom-8 right-8 bg-gray-800 text-white p-3 rounded-full shadow-md hover:bg-gray-700 transition"
