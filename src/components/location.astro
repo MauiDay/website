@@ -1,7 +1,7 @@
 ---
 import loadConfig from '../configLoader';
 
-const config = await loadConfig();
+const config = Astro.props.config ?? await loadConfig();
 
 const { location, locationNote, locationAddress, mapsLinkUrl, locationParking, locationTransit, locationCapacity, mapsEmbedUrl } = config;
 ---
