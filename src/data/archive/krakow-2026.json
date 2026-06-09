@@ -1,0 +1,63 @@
+{
+  "id": "krakow-2026",
+  "title": "MAUI Day Kraków 2026",
+  "date": "2026-05-29",
+  "location": {
+    "name": "Politechnika Krakowska",
+    "address": "Warszawska 24, 31-155 Kraków, Poland",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2560.76!2d19.942722!3d50.072583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk"
+  },
+  "sponsors": [
+    {
+      "name": "Syncfusion",
+      "logo": "syncfusion",
+      "url": "https://syncfusion.com/",
+      "boost": true
+    },
+    {
+      "name": "Telerik",
+      "logo": "progress",
+      "url": "https://www.telerik.com/maui-ui",
+      "boost": true
+    },
+    {
+      "name": "Golden Ore ITC",
+      "logo": "golden-ore-itc",
+      "url": "https://www.goldenoreitc.pl/",
+      "boost": true
+    },
+    {
+      "name": "Software Mind",
+      "logo": "software-mind",
+      "url": "https://softwaremind.com/",
+      "boost": false
+    },
+    {
+      "name": "Microsoft",
+      "logo": "microsoft",
+      "url": "https://www.microsoft.com",
+      "boost": false
+    },
+    {
+      "name": "Sessionize",
+      "logo": "sessionize",
+      "url": "https://sessionize.com",
+      "boost": false
+    },
+    {
+      "name": "Grial UI Kit",
+      "logo": "grial",
+      "url": "https://grialkit.com/",
+      "boost": false
+    },
+    {
+      "name": "UX Divers",
+      "logo": "ux-divers",
+      "url": "https://uxdivers.com/",
+      "boost": false
+    }
+  ],
+  "speakers": [],
+  "sessions": [],
+  "galleryAlbumId": "krakow-2026"
+}
