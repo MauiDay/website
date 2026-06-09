@@ -8,10 +8,11 @@
 
 ## Upcoming Events
 
-- [.NET MAUI Day Kraków 2026](https://mauiday.net/): May 29, 2026 in Kraków, Poland
+- [.NET MAUI Day Cologne 2026](https://mauiday.net/): October 23, 2026 in Cologne, Germany
 
 ## Past Events
 
+- [Kraków 2026](https://mauiday.net/archive/krakow-2026): May 29, 2026
 - [London 2026](https://mauiday.net/archive/london-2026): February 6, 2026
 - [London 2025](https://mauiday.net/archive/london-2025): March 14, 2025
 - [Cologne October 2024](https://mauiday.net/archive/cologne-2024): October 11, 2024
