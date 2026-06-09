@@ -1,0 +1,204 @@
+{
+  "id": "krakow-2026",
+  "title": "MAUI Day Kraków 2026",
+  "date": "2026-05-29",
+  "location": {
+    "name": "Politechnika Krakowska",
+    "address": "Warszawska 24, 31-155 Kraków, Poland",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2560.76!2d19.942722!3d50.072583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk"
+  },
+  "sponsors": [
+    {
+      "name": "Syncfusion",
+      "logo": "syncfusion",
+      "url": "https://syncfusion.com/",
+      "boost": true
+    },
+    {
+      "name": "Telerik",
+      "logo": "progress",
+      "url": "https://www.telerik.com/maui-ui",
+      "boost": true
+    },
+    {
+      "name": "Golden Ore ITC",
+      "logo": "golden-ore-itc",
+      "url": "https://www.goldenoreitc.pl/",
+      "boost": true
+    },
+    {
+      "name": "Software Mind",
+      "logo": "software-mind",
+      "url": "https://softwaremind.com/",
+      "boost": false
+    },
+    {
+      "name": "Microsoft",
+      "logo": "microsoft",
+      "url": "https://www.microsoft.com",
+      "boost": false
+    },
+    {
+      "name": "Sessionize",
+      "logo": "sessionize",
+      "url": "https://sessionize.com",
+      "boost": false
+    },
+    {
+      "name": "Grial UI Kit",
+      "logo": "grial",
+      "url": "https://grialkit.com/",
+      "boost": false
+    },
+    {
+      "name": "UX Divers",
+      "logo": "ux-divers",
+      "url": "https://uxdivers.com/",
+      "boost": false
+    }
+  ],
+  "speakers": [
+    {
+      "id": "d2367df0-3627-4f29-9021-5b92db6d6745",
+      "fullName": "Codrina Merigo",
+      "tagLine": "Digital Product Manager @ Fresenius Medical Care",
+      "profilePicture": "https://sessionize.com/image/14f8-400o400o1-Vm1VsdMb8SCvVS1rCUURy9.jpg"
+    },
+    {
+      "id": "1643c57c-d242-4259-a341-98e4d495a26e",
+      "fullName": "Damian Antonowicz",
+      "tagLine": "Architect",
+      "profilePicture": "https://sessionize.com/image/ba04-400o400o1-VgM8jqJ9DELX3XEgqr2sWj.jpg"
+    },
+    {
+      "id": "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15",
+      "fullName": "David Ortinau",
+      "tagLine": "Principal Product Manager at Microsoft",
+      "profilePicture": "https://sessionize.com/image/fc0f-400o400o1-31qm53unFBj8A279VcnKHn.jpg"
+    },
+    {
+      "id": "b5f674c8-199a-444d-bfaf-e8f8cd8a6248",
+      "fullName": "Gerald Versluis",
+      "tagLine": "Senior Software Engineer at Microsoft",
+      "profilePicture": "https://sessionize.com/image/3d0e-400o400o1-c8-199a-444d-bfaf-e8f8cd8a6248.a492ee56-53af-42fa-9a7f-45c7186ac12d.png"
+    },
+    {
+      "id": "cee07da0-2b68-4f8f-a220-d0d239a935b6",
+      "fullName": "Jakub Florkowski",
+      "tagLine": "Software Engineer at Microsoft",
+      "profilePicture": "https://sessionize.com/image/1d61-400o400o1-4MVBK8emTKiEeM2a2o3JSv.jpg"
+    },
+    {
+      "id": "172df8dd-ab59-4dc6-978b-d92a6d75a07a",
+      "fullName": "Łukasz Grudziński",
+      "tagLine": "TASK Software, PAR Tech - Senior mobile developer",
+      "profilePicture": "https://sessionize.com/image/4088-400o400o1-XtpNayxRbUY9HyWkpoaUVu.jpg"
+    },
+    {
+      "id": "df2bc5ca-5a6b-48a9-87ac-71c817d7b240",
+      "fullName": "Mark Allibone",
+      "tagLine": "Technical Lead at Rey Technology, Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/ab07-400o400o1-ca-5a6b-48a9-87ac-71c817d7b240.41b186a0-9d62-449a-90de-a16a94894db1.jpg"
+    },
+    {
+      "id": "1a8eb8cc-fa0f-401e-b10b-843de142ad69",
+      "fullName": "Stefan Pölz",
+      "tagLine": "I C# .NET; @Sentry by day; @FlashOWare by night",
+      "profilePicture": "https://sessionize.com/image/616f-400o400o1-cc-fa0f-401e-b10b-843de142ad69.6c6f71e4-5e78-46de-ae50-95e166be511a.png"
+    },
+    {
+      "id": "5ad7b431-a439-49ce-b663-c510d64583fe",
+      "fullName": "Stéphane Delcroix",
+      "tagLine": "Principal Software Engineer at Microsoft",
+      "profilePicture": "https://sessionize.com/image/8ffa-400o400o1-GbBKW1zqLHMJGD7yZSpKDk.jpg"
+    }
+  ],
+  "sessions": [
+    {
+      "title": ".NET MAUI Now and Next",
+      "description": "We continue to pursue our mission to delight developers and empower you to achieve more with our SDKs and tools. While .NET 10 is still new and shiny, we are already working on .NET 11. In this session I'll share the product highlights and candidly share our vision for the future of mobile and desktop cross-platform development. ",
+      "startsAt": "2026-05-29T09:10:00",
+      "endsAt": "2026-05-29T10:10:00",
+      "speakers": [
+        "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15"
+      ]
+    },
+    {
+      "title": "Beyond the phone: integrating native Apple Watch app with .NET MAUI",
+      "description": "In this session you'll learn how to build native Swift Apple Watch app that works with .NET MAUI.",
+      "startsAt": "2026-05-29T10:20:00",
+      "endsAt": "2026-05-29T10:50:00",
+      "speakers": [
+        "1643c57c-d242-4259-a341-98e4d495a26e"
+      ]
+    },
+    {
+      "title": "Performance Hacks: When Best Practices Alone Aren’t Enough",
+      "description": "We all know this situation. The designer gives you a Figma file. It is not just \"a list.\" It is grids and images inside a scrollview, with weird overlays, dynamic resizing, and elements that need to move around.\r\nIt looks logical in the design tool. But when you code it with standard MAUI layouts, the phone starts burning.\r\nThis talk is about what to do when the design structure is just too heavy for the framework to handle nicely.\r\n\"Best practices\" say we should use clean XAML and nice containers. But if you have too many layers of StackLayout or Grid inside each other, the layout calculation takes forever.\r\nI will show you real examples from production apps where the layout complexity was killing performance.\r\nStop Guessing: We use Meteor profiler and native tools to see exactly where the layout cycle is wasting time.\r\nFlattening the Tree: How to take a \"logical\" layout and smash it into something ugly but fast.\r\nBypassing MAUI: When to stop fighting with XAML and just use a Native View or a Canvas because standard controls are too heavy.\r\nThe \"Hacks\": Preloading views, faking complexity with images, and tricks to make lazy loading seamless.\r\nNo theory. Just us trying to build crazy layouts without killing the frame rate.",
+      "startsAt": "2026-05-29T10:50:00",
+      "endsAt": "2026-05-29T11:20:00",
+      "speakers": [
+        "172df8dd-ab59-4dc6-978b-d92a6d75a07a"
+      ]
+    },
+    {
+      "title": "AI-Assisted PRs in .NET MAUI: Agentic Workflows for Code Quality",
+      "description": "How the .NET MAUI team built specialized AI agents that automate pull request reviews, generate UI tests, reproduce bugs, and explore fix alternatives using multi-model consensus.\r\nThis is a show-and-tell of real, working automation - not a concept demo.",
+      "startsAt": "2026-05-29T11:40:00",
+      "endsAt": "2026-05-29T12:25:00",
+      "speakers": [
+        "cee07da0-2b68-4f8f-a220-d0d239a935b6",
+        "b5f674c8-199a-444d-bfaf-e8f8cd8a6248"
+      ]
+    },
+    {
+      "title": "Building Intelligent .NET MAUI Apps with AI",
+      "description": "In this session, you’ll learn how to integrate AI capabilities into a .NET MAUI application to create smarter, more responsive cross-platform experiences.\r\n\r\nWe’ll explore practical AI use cases such as text analysis, image understanding, and conversational features, and see how they fit into a clean MAUI architecture. Through a live demo, you’ll discover patterns and best practices for performance, privacy, and user experience.\r\n\r\nLeave with concrete ideas and techniques you can apply immediately to build intelligent MAUI apps that deliver real value to users.",
+      "startsAt": "2026-05-29T13:15:00",
+      "endsAt": "2026-05-29T14:15:00",
+      "speakers": [
+        "d2367df0-3627-4f29-9021-5b92db6d6745"
+      ]
+    },
+    {
+      "title": "Observability in .NET MAUI 10",
+      "description": "The .NET Multi-platform App UI (.NET MAUI) in .NET 10 added traces and metrics for layout performance monitoring. It's high time to take a closer look at observability (or \"o11y\" to use a fancy numeronym) for local debugging and monitoring of production environments.\r\n\r\nThis live-coding session covers not only the three pillars of observability — logs, metrics, and (distributed) traces — but also its implementation in .NET in general and .NET MAUI in particular. Moreover, we uncover the OpenTelemetry (OTel) standard, observe processes locally through CLI-based .NET tools and Aspire dashboards, and monitor deployed applications via Sentry.\r\n\r\nThe insights gained from this talk will help you to gain insights into your every .NET MAUI app to make error detection less painful and perhaps even aid in preventing problems in the first place.",
+      "startsAt": "2026-05-29T14:25:00",
+      "endsAt": "2026-05-29T14:55:00",
+      "speakers": [
+        "1a8eb8cc-fa0f-401e-b10b-843de142ad69"
+      ]
+    },
+    {
+      "title": "Aspire for your .NET MAUI app",
+      "description": "Most mobile applications rely on a backend - yet the development flow often is cumbersome. Debugging backend and mobile app on your developer machine is doable but not super intuitive. And working with distributed systems - which is basically what we are doing here - comes with a whole load of challenges that can often be overlooked when starting out. \r\n\r\nIn this session, you’ll learn how Aspire improves the developer experience for mobile apps with backends. We’ll start with creating a new mobile application with a ASP.NET Core backend using Aspire. Highlighting how Aspire simplifies local development, service orchestration, observability, and configuration.\r\n\r\nNext, we’ll look at how to “Aspirify” an existing mobile solution with a backend, step by step, and discuss what changes—and what doesn’t. You’ll see how Aspire helps you gain better insight into your systems, reduce friction between frontend and backend development, and put you up for future growth by including sensible standards.\r\n\r\nBy the end of this session, you’ll understand how and when to use Aspire makes sense for your .NET MAUI and ASP.NET Core apps. What benefits it brings in real-world scenarios, and how to adopt it.",
+      "startsAt": "2026-05-29T15:25:00",
+      "endsAt": "2026-05-29T16:10:00",
+      "speakers": [
+        "df2bc5ca-5a6b-48a9-87ac-71c817d7b240"
+      ]
+    },
+    {
+      "title": "XAML C# Expressions, and plenty of other improvements making XAML relevant in 2026",
+      "description": "net11 is introducing multiple improvements in the XAML language and its processing for MAUI projects, focussing on developers delight, and app performance\r\n- global, and implicit, xmlns\r\n- sourcegeneration\r\n- C# expression in XAML\r\n- and more\r\n\r\n\r\n",
+      "startsAt": "2026-05-29T16:15:00",
+      "endsAt": "2026-05-29T17:00:00",
+      "speakers": [
+        "5ad7b431-a439-49ce-b663-c510d64583fe"
+      ]
+    },
+    {
+      "title": "The MAUI Panel",
+      "description": "This is your opportunity to put your question to the MAUI team.",
+      "startsAt": "2026-05-29T17:00:00",
+      "endsAt": "2026-05-29T17:40:00",
+      "speakers": [
+        "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15",
+        "5ad7b431-a439-49ce-b663-c510d64583fe",
+        "b5f674c8-199a-444d-bfaf-e8f8cd8a6248",
+        "cee07da0-2b68-4f8f-a220-d0d239a935b6"
+      ]
+    }
+  ],
+  "galleryAlbumId": "krakow-2026"
+}
