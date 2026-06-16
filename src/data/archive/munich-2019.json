@@ -1,0 +1,313 @@
+{
+  "id": "munich-2019",
+  "title": "XamExpertDay 2019 Munich",
+  "date": "2019-06-14",
+  "location": {
+    "name": "Microsoft Office Munich",
+    "address": "Walter-Gropius-Straße 5, 80807 München, Germany",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?origin=mfe&pb=!1m2!2m1!1sMicrosoft+Deutschland+GmbH,+Walter-Gropius-Stra%C3%9Fe+5,+80807+M%C3%BCnchen,+Germany"
+  },
+  "sponsors": [
+    {
+      "name": "Microsoft",
+      "logo": "microsoft",
+      "url": "https://www.microsoft.com",
+      "boost": false
+    },
+    {
+      "name": "Syncfusion",
+      "logo": "syncfusion",
+      "url": "https://www.syncfusion.com/",
+      "boost": false
+    },
+    {
+      "name": "Zühlke",
+      "logo": "zuehlke",
+      "url": "https://www.zuehlke.com/",
+      "boost": false
+    },
+    {
+      "name": "MFractor",
+      "logo": "mfractor",
+      "url": "https://www.mfractor.com/",
+      "boost": false
+    },
+    {
+      "name": "LiveXAML",
+      "logo": "livexaml",
+      "url": "https://www.livexaml.com/",
+      "boost": false
+    },
+    {
+      "name": "JetBrains",
+      "logo": "jetbrains",
+      "url": "https://www.jetbrains.com/",
+      "boost": false
+    }
+  ],
+  "speakers": [
+    {
+      "id": "5935419c-3bd3-57bf-963b-83a8f79b31e9",
+      "fullName": "Jim Bennett",
+      "tagLine": "Developer Advocate at Microsoft",
+      "profilePicture": "https://sessionize.com/image/2a01-400o400o2-MgNDirDViegVKaHksj7oa2.jpg"
+    },
+    {
+      "id": "62f6bfb5-22a2-572b-b47e-e271eaadd43f",
+      "fullName": "Martijn van Dijk",
+      "tagLine": ".NET developer from The Netherlands; Xamarin, Android, Windows and iOS developer; MvvmCross contributor and Xamarin plugin creator.",
+      "profilePicture": "https://secure.gravatar.com/avatar/22155f520ab611cf04f76762556ca3f5?s=400"
+    },
+    {
+      "id": "2a132d73-278a-502e-b0bc-c59f23f675a8",
+      "fullName": "Mark Allibone",
+      "tagLine": "Lead Mobile Developer Rey Automation, Microsoft MVP",
+      "profilePicture": "https://sessionize.com/image/ab07-400o400o1-ca-5a6b-48a9-87ac-71c817d7b240.41b186a0-9d62-449a-90de-a16a94894db1.jpg"
+    },
+    {
+      "id": "58c9c0e5-8ab2-5115-b420-5e66653ab432",
+      "fullName": "Almir Vuk",
+      "tagLine": "Microsoft MVP, Software Development Engineer at App Impact d.o.o Sarajevo",
+      "profilePicture": "https://sessionize.com/image/6752-400o400o1-b4-43df-4b8b-a78c-805eac480c3d.6d9b18b9-156e-4c2c-bc98-4cb220bc697d.jpg"
+    },
+    {
+      "id": "38b123a9-22bf-5c43-be32-dce1cb971a76",
+      "fullName": "Alexander Witkowski",
+      "tagLine": "Mobile developer, consultant and trainer focused on UWP, Xamarin Apps and WPF.",
+      "profilePicture": "/images/speakers/munich-2019-alexander-witkowski.jpg"
+    },
+    {
+      "id": "c9b7fa91-1821-54a4-9a04-550cfbca83e5",
+      "fullName": "Mike James",
+      "tagLine": "Former Xamarin Evangelist who now preaches Avalonia UI.",
+      "profilePicture": "https://sessionize.com/image/61d1-400o400o2-S1WGvVHG2nZccGXwN5DAwM.png"
+    },
+    {
+      "id": "61747195-3c48-5901-9e4d-2419deb226ce",
+      "fullName": "Kerry W. Lothrop",
+      "tagLine": "Managing Engineer at DHL IT Services, Microsoft MVP",
+      "profilePicture": "https://avatars.githubusercontent.com/u/6199837?v=4"
+    },
+    {
+      "id": "64a1091a-c75b-5c09-98a4-aca94b551f86",
+      "fullName": "Rafael Regh",
+      "tagLine": "Tech entrepreneur and software architect focused on cloud transformation and scalable platforms.",
+      "profilePicture": "/images/speakers/munich-2019-rafael-regh.jpg"
+    },
+    {
+      "id": "c2de6ab1-8533-5011-ac0e-0bc598c570c9",
+      "fullName": "Dennie Declercq",
+      "tagLine": "Developer & President DDSoft",
+      "profilePicture": "https://sessionize.com/image/2c3a-400o400o1-8bfc401c-4f95-4a05-b08c-181809cb681f.jpg"
+    },
+    {
+      "id": "3b8ec080-1a64-55e7-8497-4e9f8407e04e",
+      "fullName": "Ulrike Stirnweiß",
+      "tagLine": "Xamarin speaker and INETA Germany community contributor.",
+      "profilePicture": "/images/speakers/munich-2019-ulrike-stirnweiss.jpg"
+    },
+    {
+      "id": "242f0d6f-40ff-5db0-acb4-321ce214b2a1",
+      "fullName": "Siavash Ghassemi",
+      "tagLine": "Software architect and developer, Microsoft Azure MVP and Xamarin expert.",
+      "profilePicture": "/images/speakers/munich-2019-siavash-ghassemi.jpg"
+    },
+    {
+      "id": "a8daac3f-f93f-5e1d-996a-ccc5028455cc",
+      "fullName": "François Raminosona",
+      "tagLine": "",
+      "profilePicture": "/images/speakers/munich-2019-francois-raminosona.jpg"
+    },
+    {
+      "id": "3ee2afa9-6484-55e1-bb23-3163a4b8b475",
+      "fullName": "Sven-Michael Stübe",
+      "tagLine": "Xamarin and MvvmCross mobile app developer; organizer of Munich Mobile Xamarin & .NET Developers.",
+      "profilePicture": "/images/speakers/munich-2019-sven-michael-stube.jpg"
+    },
+    {
+      "id": "ccf77c20-6606-5746-991f-b4bbb8db9561",
+      "fullName": "Luce Carter",
+      "tagLine": "Microsoft MVP and lover of code, sunshine and trains.",
+      "profilePicture": "https://sessionize.com/image/ae1a-400o400o1-34-06bb-4596-bc44-40edd9e03f6b.d01df39f-d077-4912-93e5-783d23ce649e.jpg"
+    },
+    {
+      "id": "29c56521-2a89-5688-b431-def4181e0d12",
+      "fullName": "Robin-Manuel Thiel",
+      "tagLine": "Microsoft",
+      "profilePicture": "https://avatars.githubusercontent.com/u/5874465?v=4"
+    },
+    {
+      "id": "01e89997-d8f7-513a-9f9c-fc908c0968e6",
+      "fullName": "Sebastian Seidel",
+      "tagLine": "CEO Cayas Software, Mobile Enthusiast",
+      "profilePicture": "/images/speakers/munich-2019-sebastian-seidel.jpg"
+    }
+  ],
+  "sessions": [
+    {
+      "title": "Intro",
+      "description": "",
+      "startsAt": "2019-06-14T09:00:00",
+      "endsAt": "2019-06-14T09:15:00",
+      "speakers": []
+    },
+    {
+      "title": "Keynote: Xamarin, past, present and future",
+      "description": "This keynote from Xamarin Developer Advocate Jim Bennett covers where Xamarin development is now across classic Xamarin, Xamarin.Forms and tooling, and takes a glimpse into where Xamarin is going in the future.",
+      "startsAt": "2019-06-14T09:15:00",
+      "endsAt": "2019-06-14T10:00:00",
+      "speakers": [
+        "5935419c-3bd3-57bf-963b-83a8f79b31e9"
+      ]
+    },
+    {
+      "title": "Mobile architecture with MvvmCross, are you doing it right?",
+      "description": "MvvmCross brings inversion of control, dependency injection and viewmodel-driven navigation to Xamarin apps. This session looks at using those patterns to build mobile apps that are easier to build, test and debug while writing less platform-specific glue code.",
+      "startsAt": "2019-06-14T10:10:00",
+      "endsAt": "2019-06-14T10:55:00",
+      "speakers": [
+        "62f6bfb5-22a2-572b-b47e-e271eaadd43f"
+      ]
+    },
+    {
+      "title": "Fabulous Functional Frontends",
+      "description": "Fabulous is an open-source framework for building mobile and desktop apps with F# and Xamarin.Forms using functional programming and the Model-View-Update pattern. This session introduces how declarative views, immutable state and centralized updates can make frontend code clearer and easier to maintain.",
+      "startsAt": "2019-06-14T10:10:00",
+      "endsAt": "2019-06-14T10:55:00",
+      "speakers": [
+        "2a132d73-278a-502e-b0bc-c59f23f675a8"
+      ]
+    },
+    {
+      "title": "Application Indexing and Deep Linking in Xamarin.Forms apps",
+      "description": "",
+      "startsAt": "2019-06-14T11:05:00",
+      "endsAt": "2019-06-14T11:50:00",
+      "speakers": [
+        "58c9c0e5-8ab2-5115-b420-5e66653ab432"
+      ]
+    },
+    {
+      "title": "White Label Apps with Xamarin.Forms",
+      "description": "",
+      "startsAt": "2019-06-14T11:05:00",
+      "endsAt": "2019-06-14T11:50:00",
+      "speakers": [
+        "38b123a9-22bf-5c43-be32-dce1cb971a76"
+      ]
+    },
+    {
+      "title": "Lunch",
+      "description": "",
+      "startsAt": "2019-06-14T11:50:00",
+      "endsAt": "2019-06-14T12:45:00",
+      "speakers": []
+    },
+    {
+      "title": "No Code backend with App Center",
+      "description": "App Center expanded beyond build, test, distribution and analytics with authentication and data storage features. This session shows how App Center can reduce the amount of backend code needed for mobile apps by using App Center Auth, App Center Data, Cosmos DB-backed storage and offline-capable synchronization.",
+      "startsAt": "2019-06-14T12:45:00",
+      "endsAt": "2019-06-14T13:30:00",
+      "speakers": [
+        "c9b7fa91-1821-54a4-9a04-550cfbca83e5"
+      ]
+    },
+    {
+      "title": "Is your app secure?",
+      "description": "",
+      "startsAt": "2019-06-14T12:45:00",
+      "endsAt": "2019-06-14T13:30:00",
+      "speakers": [
+        "61747195-3c48-5901-9e4d-2419deb226ce"
+      ]
+    },
+    {
+      "title": "Improve People with disabilities' lives with Xamarin.Essentials",
+      "description": "This talk is for the makers! For the makers who are making apps for people with disabilities. Apps to give quality of life to people who aren’t used to use a smartphone. In this talk we are going to focus on how Xamarin.Essentials can make steps to develop accessible apps a lot more easy. Xamarin.Essentials is a NuGet package you can download in combination with Xamarin.Android, Xamarin.iOS and Xamarin.Forms. This is going to be an awesome session that combines technical stuff and non-technical “social care”.",
+      "startsAt": "2019-06-14T13:40:00",
+      "endsAt": "2019-06-14T14:25:00",
+      "speakers": [
+        "c2de6ab1-8533-5011-ac0e-0bc598c570c9"
+      ]
+    },
+    {
+      "title": "Xamarin vs. Reality",
+      "description": "",
+      "startsAt": "2019-06-14T13:40:00",
+      "endsAt": "2019-06-14T14:25:00",
+      "speakers": [
+        "64a1091a-c75b-5c09-98a4-aca94b551f86"
+      ]
+    },
+    {
+      "title": "Beyond Accessibility",
+      "description": "A look at accessibility from broader perspectives than the usual checklist, exploring practical concepts and different angles that can help teams design more inclusive mobile app experiences.",
+      "startsAt": "2019-06-14T14:35:00",
+      "endsAt": "2019-06-14T15:20:00",
+      "speakers": [
+        "3b8ec080-1a64-55e7-8497-4e9f8407e04e",
+        "242f0d6f-40ff-5db0-acb4-321ce214b2a1"
+      ]
+    },
+    {
+      "title": "Dragging and dropping in Xamarin.Forms",
+      "description": "This session shows how to implement drag-and-drop interactions in Xamarin.Forms without native components or custom renderers, using PanGestureRecognizer, TranslateTo and coordinate calculations to move views, detect hover targets and handle drops.",
+      "startsAt": "2019-06-14T14:35:00",
+      "endsAt": "2019-06-14T15:20:00",
+      "speakers": [
+        "a8daac3f-f93f-5e1d-996a-ccc5028455cc"
+      ]
+    },
+    {
+      "title": "Coffee break",
+      "description": "",
+      "startsAt": "2019-06-14T15:20:00",
+      "endsAt": "2019-06-14T15:50:00",
+      "speakers": []
+    },
+    {
+      "title": "C# 8 Introduction - All your nulls belong to us",
+      "description": "An introduction to new C# 8 language features, with a focus on nullable reference types and how the compiler can help make null handling more explicit and less error-prone.",
+      "startsAt": "2019-06-14T15:50:00",
+      "endsAt": "2019-06-14T16:35:00",
+      "speakers": [
+        "3ee2afa9-6484-55e1-bb23-3163a4b8b475"
+      ]
+    },
+    {
+      "title": "Coming out of your Shell - Using Xamarin.Forms Shell for common UI tasks",
+      "description": "Xamarin.Forms 4.0 came out in May 2019 and with it, a load of new features to make your life easier as a developer. In this talk, Luce will discuss the new features including Shell, a navigation framework taking away some of the complexities when developing UI's that all link together.",
+      "startsAt": "2019-06-14T15:50:00",
+      "endsAt": "2019-06-14T16:35:00",
+      "speakers": [
+        "ccf77c20-6606-5746-991f-b4bbb8db9561"
+      ]
+    },
+    {
+      "title": "Continuous Everything with Azure DevOps",
+      "description": "A deep dive into setting up a real-world end-to-end CI/CD pipeline from scratch. Want to trigger a cloud-hosted build just by checking in code to the master branch? Great, let's talk about Azure DevOps for Xamarin! Starting with automated Builds, over to triggering UI Tests on real devices and finally releasing in multiple stages to Testers first and the App Stores afterward.",
+      "startsAt": "2019-06-14T16:45:00",
+      "endsAt": "2019-06-14T17:30:00",
+      "speakers": [
+        "29c56521-2a89-5688-b431-def4181e0d12"
+      ]
+    },
+    {
+      "title": "Performance Best Practices from over 6 years of Xamarin development",
+      "description": "",
+      "startsAt": "2019-06-14T16:45:00",
+      "endsAt": "2019-06-14T17:30:00",
+      "speakers": [
+        "01e89997-d8f7-513a-9f9c-fc908c0968e6"
+      ]
+    },
+    {
+      "title": "Outro, Raffle",
+      "description": "",
+      "startsAt": "2019-06-14T17:40:00",
+      "endsAt": "2019-06-14T18:00:00",
+      "speakers": []
+    }
+  ],
+  "galleryAlbumId": "munich-2019"
+}
