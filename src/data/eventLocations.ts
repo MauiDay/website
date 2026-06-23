@@ -4,7 +4,7 @@ export const eventLocations = [
     config: "skopje",
     city: "Skopje",
     country: "Macedonia",
-    date: "September 17th 2026",
+    date: "September 17th, 2026",
     name: "MAUI Day Skopje",
     headline: "Event Date: September 17th, 2026 in Skopje!",
     image: "cologne26.webp",
