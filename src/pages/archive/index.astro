@@ -8,13 +8,16 @@ const albums = await fetchAlbums();
 
 const eventsWithThumbs = events.map((event) => {
   const album = albums.find((a) => a.id === event.galleryAlbumId);
+  const badgeImage = event.badgeImage ? `/images/editions/${event.badgeImage}` : '';
   let thumbnail = '/images/default.png';
   if (album) {
     const thumbUrls = getAlbumThumbUrls(album);
     thumbnail = getAlbumThumbnail(album, thumbUrls);
   }
-  return { ...event, thumbnail };
+  return { ...event, badgeImage, thumbnail };
 });
+
+const hasBadgeEvents = eventsWithThumbs.some((event) => event.badgeImage);
 ---
 
 <Layout pageTitle="Archive | MAUI Day">
@@ -26,11 +29,43 @@ const eventsWithThumbs = events.map((event) => {
         Browse past MAUI Day and XamExpertDay events.
       </p>
 
+      {hasBadgeEvents && (
+        <div class="mb-12 rounded-3xl border border-white/10 bg-white/5 p-6 text-left">
+          <div class="flex flex-col md:flex-row gap-5 md:items-center">
+            <div class="size-14 shrink-0 rounded-2xl bg-brand-extra/20 text-brand-extra flex items-center justify-center">
+              <i class="fa-solid fa-award text-2xl"></i>
+            </div>
+            <div>
+              <p class="text-brand-extra font-bold mb-2 text-sm font-header uppercase tracking-wide">Collectible event badges</p>
+              <h3 class="text-white text-2xl font-header font-bold mb-2">Not just artwork: these are physical badges too.</h3>
+              <p class="text-brand-light/70 text-sm leading-relaxed">
+                Badge-enabled MAUI Day editions have a matching physical badge attendees can wear on clothing,
+                lanyards, bags, or wherever they collect conference memories. Each badge links back to the
+                event archive so the collection also tells the story of where it came from.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
         {eventsWithThumbs.map((event) => (
           <a href={`/archive/${event.id}`} class="group block">
             <div class="overflow-hidden rounded-3xl shadow-md aspect-[4/3] bg-brand-dark border border-white/10">
-              {event.thumbnail !== '/images/default.png' ? (
+              {event.badgeImage ? (
+                <div class="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-brand-dark via-brand-dark to-brand-extra/40">
+                  <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,60,173,0.25),_transparent_55%)]"></div>
+                  <span class="absolute top-4 left-4 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white/80">
+                    Physical badge
+                  </span>
+                  <img
+                    src={event.badgeImage}
+                    alt={`${event.title} badge`}
+                    class="relative z-10 size-40 object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              ) : event.thumbnail !== '/images/default.png' ? (
                 <img
                   src={event.thumbnail}
                   alt={event.title}
