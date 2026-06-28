@@ -7,7 +7,7 @@ export const eventLocations = [
     date: "September 17th, 2026",
     name: "MAUI Day Skopje",
     headline: "Event Date: September 17th, 2026 in Skopje!",
-    image: "cologne26.webp",
+    image: "skopje26.png",
     description:
       "Join us in Skopje for a day of .NET MAUI workshops, talks, community, and hallway-track conversations.",
   },

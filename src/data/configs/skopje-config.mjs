@@ -11,7 +11,7 @@ export default {
     mapsLinkUrl: "https://maps.app.goo.gl/qUjmgxXHBQTZYQSD8",
     ticketUrl: "https://www.eventbrite.nl/e/net-maui-day-skopje-2026-tickets-1992309951697",
     locationNote: "",
-    badge:"cologne26.webp",
+    badge:"skopje26.png",
     locationParking: 'Parking available nearby',
     locationTransit: 'Bus Stop 5 minutes walk',
     locationCapacity: '70',
