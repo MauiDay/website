@@ -1,6 +1,6 @@
 ---
 import loadConfig from "../configLoader";
-const config = await loadConfig();
+const config = Astro.props.config ?? await loadConfig();
 ---
 
 <section id="call-for-speakers" class="py-24 bg-brand-light relative">

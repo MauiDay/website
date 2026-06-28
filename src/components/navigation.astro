@@ -2,7 +2,14 @@
 import { config } from "../../mauiday.config.mjs";
 import loadConfig from "../configLoader";
 
-const confConfig = await loadConfig();
+const {
+  eventConfig,
+  eventBasePath = "",
+  landing = false,
+} = Astro.props;
+const confConfig = eventConfig ?? await loadConfig();
+const homeHref = landing ? "/" : eventBasePath || "/";
+const sectionHref = (id: string) => `${eventBasePath || ""}/#${id}`;
 ---
 
 <nav
@@ -22,12 +29,19 @@ const confConfig = await loadConfig();
     <div class="hidden lg:flex items-center gap-8">
       <a
         class="text-sm font-medium hover:text-pink-400 transition-colors"
-        href="/">Home</a>
+        href={homeHref}>Home</a>
+      {landing && (
+        <a
+          class="text-sm font-medium hover:text-pink-400 transition-colors"
+          href="/#locations">Locations</a>
+      )}
+      {!landing && (
+        <>
       {
         confConfig.hasCfs ? (
           <a
             class="text-sm font-medium hover:text-pink-400 transition-colors"
-            href="/#call-for-speakers"
+            href={sectionHref("call-for-speakers")}
           >
             Call for Speakers
           </a>
@@ -36,7 +50,7 @@ const confConfig = await loadConfig();
             {confConfig.hasAnnouncedSpeakers && (
               <a
                 class="text-sm font-medium hover:text-pink-400 transition-colors"
-                href="/#speakers"
+                href={sectionHref("speakers")}
               >
                 Speakers
               </a>
@@ -44,7 +58,7 @@ const confConfig = await loadConfig();
             {confConfig.hasAnnouncedSchedule && (
               <a
                 class="text-sm font-medium hover:text-pink-400 transition-colors"
-                href="/#schedule"
+                href={sectionHref("schedule")}
               >
                 Schedule
               </a>
@@ -54,10 +68,12 @@ const confConfig = await loadConfig();
       }
       <a
         class="text-sm font-medium hover:text-pink-400 transition-colors"
-        href="/#location">Location</a>
+        href={sectionHref("location")}>Location</a>
       <a
         class="text-sm font-medium hover:text-pink-400 transition-colors"
-        href="/#sponsors">Sponsors</a>
+        href={sectionHref("sponsors")}>Sponsors</a>
+        </>
+      )}
       <a
         class="text-sm font-medium hover:text-pink-400 transition-colors"
         href="/code-of-conduct">Code of Conduct</a>
@@ -146,13 +162,20 @@ const confConfig = await loadConfig();
     <nav class="container mx-auto px-6 py-4 flex flex-col gap-4">
       <a
         class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
-        href="/">Home</a
+        href={homeHref}>Home</a
       >
+      {landing && (
+        <a
+          class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
+          href="/#locations">Locations</a>
+      )}
+      {!landing && (
+        <>
       {
         confConfig.hasCfs ? (
           <a
             class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
-            href="/#call-for-speakers"
+            href={sectionHref("call-for-speakers")}
           >
             Call for Speakers
           </a>
@@ -161,7 +184,7 @@ const confConfig = await loadConfig();
             {confConfig.hasAnnouncedSpeakers && (
               <a
                 class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
-                href="/#speakers"
+                href={sectionHref("speakers")}
               >
                 Speakers
               </a>
@@ -169,7 +192,7 @@ const confConfig = await loadConfig();
             {confConfig.hasAnnouncedSchedule && (
               <a
                 class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
-                href="/#schedule"
+                href={sectionHref("schedule")}
               >
                 Schedule
               </a>
@@ -179,12 +202,14 @@ const confConfig = await loadConfig();
       }
       <a
         class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
-        href="/#location">Location</a
+        href={sectionHref("location")}>Location</a
       >
       <a
         class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
-        href="/#sponsors">Sponsors</a
+        href={sectionHref("sponsors")}>Sponsors</a
       >
+        </>
+      )}
       <a
         class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
         href="/code-of-conduct">Code of Conduct</a

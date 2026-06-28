@@ -1,8 +1,7 @@
 import { config as baseConfig } from '../mauiday.config.mjs';
 import path from 'path';
 
-async function loadConfig() {
-    const conference = baseConfig.USE_CONFIG || 'default';
+async function loadConfig(conference = baseConfig.USE_CONFIG || 'default') {
     const configPath = path.resolve('src/data/configs', `${conference}-config.mjs`);
 
     try {
