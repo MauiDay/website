@@ -47,7 +47,7 @@
           const speakerImages = speakerDetails
             .map(
               (speaker) =>
-                `<img src="${speaker.profilePicture}" alt="${speaker.fullName}" class="object-cover rounded-full flex-shrink-0 w-8 h-8" />`
+                `<img src="${speaker.profilePicture}" alt="${speaker.fullName}" class="object-cover rounded-full shrink-0 w-8 h-8" />`
             )
             .join("");
   
