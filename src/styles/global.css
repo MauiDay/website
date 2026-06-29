@@ -1,3 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-header: "Poppins", sans-serif;
+  --color-brand-extra: #e666cc;
+  --color-brand-extraDark: #c93cad;
+  --color-brand-light: #d9eeff;
+  --color-brand: #9780e5;
+  --color-brand-dark: #0b1d51;
+}
+
+@source inline("rounded-{lg,xl,full}");
+@source inline("hover:shadow-lg");
+@source inline("hover:border-brand-extra/40");
+@source inline("from-brand-extra/5");
+@source inline("to-brand-light/5");
+@source inline("border-brand-extra/40");
+@source inline("border-gray-{100,200}");
+@source inline("bg-gradient-to-r");
+@source inline("bg-brand-extra");
+@source inline("bg-gray-100");
+@source inline("group-hover:text-brand-extra");
+@source inline("{w,h}-{3,8,10}");
+@source inline("w-px");
+@source inline("text-{xl,2xl}");
+@source inline("leading-{tight,relaxed}");
+@source inline("border-2");
+@source inline("mb-8");
+@source inline("md:mb-12");
+@source inline("line-clamp-3");
+@source inline("shrink-0");
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
 /* Global overrides (e.g. third-party widgets) */
 
 .grecaptcha-badge,
@@ -14,7 +54,7 @@
 }
 
 .btn-gradient {
-  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%)
+  background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
 }
 
 .hero {

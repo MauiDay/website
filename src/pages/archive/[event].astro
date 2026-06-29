@@ -203,20 +203,28 @@ function sessionDuration(start: string, end: string) {
       </div>
     </section>
   )}
-</Layout>
 
 <script>
-  document.querySelectorAll('.session-preview').forEach(p => {
-    if (p.scrollHeight > p.clientHeight) {
-      const btn = p.parentElement?.querySelector('.session-expand') as HTMLElement;
-      if (btn) {
+  const setupSessionExpanders = () => {
+    document.querySelectorAll('.session-preview').forEach((p) => {
+      const btn = p.parentElement?.querySelector('.session-expand') as HTMLElement | null;
+      if (!btn) return;
+
+      if (p.scrollHeight > p.clientHeight) {
         btn.classList.remove('hidden');
-        btn.addEventListener('click', () => {
-          const isClamped = p.classList.contains('line-clamp-3');
-          p.classList.toggle('line-clamp-3');
-          btn.textContent = isClamped ? 'Show less' : 'Read more';
-        });
       }
-    }
-  });
+
+      if (btn.dataset.expandBound) return;
+      btn.dataset.expandBound = 'true';
+      btn.addEventListener('click', () => {
+        const isClamped = p.classList.contains('line-clamp-3');
+        p.classList.toggle('line-clamp-3');
+        btn.textContent = isClamped ? 'Show less' : 'Read more';
+      });
+    });
+  };
+
+  requestAnimationFrame(() => requestAnimationFrame(setupSessionExpanders));
+  window.addEventListener('load', setupSessionExpanders);
 </script>
+</Layout>

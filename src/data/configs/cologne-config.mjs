@@ -21,7 +21,7 @@ export default {
         Germany
     `,
     codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a>`,
-    codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:shaun@mauiday.net">Shaun Lawrence/a> `,
+    codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:shaun@mauiday.net">Shaun Lawrence</a>`,
     sponsors: [
         // {
         //     name: "Syncfusion",
@@ -86,4 +86,3 @@ export default {
         }
     ],
   };
-
