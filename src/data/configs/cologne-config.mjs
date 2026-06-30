@@ -11,7 +11,7 @@ export default {
     mapsLinkUrl: "https://maps.app.goo.gl/svuLsiq8zKZaVxY19",
     ticketUrl: "https://www.eventbrite.nl/e/net-maui-day-cologne-2026-tickets-1990687626278",
     locationNote:"",
-    badge:"cologne26.webp",
+    badge:"cologne26.png",
     locationParking: 'Public parking nearby',
     locationTransit: 'Train station 15 min walk',
     locationCapacity: '160 seats',

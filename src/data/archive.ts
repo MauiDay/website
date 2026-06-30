@@ -36,6 +36,7 @@ export interface ArchiveEvent {
   sponsors: Sponsor[];
   speakers: Speaker[];
   sessions: Session[];
+  badgeImage?: string;
   galleryAlbumId: string;
 }
 

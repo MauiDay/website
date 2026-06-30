@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getArchiveEvents } from "../../data/archive";
-import type { ArchiveEvent, Speaker } from "../../data/archive";
+import type { ArchiveEvent } from "../../data/archive";
 
 export async function getStaticPaths() {
   const events = getArchiveEvents();
@@ -18,6 +18,7 @@ const formattedDate = new Date(event.date).toLocaleDateString("en-US", {
   month: "long",
   day: "numeric",
 });
+const badgeImage = event.badgeImage ? `/images/editions/${event.badgeImage}` : '';
 
 // Build speaker lookup for schedule
 const speakerMap = new Map(event.speakers.map((s) => [s.id, s]));
@@ -57,6 +58,48 @@ function sessionDuration(start: string, end: string) {
       </div>
     </div>
   </section>
+
+  <!-- Event Badge -->
+  {badgeImage && (
+    <section class="bg-brand-dark py-16 border-t border-white/10">
+      <div class="container max-w-5xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center rounded-3xl border border-white/10 bg-white/5 p-8">
+          <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-brand-dark via-brand-dark to-brand-extra/30 p-10 flex items-center justify-center aspect-square max-w-sm mx-auto w-full">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(201,60,173,0.25),_transparent_60%)]"></div>
+            <img
+              src={badgeImage}
+              alt={`${event.title} badge`}
+              class="relative z-10 size-56 object-contain drop-shadow-2xl"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">Collectible Edition</p>
+            <h2 class="text-white text-3xl uppercase font-header font-bold mb-4">Event Badge</h2>
+            <p class="text-brand-light/70 text-md leading-relaxed">
+              This is more than the digital mark for {event.title}. Badge-enabled MAUI Day editions are also
+              produced as physical badges that attendees can wear on clothing, lanyards, bags, or wherever
+              they collect conference memories.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-bold text-white">
+                <i class="fa-solid fa-shirt text-brand-extra"></i>
+                Wearable
+              </span>
+              <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-bold text-white">
+                <i class="fa-solid fa-layer-group text-brand-extra"></i>
+                Collectible
+              </span>
+              <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-bold text-white">
+                <i class="fa-solid fa-location-dot text-brand-extra"></i>
+                Edition-specific
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- Speakers -->
   {event.speakers.length > 0 && (
