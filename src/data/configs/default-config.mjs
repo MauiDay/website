@@ -57,5 +57,7 @@ export default {
             url: "https://sessionize.com",
         },
     ],
+    supporters: [],
+    communityPartners: [],
   };
   
