@@ -27,62 +27,54 @@ export default {
         //     name: "Syncfusion",
         //     logo: "syncfusion",
         //     url: "https://syncfusion.com/",
-        //     boost: true,
-        // },       
+        // },
         {
             name: "Telerik",
             logo: "progress",
             url: "https://www.telerik.com/maui-ui",
-            boost: true,
         },
         // {
         //     name: "Sentry",
         //     logo: "sentry",
         //     url: "https://sentry.io",
-        //     boost: true,
         // },
+        // {
+        //     name: "NewDay",
+        //     logo: "newday",
+        //     url: "https://newday.co.uk/",
+        // },
+    ],
+    supporters: [
         // {
         //     name: "Software Mind",
         //     logo: "software-mind",
         //     url: "https://softwaremind.com/",
-        //     boost: false,
         // },
         {
             name: "Microsoft",
             logo: "microsoft",
             url: "https://www.microsoft.com",
-            boost: false,
         },
-        // {
-        //     name: "NewDay",
-        //     logo: "newday",
-        //     url: "https://newday.co.uk/",
-        //     boost: true,
-        // },
         {
             name: "Sessionize",
             logo: "sessionize",
             url: "https://sessionize.com",
-            boost: false,   
         },
-        // ,
         // {
         //     name: "JetBrains",
         //     logo: "jetbrains",
         //     url: "https://www.jetbrains.com/",
-        //     boost: false,
         // },
         {
             name: "Grial UI Kit",
             logo: "grial",
             url: "https://grialkit.com/",
-            boost: false,
         },
         {
             name: "UX Divers",
             logo: "ux-divers",
             url: "https://uxdivers.com/",
-            boost: false,
-        }
+        },
     ],
+    communityPartners: [],
   };
