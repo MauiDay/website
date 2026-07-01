@@ -19,7 +19,7 @@ export const eventLocations = [
     date: "October 23rd, 2026",
     name: "MAUI Day Cologne",
     headline: "Event Date: October 23rd, 2026 in Cologne!",
-    image: "cologne26.webp",
+    image: "cologne26.png",
     description:
       "Join us in Cologne for a full day of .NET MAUI sessions, community, and hallway-track conversations.",
   },
