@@ -22,41 +22,45 @@ export default {
     `,
     codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a>`,
     codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:tony@mauiday.net">Tony Edwards</a>`,
-    sponsors: [{
-        name: "Microsoft",
-        logo: "microsoft",
-        url: "https://www.microsoft.com",
-        boost: false,
-    },
-    // {
-    //     name: "NewDay",
-    //     logo: "newday",
-    //     url: "https://newday.co.uk/",
-    //     boost: true,
-    // },
-    {
-        name: "Sessionize",
-        logo: "sessionize",
-        url: "https://sessionize.com",
-        boost: false,   
-    },
-    // ,
-    // {
-    //     name: "JetBrains",
-    //     logo: "jetbrains",
-    //     url: "https://www.jetbrains.com/",
-    //     boost: false,
-    // },
-    {
-        name: "Grial UI Kit",
-        logo: "grial",
-        url: "https://grialkit.com/",
-        boost: false,
-    },
-    {
-        name: "UX Divers",
-        logo: "ux-divers",
-        url: "https://uxdivers.com/",
-        boost: false,
-    }],
+    sponsors: [
+        // {
+        //     name: "NewDay",
+        //     logo: "newday",
+        //     url: "https://newday.co.uk/",
+        // },
+    ],
+    supporters: [
+        {
+            name: "Microsoft",
+            logo: "microsoft",
+            url: "https://www.microsoft.com",
+        },
+        {
+            name: "Sessionize",
+            logo: "sessionize",
+            url: "https://sessionize.com",
+        },
+        // {
+        //     name: "JetBrains",
+        //     logo: "jetbrains",
+        //     url: "https://www.jetbrains.com/",
+        // },
+        {
+            name: "Grial UI Kit",
+            logo: "grial",
+            url: "https://grialkit.com/",
+        },
+        {
+            name: "UX Divers",
+            logo: "ux-divers",
+            url: "https://uxdivers.com/",
+        },
+    ],
+    communityPartners: [
+        {
+            name: "WhatTheStack",
+            logo: "what-the-stack",
+            url: "https://wts.sh/",
+        }
+    ],
   };
