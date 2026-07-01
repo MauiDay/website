@@ -7,16 +7,26 @@ import "../styles/global.css";
 
 const {
   pageTitle = siteMeta.title, // Default to site title if no page title is provided
+  pageSocialTitle = siteMeta.socialTitle,
   pageDescription = siteMeta.description,
+  pageSocialDescription = siteMeta.socialDescription,
   pageUrl = siteMeta.url,
   pageImage = siteMeta.image,
+  pageImageAlt = siteMeta.imageAlt,
+  pageImageWidth = siteMeta.imageWidth,
+  pageImageHeight = siteMeta.imageHeight,
+  pageImageType = siteMeta.imageType,
+  pageTwitterImage = siteMeta.twitterImage,
+  pageSquareImage = siteMeta.squareImage,
+  pageSquareImageWidth = siteMeta.squareImageWidth,
+  pageSquareImageHeight = siteMeta.squareImageHeight,
   eventConfig,
   eventBasePath = "",
   landing = false,
 } = Astro.props;
 ---
 
-<html class="scroll-smooth" lang="en">
+<html class="scroll-smooth" lang="en" prefix="og: https://ogp.me/ns#">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href={`/favicon.svg`} type="image/svg+xml" />
@@ -34,9 +44,19 @@ const {
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <MetaHead
       pageTitle={pageTitle}
+      pageSocialTitle={pageSocialTitle}
       pageDescription={pageDescription}
+      pageSocialDescription={pageSocialDescription}
       pageUrl={pageUrl}
       pageImage={pageImage}
+      pageImageAlt={pageImageAlt}
+      pageImageWidth={pageImageWidth}
+      pageImageHeight={pageImageHeight}
+      pageImageType={pageImageType}
+      pageTwitterImage={pageTwitterImage}
+      pageSquareImage={pageSquareImage}
+      pageSquareImageWidth={pageSquareImageWidth}
+      pageSquareImageHeight={pageSquareImageHeight}
     />
   </head>
   <body>

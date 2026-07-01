@@ -3,31 +3,108 @@
 import { siteMeta } from "../data/siteMeta";
 import { config } from "../../mauiday.config.mjs";
 
-const { title, description, url, image } = siteMeta;
+const {
+  title,
+  socialTitle,
+  description,
+  socialDescription,
+  url,
+  siteName,
+  image,
+  imageAlt,
+  imageWidth,
+  imageHeight,
+  imageType,
+  twitterImage,
+  squareImage,
+  squareImageWidth,
+  squareImageHeight,
+} = siteMeta;
 
 // Props
 const {
   pageTitle = title, // Override for page title
+  pageSocialTitle = socialTitle, // Override for link preview title
   pageDescription = description, // Override for page description
+  pageSocialDescription = socialDescription, // Override for link preview description
   pageUrl = url, // Override for page URL
   pageImage = image, // Override for OG image
+  pageImageAlt = imageAlt,
+  pageImageWidth = imageWidth,
+  pageImageHeight = imageHeight,
+  pageImageType = imageType,
+  pageTwitterImage = twitterImage,
+  pageSquareImage = squareImage,
+  pageSquareImageWidth = squareImageWidth,
+  pageSquareImageHeight = squareImageHeight,
 } = Astro.props;
+
+const imageUrl = (imagePath: string) => {
+  if (imagePath.startsWith("http://") || imagePath.startsWith("https://")) {
+    return imagePath;
+  }
+
+  return `${config.SITE_ROOT}/images/${imagePath}`;
+};
+
+const pageImageUrl = imageUrl(pageImage);
+const pageTwitterImageUrl = imageUrl(pageTwitterImage);
+const pageSquareImageUrl = imageUrl(pageSquareImage);
+const twitterHandle = config.X_LINK ? `@${new URL(config.X_LINK).pathname.split("/").filter(Boolean)[0]}` : undefined;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: pageSocialTitle,
+  description: pageSocialDescription,
+  url: pageUrl,
+  image: [pageImageUrl, pageSquareImageUrl],
+  thumbnailUrl: pageSquareImageUrl,
+  isPartOf: {
+    "@type": "WebSite",
+    name: siteName,
+    url,
+  },
+};
 ---
   <!-- Basic Metadata -->
   <title>{pageTitle}</title>
   <meta name="description" content={pageDescription} />
   <link rel="canonical" href={pageUrl} />
   <link rel="sitemap" href=`${config.SITE_ROOT}/sitemap-index.xml` />
+  <link rel="image_src" href={pageImageUrl} />
+  <meta name="thumbnail" content={pageSquareImageUrl} />
+  <meta itemprop="name" content={pageSocialTitle} />
+  <meta itemprop="description" content={pageSocialDescription} />
+  <meta itemprop="image" content={pageImageUrl} />
 
   <!-- OpenGraph Metadata -->
-  <meta property="og:title" content={pageTitle} />
-  <meta property="og:description" content={pageDescription} />
+  <meta property="og:title" content={pageSocialTitle} />
+  <meta property="og:description" content={pageSocialDescription} />
   <meta property="og:url" content={pageUrl} />
-  <meta property="og:image" content=`${config.SITE_ROOT}/images/${pageImage}`/>
+  <meta property="og:site_name" content={siteName} />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content={pageImageUrl}/>
+  <meta property="og:image:url" content={pageImageUrl}/>
+  <meta property="og:image:secure_url" content={pageImageUrl}/>
+  <meta property="og:image:type" content={pageImageType}/>
+  <meta property="og:image:width" content={String(pageImageWidth)}/>
+  <meta property="og:image:height" content={String(pageImageHeight)}/>
+  <meta property="og:image:alt" content={pageImageAlt}/>
+  <meta property="og:image" content={pageSquareImageUrl}/>
+  <meta property="og:image:url" content={pageSquareImageUrl}/>
+  <meta property="og:image:secure_url" content={pageSquareImageUrl}/>
+  <meta property="og:image:type" content={pageImageType}/>
+  <meta property="og:image:width" content={String(pageSquareImageWidth)}/>
+  <meta property="og:image:height" content={String(pageSquareImageHeight)}/>
+  <meta property="og:image:alt" content={pageImageAlt}/>
   <meta property="og:type" content="website" />
 
   <!-- Twitter Metadata -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={pageTitle} />
-  <meta name="twitter:description" content={pageDescription} />
-  <meta name="twitter:image" content=`${config.SITE_ROOT}/images/${pageImage}` />
+  {twitterHandle && <meta name="twitter:site" content={twitterHandle} />}
+  <meta name="twitter:title" content={pageSocialTitle} />
+  <meta name="twitter:description" content={pageSocialDescription} />
+  <meta name="twitter:image" content={pageTwitterImageUrl} />
+  <meta name="twitter:image:alt" content={pageImageAlt} />
+
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
