@@ -58,6 +58,5 @@ export default {
         },
     ],
     supporters: [],
-    communityPartners: [],
   };
   

@@ -55,12 +55,10 @@ export default {
             logo: "ux-divers",
             url: "https://uxdivers.com/",
         },
-    ],
-    communityPartners: [
         {
             name: "WhatTheStack",
             logo: "what-the-stack",
             url: "https://wts.sh/",
-        }
+        },
     ],
   };

@@ -76,5 +76,4 @@ export default {
             url: "https://uxdivers.com/",
         },
     ],
-    communityPartners: [],
   };

@@ -5,7 +5,6 @@ import type { Sponsor } from "../types";
 const config = Astro.props.config ?? await loadConfig();
 const sponsors: Sponsor[] = config.sponsors ?? [];
 const supporters: Sponsor[] = config.supporters ?? [];
-const communityPartners: Sponsor[] = config.communityPartners ?? [];
 ---
 
 <section id="sponsors" class="bg-white py-24 px-0">
@@ -58,7 +57,9 @@ const communityPartners: Sponsor[] = config.communityPartners ?? [];
         </h3>
         <p class="text-brand-dark text-base text-md mb-8">
           Our supporters help make the day even better. They provide prizes,
-          power the platforms we rely on, and back our speakers along the way.
+          power the platforms we rely on, back our speakers, and help spread the
+          word in the local community. Please take a moment to check them out
+          and show them some love.
         </p>
         <div class="flex flex-wrap justify-center gap-6">
           {supporters.map((supporter) => (
@@ -71,37 +72,6 @@ const communityPartners: Sponsor[] = config.communityPartners ?? [];
               <img
                 src={`/images/sponsors/${supporter.logo}.png`}
                 alt={supporter.name}
-                class="w-4/5 sm:w-full md:w-3/4 object-contain mb-4"
-                loading="lazy"
-              />
-            </a>
-          ))}
-        </div>
-      </div>
-    )}
-
-    <!-- Partners -->
-    {communityPartners.length > 0 && (
-      <div class="mt-16">
-        <h3 class="text-brand-dark text-2xl md:text-3xl uppercase font-header font-bold mb-4">
-          Our Partners
-        </h3>
-        <p class="text-brand-dark text-base text-md mb-8">
-          Our partners help make the day happen behind the scenes and spread
-          the word in the local community. We're grateful for everything they do
-          to bring people together.
-        </p>
-        <div class="flex flex-wrap justify-center gap-6">
-          {communityPartners.map((partner) => (
-            <a
-              href={partner.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex flex-col items-center p-4 transition-transform opacity-70 transform hover:scale-105 hover:opacity-100 w-full sm:w-[calc(33.333%-1rem)]"
-            >
-              <img
-                src={`/images/sponsors/${partner.logo}.png`}
-                alt={partner.name}
                 class="w-4/5 sm:w-full md:w-3/4 object-contain mb-4"
                 loading="lazy"
               />
