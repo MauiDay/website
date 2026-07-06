@@ -60,5 +60,10 @@ export default {
             logo: "what-the-stack",
             url: "https://wts.sh/",
         },
+        {
+            name: "MAUI",
+            logo: "maui-macedonia-group",
+            url: "https://www.linkedin.com/groups/16015002/"
+        }
     ],
   };
