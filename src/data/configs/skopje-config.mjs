@@ -18,7 +18,7 @@ export default {
     locationAddress: `
         Ruger Boskovik 16,<br/>
         Skopje 1000,<br/>
-        Macedonia
+        North Macedonia
     `,
     codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a>`,
     codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:tony@mauiday.net">Tony Edwards</a>`,
@@ -62,7 +62,7 @@ export default {
         },
         {
             name: "MAUI",
-            logo: "maui-macedonia-group",
+            logo: "maui-north-macedonia-group",
             url: "https://www.linkedin.com/groups/16015002/"
         }
     ],
