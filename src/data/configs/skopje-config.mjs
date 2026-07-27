@@ -23,11 +23,11 @@ export default {
     codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a>`,
     codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:tony@mauiday.net">Tony Edwards</a>`,
     sponsors: [
-        // {
-        //     name: "NewDay",
-        //     logo: "newday",
-        //     url: "https://newday.co.uk/",
-        // },
+        {
+            name: "Syncfusion",
+            logo: "syncfusion",
+            url: "https://syncfusion.com/"
+        }, 
     ],
     supporters: [
         {

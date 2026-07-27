@@ -23,11 +23,11 @@ export default {
     codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a>`,
     codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:shaun@mauiday.net">Shaun Lawrence</a>`,
     sponsors: [
-        // {
-        //     name: "Syncfusion",
-        //     logo: "syncfusion",
-        //     url: "https://syncfusion.com/",
-        // },
+        {
+            name: "Syncfusion",
+            logo: "syncfusion",
+            url: "https://syncfusion.com/",
+        },
         {
             name: "Telerik",
             logo: "progress",
