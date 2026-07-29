@@ -28,6 +28,11 @@ export default {
             logo: "syncfusion",
             url: "https://syncfusion.com/"
         }, 
+        {
+            name: "Xessable",
+            logo: "xessable",
+            url: "https://www.xessable.com/"
+        }, 
     ],
     supporters: [
         {
