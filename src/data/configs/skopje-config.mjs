@@ -69,6 +69,11 @@ export default {
             name: "MAUI",
             logo: "maui-north-macedonia-group",
             url: "https://www.linkedin.com/groups/16015002/"
+        },
+        {
+            name: "Macedonian .NET community",
+            logo: "mkdotnet",
+            url: "https://mkdot.net/"
         }
     ],
   };
