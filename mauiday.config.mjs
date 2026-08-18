@@ -10,5 +10,7 @@ export const config = {
     X_LINK: 'https://x.com/mauiday', // Link to the X (Twitter) profile
     FLICKR_LINK: 'https://www.flickr.com/photos/xamexpertday/', // Link to the Flickr profile
     INSTAGRAM_LINK: 'https://www.instagram.com/mauiday/', // Link to the Instagram profile
+    GOOGLE_PLAY_LINK: 'https://play.google.com/store/apps/details?id=com.companyname.conference.maui', // Link to the Android companion app
+    APP_STORE_LINK: 'https://apps.apple.com/app/maui-day/id6792326165', // Link to the iOS companion app
     USE_CONFIG: 'cologne', // Configuration to use, alternatively "london"
 };
