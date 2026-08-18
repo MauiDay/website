@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AppDownload from '../components/app-download.astro';
 import { eventLocations } from '../data/eventLocations';
 
 const locations = eventLocations;
@@ -77,4 +78,5 @@ alt={`${location.name} badge`}
 </div>
 </div>
 </section>
+<AppDownload />
 </Layout>

@@ -1,0 +1,39 @@
+---
+import AppStoreButtons from "./app-store-buttons.astro";
+---
+
+<section id="app" class="bg-white px-4 py-20">
+  <div
+    class="relative mx-auto max-w-6xl overflow-hidden rounded-3xl bg-brand-dark px-6 py-12 shadow-2xl md:px-12"
+  >
+    <div
+      class="absolute -right-20 -top-24 size-72 rounded-full bg-brand-extra/30 blur-3xl"
+      aria-hidden="true"
+    ></div>
+    <div
+      class="absolute -bottom-32 left-1/3 size-72 rounded-full bg-brand-light/20 blur-3xl"
+      aria-hidden="true"
+    ></div>
+
+    <div class="relative grid items-center gap-10 md:grid-cols-[1fr_auto]">
+      <div class="max-w-2xl text-center md:text-left">
+        <p
+          class="mb-3 font-header text-sm font-bold uppercase tracking-[0.2em] text-pink-300"
+        >
+          Your event companion
+        </p>
+        <h2
+          class="mb-4 font-header text-3xl font-bold uppercase text-white md:text-4xl"
+        >
+          Take MAUI Day with you
+        </h2>
+        <p class="text-lg leading-relaxed text-white/80">
+          Keep the schedule, speakers, venue details, and latest event information
+          close at hand with the official MAUI Day app.
+        </p>
+      </div>
+
+      <AppStoreButtons />
+    </div>
+  </div>
+</section>

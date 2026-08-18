@@ -1,6 +1,7 @@
 ---
 import { config } from "../../mauiday.config.mjs";
 import loadConfig from '../configLoader';
+import AppStoreButtons from "./app-store-buttons.astro";
 
 const {
   eventConfig,
@@ -114,6 +115,17 @@ const sectionHref = (id: string) => `${eventBasePath || ""}/#${id}`;
     </div>
 </div>
 </div>
+{eventBasePath && (
+  <div id="event-app" class="mb-10 flex flex-col items-center justify-between gap-5 rounded-2xl border border-white/10 bg-white/5 p-5 sm:flex-row">
+    <div class="text-center sm:text-left">
+      <p class="font-header text-lg font-bold text-white">Take MAUI Day with you</p>
+      <p class="text-sm text-gray-400">Schedule, speakers, and venue details in the event app.</p>
+    </div>
+    <div class="w-full sm:w-auto sm:min-w-[320px]">
+      <AppStoreButtons compact={true} />
+    </div>
+  </div>
+)}
 <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
 <p>© 2026 MAUI Day. All rights reserved.</p>
 <div class="flex gap-6 mt-4 md:mt-0">

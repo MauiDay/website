@@ -1,0 +1,48 @@
+---
+import { config } from "../../mauiday.config.mjs";
+
+const { compact = false } = Astro.props;
+const { APP_STORE_LINK, GOOGLE_PLAY_LINK } = config;
+
+const buttonClass = compact
+  ? "flex min-w-36 flex-1 items-center justify-center gap-3 rounded-lg bg-black px-3 py-2 text-white ring-1 ring-white/20 transition hover:-translate-y-0.5 hover:ring-white/50"
+  : "group flex min-w-56 items-center gap-4 rounded-xl bg-black px-5 py-3 text-white ring-1 ring-white/20 transition hover:-translate-y-0.5 hover:ring-white/50";
+const iconClass = compact ? "text-2xl" : "text-3xl";
+const appleIconClass = compact ? "text-3xl" : "text-4xl";
+const labelClass = compact ? "text-sm font-semibold" : "text-lg font-semibold";
+---
+
+<div
+  class:list={[
+    "flex items-stretch gap-3",
+    compact ? "flex-row flex-wrap" : "flex-col sm:flex-row md:flex-col",
+  ]}
+>
+  <a
+    href={GOOGLE_PLAY_LINK}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Get the MAUI Day app on Google Play"
+    class={buttonClass}
+  >
+    <i class:list={["fa-brands fa-google-play", iconClass]} aria-hidden="true"></i>
+    <span class="text-left leading-tight">
+      <span class="block text-[10px]">Get it on</span>
+      <span class:list={["block", labelClass]}>Google Play</span>
+    </span>
+  </a>
+
+  <a
+    href={APP_STORE_LINK}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Download the MAUI Day app on the App Store"
+    class={buttonClass}
+  >
+    <i class:list={["fa-brands fa-apple", appleIconClass]} aria-hidden="true"></i>
+    <span class="text-left leading-tight">
+      <span class="block text-[10px]">Download on the</span>
+      <span class:list={["block", labelClass]}>App Store</span>
+    </span>
+  </a>
+</div>
