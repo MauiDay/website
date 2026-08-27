@@ -85,5 +85,18 @@ const {
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
     </script>
+    <script>
+      // AidBase chatbot: loaded asynchronously so it never blocks rendering,
+      // and any failure to load is swallowed so the rest of the site keeps working.
+      window.AIDBASE_CHATBOT_ID = "7bQiFGHRcptqF-Ng5oHmn";
+
+      const aidbaseScript = document.createElement("script");
+      aidbaseScript.src = "https://client.aidbase.ai/chat.ab.js";
+      aidbaseScript.async = true;
+      aidbaseScript.onerror = () => {
+        console.warn("AidBase chatbot failed to load; continuing without it.");
+      };
+      document.body.appendChild(aidbaseScript);
+    </script>
   </body>
 </html>
