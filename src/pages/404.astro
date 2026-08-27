@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  pageTitle="404 — Page Not Found | MAUI Day"
+  pageDescription="This MAUI Day page could not be found."
+  landing={true}
+>
+  <main class="relative isolate flex min-h-screen items-center overflow-hidden bg-brand-dark px-4 pb-24 pt-32">
+    <div
+      class="pointer-events-none absolute inset-0 opacity-30"
+      style={{
+        backgroundImage:
+          "linear-gradient(to right, rgba(217, 238, 255, 0.16) 1px, transparent 1px), linear-gradient(to bottom, rgba(217, 238, 255, 0.16) 1px, transparent 1px)",
+        backgroundSize: "32px 32px",
+      }}
+    ></div>
+    <div
+      class="pointer-events-none absolute -left-24 top-20 size-80 rounded-full bg-brand-extra/30 blur-3xl"
+    ></div>
+    <div
+      class="pointer-events-none absolute -bottom-24 -right-24 size-96 rounded-full bg-brand/30 blur-3xl"
+    ></div>
+
+    <section class="relative mx-auto w-full max-w-4xl text-center">
+      <div class="mx-auto mb-8 flex w-fit items-center gap-3 rounded-full border border-brand-extra/40 bg-brand-extra/10 px-4 py-2 text-sm font-bold uppercase tracking-widest text-brand-light">
+        <span class="relative flex size-3">
+          <span class="absolute inline-flex size-full animate-ping rounded-full bg-brand-extra opacity-75"></span>
+          <span class="relative inline-flex size-3 rounded-full bg-brand-extra"></span>
+        </span>
+        Navigation hiccup
+      </div>
+
+      <div class="relative mx-auto mb-2 w-fit select-none" aria-hidden="true">
+        <p class="font-header text-[9rem] font-bold leading-none tracking-tighter text-white sm:text-[13rem]">404</p>
+        <i class="fa-solid fa-umbrella-beach absolute -right-5 top-3 rotate-12 text-4xl text-brand-extra sm:-right-8 sm:text-6xl"></i>
+        <i class="fa-solid fa-location-dot absolute -bottom-2 left-3 text-3xl text-brand-light sm:left-6 sm:text-5xl"></i>
+      </div>
+
+      <h1 class="font-header text-3xl font-bold uppercase text-white sm:text-5xl">This page took a beach break</h1>
+      <p class="mx-auto mt-5 max-w-xl text-base leading-relaxed text-brand-light/90 sm:text-lg">
+        We looked everywhere—from the schedule to the hallway track—but this URL is not on the MAUI Day map.
+      </p>
+
+      <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+        <a
+          href="/"
+          class="btn-gradient inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-bold text-white shadow-lg shadow-brand-extra/30 transition-all hover:-translate-y-0.5 hover:shadow-brand-extra/50"
+        >
+          <i class="fa-solid fa-house"></i>
+          Take me home
+        </a>
+        <a
+          href="/archive"
+          class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/20 px-7 py-3.5 font-bold text-white transition-all hover:border-white hover:bg-white/10"
+        >
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          Explore past events
+        </a>
+      </div>
+
+      <p class="mt-10 text-sm text-brand-light/70">
+        Need a hand? Try choosing a <a href="/#locations" class="font-bold text-brand-extra underline decoration-brand-extra/50 underline-offset-4 hover:text-white">MAUI Day location</a>.
+      </p>
+    </section>
+  </main>
+</Layout>
