@@ -5,7 +5,7 @@ export default {
     headline: "Event Date: September 17th 2026 in Skopje!",
     hasCfs: true,
     hasAnnouncedSpeakers: true,
-    hasAnnouncedSchedule: true,
+    hasAnnouncedSchedule: false,
     location: "Faculty of Computer Science & Engineering",
     mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28001.339626201563!2d21.408426604766383!3d42.0087091014232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13541443605aa4ab%3A0x33d56647e5b87264!2sFaculty%20of%20Computer%20Science%20%26%20Engineering!5e0!3m2!1sen!2suk!4v1782216987207!5m2!1sen!2suk",
     mapsLinkUrl: "https://maps.app.goo.gl/qUjmgxXHBQTZYQSD8",
@@ -36,6 +36,11 @@ export default {
     ],
     supporters: [
         {
+            name: "Avant2Go",
+            logo: "avant2go",
+            url: "https://avant2go.mk/en",
+        },
+        {
             name: "Microsoft",
             logo: "microsoft",
             url: "https://www.microsoft.com",
@@ -45,11 +50,6 @@ export default {
             logo: "sessionize",
             url: "https://sessionize.com",
         },
-        // {
-        //     name: "JetBrains",
-        //     logo: "jetbrains",
-        //     url: "https://www.jetbrains.com/",
-        // },
         {
             name: "Grial UI Kit",
             logo: "grial",
