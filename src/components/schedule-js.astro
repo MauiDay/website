@@ -14,7 +14,7 @@ const config = Astro.props.config ?? await loadConfig();
       </p>
       <div class="bg-gradient-to-r from-brand-extra/10 to-brand-light/10 rounded-lg p-6 mb-12 border border-brand-extra/20 max-w-2xl mx-auto">
         <p class="text-brand-dark text-lg font-bold mb-2">
-          <i class="fa-solid fa-door-open mr-2 text-brand-extra"></i>Doors open at 8:30am
+          <i class="fa-solid fa-door-open mr-2 text-brand-extra"></i>Doors open at {config.doorsOpenTime}
         </p>
         <p class="text-gray-600 text-sm">
           Arrive early to register, grab some coffee, and network with fellow attendees before the sessions begin!

@@ -20,6 +20,7 @@ export default {
         50676 Köln,<br/>
         Germany
     `,
+    doorsOpenTime: "8:30am",
     codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a>`,
     codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:shaun@mauiday.net">Shaun Lawrence</a>`,
     sponsors: [

@@ -20,6 +20,7 @@ export default {
         Skopje 1000,<br/>
         North Macedonia
     `,
+    doorsOpenTime: "9:00am",
     codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a>`,
     codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:tony@mauiday.net">Tony Edwards</a>`,
     sponsors: [
