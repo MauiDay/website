@@ -32,7 +32,12 @@ export default {
             name: "Xessable",
             logo: "xessable",
             url: "https://www.xessable.com/"
-        }, 
+        },
+        {
+            name: "CodeChem",
+            logo: "codechem",
+            url: "https://codechem.com/"
+        }
     ],
     supporters: [
         {
