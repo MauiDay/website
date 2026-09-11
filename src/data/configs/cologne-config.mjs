@@ -3,7 +3,7 @@ export default {
     sessionizeId: "o0aj9rpg",
     sessionizeCfsUrl: "https://sessionize.com/mauiday-cologne-2026",
     headline: "Event Date: October 23rd, 2026 in Cologne!",
-    hasCfs: true,
+    hasCfs: false,
     hasAnnouncedSpeakers: true,
     hasAnnouncedSchedule: false,
     location: "Microsoft, Cologne Office",
