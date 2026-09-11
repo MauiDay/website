@@ -3,7 +3,7 @@ export default {
     sessionizeId: "q9b8reb9",
     sessionizeCfsUrl: "https://sessionize.com/maui-day-skopje-2026/",
     headline: "Event Date: September 17th 2026 in Skopje!",
-    hasCfs: true,
+    hasCfs: false,
     hasAnnouncedSpeakers: true,
     hasAnnouncedSchedule: true,
     location: "INNOFEIT EDIH",
