@@ -6,7 +6,29 @@ import { eventLocations } from '../data/eventLocations';
 const locations = eventLocations;
 
 if (locations.length === 1) {
-  return Astro.redirect(`/${locations[0].slug}`);
+  const target = `/${locations[0].slug}`;
+
+  return new Response(
+    `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0;url=${target}">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="${new URL(target, Astro.site)}">
+    <title>MAUI Day</title>
+    <script>window.location.replace(${JSON.stringify(target)});</script>
+  </head>
+  <body>
+    <noscript><a href="${target}">Continue to MAUI Day</a></noscript>
+  </body>
+</html>`,
+    {
+      headers: {
+        "Content-Type": "text/html; charset=utf-8",
+      },
+    },
+  );
 }
 ---
 
