@@ -4,6 +4,10 @@ import AppDownload from '../components/app-download.astro';
 import { eventLocations } from '../data/eventLocations';
 
 const locations = eventLocations;
+
+if (locations.length === 1) {
+  return Astro.redirect(`/${locations[0].slug}`);
+}
 ---
 
 <Layout landing={true}>

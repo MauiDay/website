@@ -27,6 +27,48 @@
       "boost": false
     }
   ],
+  "supporters": [
+    {
+      "name": "Avant2Go",
+      "logo": "avant2go",
+      "url": "https://avant2go.mk/en"
+    },
+    {
+      "name": "Microsoft",
+      "logo": "microsoft",
+      "url": "https://www.microsoft.com"
+    },
+    {
+      "name": "Sessionize",
+      "logo": "sessionize",
+      "url": "https://sessionize.com"
+    },
+    {
+      "name": "Grial UI Kit",
+      "logo": "grial",
+      "url": "https://grialkit.com/"
+    },
+    {
+      "name": "UX Divers",
+      "logo": "ux-divers",
+      "url": "https://uxdivers.com/"
+    },
+    {
+      "name": "WhatTheStack",
+      "logo": "what-the-stack",
+      "url": "https://wts.sh/"
+    },
+    {
+      "name": "MAUI",
+      "logo": "maui-north-macedonia-group",
+      "url": "https://www.linkedin.com/groups/16015002/"
+    },
+    {
+      "name": "Macedonian .NET community",
+      "logo": "mkdotnet",
+      "url": "https://mkdot.net/"
+    }
+  ],
   "speakers": [
     {
       "id": "b5f674c8-199a-444d-bfaf-e8f8cd8a6248",

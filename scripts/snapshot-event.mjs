@@ -116,6 +116,7 @@ async function main() {
       mapsEmbedUrl: args.mapsUrl || '',
     },
     sponsors: [],
+    supporters: [],
     speakers,
     sessions,
     galleryAlbumId: args.gallery || args.id,
@@ -136,6 +137,11 @@ async function main() {
         logo: s.logo,
         url: s.url,
         boost: s.boost || false,
+      }));
+      event.supporters = (config.supporters || []).map(s => ({
+        name: s.name,
+        logo: s.logo,
+        url: s.url,
       }));
     }
   }

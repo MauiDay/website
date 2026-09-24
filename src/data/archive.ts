@@ -34,6 +34,7 @@ export interface ArchiveEvent {
   date: string;
   location: EventLocation;
   sponsors: Sponsor[];
+  supporters?: Sponsor[];
   speakers: Speaker[];
   sessions: Session[];
   badgeImage?: string;
