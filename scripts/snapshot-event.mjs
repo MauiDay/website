@@ -116,6 +116,8 @@ async function main() {
       mapsEmbedUrl: args.mapsUrl || '',
     },
     sponsors: [],
+    supporters: [],
+    badgeImage: '',
     speakers,
     sessions,
     galleryAlbumId: args.gallery || args.id,
@@ -131,11 +133,17 @@ async function main() {
         event.location.address = stripHtml(config.locationAddress || '');
         event.location.mapsEmbedUrl = config.mapsEmbedUrl || '';
       }
+      event.badgeImage = config.badge || '';
       event.sponsors = (config.sponsors || []).map(s => ({
         name: s.name,
         logo: s.logo,
         url: s.url,
         boost: s.boost || false,
+      }));
+      event.supporters = (config.supporters || []).map(s => ({
+        name: s.name,
+        logo: s.logo,
+        url: s.url,
       }));
     }
   }

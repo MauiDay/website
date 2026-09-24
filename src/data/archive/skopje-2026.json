@@ -1,0 +1,153 @@
+{
+  "id": "skopje-2026",
+  "title": "MAUI Day Skopje 2026",
+  "date": "2026-09-17",
+  "location": {
+    "name": "INNOFEIT EDIH",
+    "address": "Ruger Boskovik 18, Skopje 1000, North Macedonia",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2964.8102907154143!2d21.408280899999998!3d42.0043468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1354156a87e09fdd%3A0x6bf62a9cae5ef17f!2sINNOFEIT!5e0!3m2!1sen!2suk!4v1788812191755!5m2!1sen!2suk"
+  },
+  "sponsors": [
+    {
+      "name": "Syncfusion",
+      "logo": "syncfusion",
+      "url": "https://syncfusion.com/",
+      "boost": false
+    },
+    {
+      "name": "Xessable",
+      "logo": "xessable",
+      "url": "https://www.xessable.com/",
+      "boost": false
+    },
+    {
+      "name": "CodeChem",
+      "logo": "codechem",
+      "url": "https://codechem.com/",
+      "boost": false
+    }
+  ],
+  "supporters": [
+    {
+      "name": "Avant2Go",
+      "logo": "avant2go",
+      "url": "https://avant2go.mk/en"
+    },
+    {
+      "name": "Microsoft",
+      "logo": "microsoft",
+      "url": "https://www.microsoft.com"
+    },
+    {
+      "name": "Sessionize",
+      "logo": "sessionize",
+      "url": "https://sessionize.com"
+    },
+    {
+      "name": "Grial UI Kit",
+      "logo": "grial",
+      "url": "https://grialkit.com/"
+    },
+    {
+      "name": "UX Divers",
+      "logo": "ux-divers",
+      "url": "https://uxdivers.com/"
+    },
+    {
+      "name": "WhatTheStack",
+      "logo": "what-the-stack",
+      "url": "https://wts.sh/"
+    },
+    {
+      "name": "MAUI",
+      "logo": "maui-north-macedonia-group",
+      "url": "https://www.linkedin.com/groups/16015002/"
+    },
+    {
+      "name": "Macedonian .NET community",
+      "logo": "mkdotnet",
+      "url": "https://mkdot.net/"
+    }
+  ],
+  "badgeImage": "skopje26.png",
+  "speakers": [
+    {
+      "id": "b5f674c8-199a-444d-bfaf-e8f8cd8a6248",
+      "fullName": "Gerald Versluis",
+      "tagLine": "Senior Software Engineer at Microsoft",
+      "profilePicture": "https://cdn.sessionize.com/image/5989-400o400o1-XJS9YW2CA9hpY1774t84Tx.png"
+    },
+    {
+      "id": "bf526b1a-6546-407a-a3f6-c95e7196dbdd",
+      "fullName": "Mario Naumoski",
+      "tagLine": ".Net Maui Engineer",
+      "profilePicture": "https://cdn.sessionize.com/image/6b7e-400o400o1-rp5FffaRDk2wxYsYgYvPfp.jpg"
+    },
+    {
+      "id": "a0414b13-2dd1-4c5e-a693-484a758b9539",
+      "fullName": "Michał Pobuta",
+      "tagLine": "Software Engineer/.NET MAUI Expert",
+      "profilePicture": "https://cdn.sessionize.com/image/39cf-400o400o1-3mUUs48P56CP161QtCSQfM.jpg"
+    },
+    {
+      "id": "c1187bf0-56c8-4cc4-b93e-e5f8aacb4354",
+      "fullName": "Mihajlo Mladenov",
+      "tagLine": "Engineering Lead",
+      "profilePicture": "https://cdn.sessionize.com/image/032b-400o400o1-R7GMN7xE91uXewDpxiTPvd.jpg"
+    },
+    {
+      "id": "5ad7b431-a439-49ce-b663-c510d64583fe",
+      "fullName": "Stéphane Delcroix",
+      "tagLine": "Principal Software Engineer at Microsoft",
+      "profilePicture": "https://cdn.sessionize.com/image/8ffa-400o400o1-GbBKW1zqLHMJGD7yZSpKDk.jpg"
+    }
+  ],
+  "sessions": [
+    {
+      "title": "Building Your First .NET MAUI App Workshop",
+      "description": "Today we will build a .NET MAUI application that will display a list of Monkeys from around the world. We will start by building the business logic backend that pulls down json-encoded data from a RESTful endpoint. We will then leverage .NET MAUI to find the closest monkey to us and also show the monkey on a map. We will also see how to display data in many different ways and then finally fully theme the application.",
+      "startsAt": "2026-09-17T10:00:00",
+      "endsAt": "2026-09-17T14:00:00",
+      "speakers": [
+        "b5f674c8-199a-444d-bfaf-e8f8cd8a6248"
+      ]
+    },
+    {
+      "title": "The Secret Life of a MAUI Page",
+      "description": "Creating a page in .NET MAUI looks simple, but a lot happens behind the scenes before it appears on the screen and long after it disappears.\r\n\r\nIn this session, we'll follow the complete journey of a page, from construction and XAML loading to handler creation, native controls, navigation, and eventually garbage collection. Along the way, we'll uncover why some pages are released immediately while others stay in memory, how seemingly harmless code can affect performance, and what actually happens under the hood when you navigate through your application.\r\n\r\nThe examples and lessons come from building and maintaining a production .NET MAUI application used by more than 1.8 million users, where understanding the framework internals has often been the difference between guessing and solving the problem.",
+      "startsAt": "2026-09-17T16:10:00",
+      "endsAt": "2026-09-17T16:55:00",
+      "speakers": [
+        "c1187bf0-56c8-4cc4-b93e-e5f8aacb4354"
+      ]
+    },
+    {
+      "title": "Building Efficient, Offline AI Agents with .NET MAUI, Semantic Kernel and SLM",
+      "description": "AI wrapper fatigue is real. Users are tired of basic chat boxes; the future belongs to AI Agents that think and act locally.In this session, we step out of the clouds to look at a \"Clear Sky\" architecture. You will learn how to build highly resource-efficient, 100% offline AI agents using .NET MAUI, Semantic Kernel, and local SLMs. We will dissect a Two-Tier Optimization pattern that uses lightweight C# filters to dynamically inject plugins. This keeps token payloads microscopic, preventing mobile hardware from overheating or draining the battery.",
+      "startsAt": "2026-09-17T17:00:00",
+      "endsAt": "2026-09-17T17:30:00",
+      "speakers": [
+        "bf526b1a-6546-407a-a3f6-c95e7196dbdd"
+      ]
+    },
+    {
+      "title": "XAML C# Expressions, HotReload, and plenty of other improvements making XAML relevant in 2026",
+      "description": "net11 is introducing multiple improvements in the XAML language and its processing for MAUI projects, focussing on developers delight, and app performance\r\n- global, and implicit, xmlns\r\n- sourcegeneration\r\n- C# expression in XAML\r\n- incremental HotReload\r\n- and more\r\n\r\n\r\n",
+      "startsAt": "2026-09-17T18:00:00",
+      "endsAt": "2026-09-17T18:45:00",
+      "speakers": [
+        "5ad7b431-a439-49ce-b663-c510d64583fe"
+      ]
+    },
+    {
+      "title": "Bulletproof .NET MAUI: Building Apps That Don't Crash",
+      "description": "Every mobile app crashes at some point. The question isn't \"whether\" — it's \"how often\" and \"whether you even know about it.\"\r\nIn this session, I'll show concrete patterns and tools that make .NET MAUI apps crash significantly less often, and ensure that when they do crash, you know before your users do.\r\n* The most common causes of crashes and ANRs in MAUI — unhandled exceptions, blocking the main thread, async/await pitfalls, memory leaks, race conditions during navigation. Each case shown with an example of bad and good code.\r\n* A global safety net: how to hook into AppDomain, TaskScheduler, and platform handlers (Android/iOS) so no exception disappears silently.\r\n* Production observability — Sentry and Firebase Crashlytics in MAUI, stack trace symbolication, breadcrumbs, device tags. Without this, you're flying blind.\r\n* Crash-resistant patterns — a BaseViewModel with a safe execution wrapper, lifecycle cancellation to prevent operations from firing after navigation, all async operations cancellable via CancellationToken.\r\n* Trimming and AOT as a silent crash factory — why your app works in Debug but blows up in Release, and how to configure CI to catch it before your users do.\r\n",
+      "startsAt": "2026-09-17T19:20:00",
+      "endsAt": "2026-09-17T19:50:00",
+      "speakers": [
+        "a0414b13-2dd1-4c5e-a693-484a758b9539"
+      ]
+    }
+  ],
+  "galleryAlbumId": "skopje-2026"
+}

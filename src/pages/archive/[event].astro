@@ -12,6 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { event } = Astro.props as { event: ArchiveEvent };
+const supporters = event.supporters ?? [];
 
 const formattedDate = new Date(event.date).toLocaleDateString("en-US", {
   year: "numeric",
@@ -220,6 +221,31 @@ function sessionDuration(start: string, end: string) {
               <img
                 src={`/images/sponsors/${sponsor.logo}.png`}
                 alt={sponsor.name}
+                class="max-h-16 max-w-[160px] object-contain"
+                loading="lazy"
+              />
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Supporters -->
+  {supporters.length > 0 && (
+    <section class="bg-white py-16 border-t border-gray-200">
+      <div class="container max-w-5xl mx-auto px-4">
+        <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase text-center">With Help From</p>
+        <h2 class="text-brand-dark text-3xl uppercase font-header font-bold mb-4 text-center">Supporters</h2>
+        <p class="text-brand-dark/70 text-base mb-10 text-center max-w-3xl mx-auto">
+          These organizations provided prizes, platforms, speaker support, and help from the local community.
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 items-center justify-items-center">
+          {supporters.map((supporter) => (
+            <a href={supporter.url} target="_blank" rel="noopener noreferrer" class="block p-4 hover:opacity-80 transition">
+              <img
+                src={`/images/sponsors/${supporter.logo}.png`}
+                alt={supporter.name}
                 class="max-h-16 max-w-[160px] object-contain"
                 loading="lazy"
               />
