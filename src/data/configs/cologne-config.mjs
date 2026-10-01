@@ -5,7 +5,7 @@ export default {
     headline: "Event Date: October 23rd, 2026 in Cologne!",
     hasCfs: false,
     hasAnnouncedSpeakers: true,
-    hasAnnouncedSchedule: false,
+    hasAnnouncedSchedule: true,
     location: "Microsoft, Cologne Office",
     mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.7093621078993!2d6.960644576545578!3d50.929093152785406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf25b4bb4cf92b%3A0x80c4f5fba887b23b!2sMicrosoft!5e0!3m2!1sen!2snl!4v1780142133861!5m2!1sen!2snl",
     mapsLinkUrl: "https://maps.app.goo.gl/svuLsiq8zKZaVxY19",
@@ -14,7 +14,7 @@ export default {
     badge:"cologne26.png",
     locationParking: 'Public parking nearby',
     locationTransit: 'Train station 15 min walk',
-    locationCapacity: '160 seats',
+    locationCapacity: '100 seats',
     locationAddress: `
         Holzmarkt 2,<br/>
         50676 Köln,<br/>
