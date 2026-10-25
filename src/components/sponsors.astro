@@ -1,6 +1,7 @@
 ---
 import loadConfig from "../configLoader";
 import type { Sponsor } from "../types";
+import { sponsorUrl } from "../utils/sponsorUrl";
 
 const config = Astro.props.config ?? await loadConfig();
 const sponsors: Sponsor[] = config.sponsors ?? [];
@@ -25,7 +26,7 @@ const supporters: Sponsor[] = config.supporters ?? [];
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center place-items-center">
       {sponsors.map((sponsor) => (
         <a
-          href={sponsor.url}
+          href={sponsorUrl(sponsor.url, config.eventId)}
           target="_blank"
           rel="noopener noreferrer"
           class="flex flex-col items-center p-4 transition-transform opacity-70 transform hover:scale-105 hover:opacity-100 w-full"
@@ -64,7 +65,7 @@ const supporters: Sponsor[] = config.supporters ?? [];
         <div class="flex flex-wrap justify-center gap-6">
           {supporters.map((supporter) => (
             <a
-              href={supporter.url}
+              href={sponsorUrl(supporter.url, config.eventId)}
               target="_blank"
               rel="noopener noreferrer"
               class="flex flex-col items-center p-4 transition-transform opacity-70 transform hover:scale-105 hover:opacity-100 w-full sm:w-[calc(33.333%-1rem)]"

@@ -1,4 +1,5 @@
 export default {
+    eventId: "", // Set to the event's archive-style ID to enable sponsor tracking.
     name: "",
     sessionizeId: "8cknf5zh",
     sessionizeCfsUrl: "",

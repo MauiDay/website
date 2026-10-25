@@ -1,4 +1,5 @@
 export default {
+    eventId: "london-2026",
     name: "",
     sessionizeId: "sm7afub1",
     sessionizeCfsUrl: "https://sessionize.com/maui-day-london-2026",
@@ -72,4 +73,3 @@ export default {
         // }
     ],
   };
-

@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import { getArchiveEvents } from "../../data/archive";
 import type { ArchiveEvent } from "../../data/archive";
+import { sponsorUrl } from "../../utils/sponsorUrl";
 
 export async function getStaticPaths() {
   const events = getArchiveEvents();
@@ -217,7 +218,7 @@ function sessionDuration(start: string, end: string) {
         <h2 class="text-brand-dark text-3xl uppercase font-header font-bold mb-12 text-center">Sponsors</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 items-center justify-items-center">
           {event.sponsors.map((sponsor) => (
-            <a href={sponsor.url} target="_blank" rel="noopener noreferrer" class="block p-4 hover:opacity-80 transition">
+            <a href={sponsorUrl(sponsor.url, event.id)} target="_blank" rel="noopener noreferrer" class="block p-4 hover:opacity-80 transition">
               <img
                 src={`/images/sponsors/${sponsor.logo}.png`}
                 alt={sponsor.name}
@@ -242,7 +243,7 @@ function sessionDuration(start: string, end: string) {
         </p>
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 items-center justify-items-center">
           {supporters.map((supporter) => (
-            <a href={supporter.url} target="_blank" rel="noopener noreferrer" class="block p-4 hover:opacity-80 transition">
+            <a href={sponsorUrl(supporter.url, event.id)} target="_blank" rel="noopener noreferrer" class="block p-4 hover:opacity-80 transition">
               <img
                 src={`/images/sponsors/${supporter.logo}.png`}
                 alt={supporter.name}
