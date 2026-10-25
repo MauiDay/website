@@ -1,0 +1,161 @@
+{
+  "id": "cologne-2026",
+  "title": "MAUI Day Cologne 2026",
+  "date": "2026-10-23",
+  "location": {
+    "name": "Microsoft, Cologne Office",
+    "address": "Holzmarkt 2, 50676 Köln, Germany",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.7093621078993!2d6.960644576545578!3d50.929093152785406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf25b4bb4cf92b%3A0x80c4f5fba887b23b!2sMicrosoft!5e0!3m2!1sen!2snl!4v1780142133861!5m2!1sen!2snl"
+  },
+  "sponsors": [
+    {
+      "name": "Syncfusion",
+      "logo": "syncfusion",
+      "url": "https://syncfusion.com/",
+      "boost": false
+    },
+    {
+      "name": "Telerik",
+      "logo": "progress",
+      "url": "https://www.telerik.com/maui-ui",
+      "boost": false
+    }
+  ],
+  "supporters": [
+    {
+      "name": "Microsoft",
+      "logo": "microsoft",
+      "url": "https://www.microsoft.com"
+    },
+    {
+      "name": "Sessionize",
+      "logo": "sessionize",
+      "url": "https://sessionize.com"
+    },
+    {
+      "name": "Grial UI Kit",
+      "logo": "grial",
+      "url": "https://grialkit.com/"
+    },
+    {
+      "name": "UX Divers",
+      "logo": "ux-divers",
+      "url": "https://uxdivers.com/"
+    }
+  ],
+  "badgeImage": "cologne26.png",
+  "speakers": [
+    {
+      "id": "1df97ab4-43df-4b8b-a78c-805eac480c3d",
+      "fullName": "Almir Vuk",
+      "tagLine": "Lead Architect & Microsoft MVP, at run.events GmbH",
+      "profilePicture": "https://cdn.sessionize.com/image/e953-400o400o1-n2c9n34wBAEGDqWFCbdWr1.png"
+    },
+    {
+      "id": "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15",
+      "fullName": "David Ortinau",
+      "tagLine": "Principal Product Manager at Microsoft",
+      "profilePicture": "https://cdn.sessionize.com/image/fc0f-400o400o1-31qm53unFBj8A279VcnKHn.jpg"
+    },
+    {
+      "id": "b5f674c8-199a-444d-bfaf-e8f8cd8a6248",
+      "fullName": "Gerald Versluis",
+      "tagLine": "Senior Software Engineer at Microsoft",
+      "profilePicture": "https://cdn.sessionize.com/image/5989-400o400o1-XJS9YW2CA9hpY1774t84Tx.png"
+    },
+    {
+      "id": "3ae0d69a-e209-4ccb-ae3f-cbbf6762f7c3",
+      "fullName": "Maddy Montaquila",
+      "tagLine": "Queen of aspirations for Aspire",
+      "profilePicture": "https://cdn.sessionize.com/image/ed63-400o400o1-Ei42Gp5vpo9dEqCE5x1uMz.jpg"
+    },
+    {
+      "id": "a0414b13-2dd1-4c5e-a693-484a758b9539",
+      "fullName": "Michał Pobuta",
+      "tagLine": "Software Engineer/.NET MAUI Expert",
+      "profilePicture": "https://cdn.sessionize.com/image/39cf-400o400o1-3mUUs48P56CP161QtCSQfM.jpg"
+    },
+    {
+      "id": "65efd07e-b474-4bd1-bdda-77550ec8b129",
+      "fullName": "Simon Rozsival",
+      "tagLine": "Senior software engineer on the .NET runtime team at Microsoft",
+      "profilePicture": "https://cdn.sessionize.com/image/b26b-400o400o1-MdaDmgJCfcWVYAXdQpzdeV.jpg"
+    },
+    {
+      "id": "5ad7b431-a439-49ce-b663-c510d64583fe",
+      "fullName": "Stéphane Delcroix",
+      "tagLine": "Principal Software Engineer at Microsoft",
+      "profilePicture": "https://cdn.sessionize.com/image/8ffa-400o400o1-GbBKW1zqLHMJGD7yZSpKDk.jpg"
+    }
+  ],
+  "sessions": [
+    {
+      "title": "Building the Next Generation of Apps with .NET MAUI",
+      "description": ".NET MAUI continues to evolve as the modern .NET framework for building native, cross-platform apps. With .NET 11 rapidly approaching, this keynote looks at where .NET MAUI stands today, what is coming next, and how it fits into the future of mobile and desktop development.\r\n\r\nWe’ll explore the bigger themes shaping the platform: quality, performance, developer productivity, great native experiences, and the growing role of AI in how we build and use apps. Rather than focusing only on individual features, this session will connect the dots between the current state of .NET MAUI and the opportunities ahead.\r\n\r\nWhether you are building consumer apps, enterprise tools, internal productivity apps, or new AI-powered experiences, this session will show why .NET MAUI remains one of the best ways to turn ideas into native apps across platforms.",
+      "startsAt": "2026-10-23T09:10:00",
+      "endsAt": "2026-10-23T10:10:00",
+      "speakers": [
+        "b5f674c8-199a-444d-bfaf-e8f8cd8a6248"
+      ]
+    },
+    {
+      "title": ".NET MAUI 11: Focused on Perf",
+      "description": ".NET 11 completes a multi-year runtime consolidation: CoreCLR is now the default runtime across all .NET MAUI targets — Android, iOS, macOS, and Windows — and Native AOT is available on all these platforms too. Behind that switch is a lot of platform work: reshaping runtime internals for performance, and making long-standing pieces of the stack compatible with CoreCLR and AOT compilation.\r\n\r\nThis deep dive comes in two parts. First, what we changed: how core runtime and MAUI components were optimized and made trimming/AOT-safe — from a rebuilt type-map system and reflection-free rewrites of features like HybridWebView, to microbenchmark-driven fixes in MAUI's hot paths. You'll see why your app is likely faster and smaller in .NET 11 without touching your code.\r\n\r\nSecond, what you can do: the extra steps you can take to squeeze more out of your apps. We'll cover app-specific MIBC startup profiles and how to collect them for your own app, ReadyToRun and the app-size vs. startup trade-off, and how to get your app trim-clean and ready for Native AOT — including the things that commonly break and how to fix them.\r\n\r\nYou'll leave understanding what's happening under the hood and with a concrete checklist to make your own MAUI app faster and smaller in .NET 11.",
+      "startsAt": "2026-10-23T10:35:00",
+      "endsAt": "2026-10-23T11:20:00",
+      "speakers": [
+        "65efd07e-b474-4bd1-bdda-77550ec8b129"
+      ]
+    },
+    {
+      "title": "Bulletproof .NET MAUI: Building Apps That Don't Crash",
+      "description": "Every mobile app crashes at some point. The question isn't \"whether\" — it's \"how often\" and \"whether you even know about it.\"\r\nIn this session, I'll show concrete patterns and tools that make .NET MAUI apps crash significantly less often, and ensure that when they do crash, you know before your users do.\r\n* The most common causes of crashes and ANRs in MAUI — unhandled exceptions, blocking the main thread, async/await pitfalls, memory leaks, race conditions during navigation. Each case shown with an example of bad and good code.\r\n* A global safety net: how to hook into AppDomain, TaskScheduler, and platform handlers (Android/iOS) so no exception disappears silently.\r\n* Production observability — Sentry and Firebase Crashlytics in MAUI, stack trace symbolication, breadcrumbs, device tags. Without this, you're flying blind.\r\n* Crash-resistant patterns — a BaseViewModel with a safe execution wrapper, lifecycle cancellation to prevent operations from firing after navigation, all async operations cancellable via CancellationToken.\r\n* Trimming and AOT as a silent crash factory — why your app works in Debug but blows up in Release, and how to configure CI to catch it before your users do.\r\n",
+      "startsAt": "2026-10-23T11:25:00",
+      "endsAt": "2026-10-23T11:55:00",
+      "speakers": [
+        "a0414b13-2dd1-4c5e-a693-484a758b9539"
+      ]
+    },
+    {
+      "title": "Building with AI at the Edge",
+      "description": "Nobody can really predict what app development will look like in the next weeks and months exactly. The same skills that helped you grow and excel through every technology release and minor or major shift in the mobile race, those skills are what will make you successful today and tomorrow. The pace is just...a bit faster. In this session I'll share how we are using the latest tools and services to build efficiently, effectively, and sustainably.",
+      "startsAt": "2026-10-23T13:00:00",
+      "endsAt": "2026-10-23T14:00:00",
+      "speakers": [
+        "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15"
+      ]
+    },
+    {
+      "title": "One Screen, Every Device: State Triggers and the Visual State Manager in .NET MAUI",
+      "description": "Your app looks perfect on the phone emulator. Then someone rotates the device, resizes the desktop window, or opens it on a tablet... and the layout falls apart.\r\n\r\nTriggers are .NET MAUI's answer, and they live entirely in XAML. In this session we'll walk through all of them: property triggers, data triggers, event triggers, and multi-triggers. Then we get to the good part: state triggers, which let one screen reshape itself for any window size, orientation, or device, with almost no code-behind.\r\n\r\nWe'll look at the live code in a single demo app, exploring one trigger type at a time. Along the way, I'll show the gotchas that bite in real projects: why a data trigger silently does nothing, when triggers leak, and when you should just use a behavior or converter instead.\r\n\r\nYou'll leave knowing which tool to reach for, and when.",
+      "startsAt": "2026-10-23T14:25:00",
+      "endsAt": "2026-10-23T15:10:00",
+      "speakers": [
+        "1df97ab4-43df-4b8b-a78c-805eac480c3d"
+      ]
+    },
+    {
+      "title": "Keep writing code. Stop typing it. Massively distributed live coding with AI",
+      "description": "Engineers of the MAUI team, present and remotes, will live code an app. You'll see their funky prompting styles, the way they yell at copilot, and what can be achieved in a session.\r\nInteract live, or send pull-requests.",
+      "startsAt": "2026-10-23T15:40:00",
+      "endsAt": "2026-10-23T16:40:00",
+      "speakers": [
+        "5ad7b431-a439-49ce-b663-c510d64583fe"
+      ]
+    },
+    {
+      "title": ".NET MAUI Q&A Panel",
+      "description": "This is your chance to put your burning questions to the MAUI team.",
+      "startsAt": "2026-10-23T16:40:00",
+      "endsAt": "2026-10-23T17:30:00",
+      "speakers": [
+        "9fd10a46-6e2a-4eae-9b6d-9cf8ff0ecf15",
+        "b5f674c8-199a-444d-bfaf-e8f8cd8a6248",
+        "5ad7b431-a439-49ce-b663-c510d64583fe",
+        "65efd07e-b474-4bd1-bdda-77550ec8b129",
+        "3ae0d69a-e209-4ccb-ae3f-cbbf6762f7c3"
+      ]
+    }
+  ],
+  "galleryAlbumId": "cologne-2026"
+}

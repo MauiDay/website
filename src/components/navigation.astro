@@ -35,7 +35,7 @@ const sectionHref = (id: string) => `${eventBasePath || ""}/#${id}`;
           class="text-sm font-medium hover:text-pink-400 transition-colors"
           href="/#locations">Locations</a>
       )}
-      {!landing && (
+      {!landing && eventBasePath && (
         <>
       {
         confConfig.hasCfs ? (
@@ -169,7 +169,7 @@ const sectionHref = (id: string) => `${eventBasePath || ""}/#${id}`;
           class="text-sm font-medium hover:text-pink-400 transition-colors py-2"
           href="/#locations">Locations</a>
       )}
-      {!landing && (
+      {!landing && eventBasePath && (
         <>
       {
         confConfig.hasCfs ? (

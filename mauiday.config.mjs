@@ -2,7 +2,7 @@
 
 export const config = {
     SITE_TITLE: 'MAUI Day | An in-person, one-day event dedicated to the latest in cross-platform development with .NET MAUI!', // Title of the site
-    SITE_DESCRIPTION: 'An in-person, one-day event dedicated to the latest in cross-platform development with .NET MAUI! Join global experts for sessions, live discussions, and networking on the cutting-edge .NET MAUI ecosystem. Connect, learn, and explore with developers worldwide!', // Description of the site
+    SITE_DESCRIPTION: 'MAUI Day is a community-driven, one-day event dedicated to cross-platform development with .NET MAUI. Check back for news about our next event and follow us on social media for announcements.', // Description of the site
     SITE_ROOT: 'https://mauiday.net', // Root URL of the site
     BLUESKY_LINK: 'https://bsky.app/profile/mauiday.net', // Link to the BlueSky profile
     GITHUB_LINK: 'https://github.com/MauiDay', // Link to the GitHub profile
@@ -12,5 +12,5 @@ export const config = {
     INSTAGRAM_LINK: 'https://www.instagram.com/mauiday/', // Link to the Instagram profile
     GOOGLE_PLAY_LINK: 'https://play.google.com/store/apps/details?id=net.mauiday.companion', // Link to the Android companion app
     APP_STORE_LINK: 'https://apps.apple.com/app/maui-day/id6792326165', // Link to the iOS companion app
-    USE_CONFIG: 'cologne', // Configuration to use, alternatively "london"
+    USE_CONFIG: 'default', // Active conference configuration, or "default" when no event is planned
 };
