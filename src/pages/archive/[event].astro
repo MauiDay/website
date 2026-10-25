@@ -2,17 +2,20 @@
 import Layout from "../../layouts/Layout.astro";
 import { getArchiveEvents } from "../../data/archive";
 import type { ArchiveEvent } from "../../data/archive";
+import { fetchAlbums } from "../../data/gallery";
 import { sponsorUrl } from "../../utils/sponsorUrl";
 
 export async function getStaticPaths() {
   const events = getArchiveEvents();
+  const albums = await fetchAlbums();
+  const albumIds = new Set(albums.map((album) => album.id));
   return events.map((event) => ({
     params: { event: event.id },
-    props: { event },
+    props: { event, hasGallery: albumIds.has(event.galleryAlbumId) },
   }));
 }
 
-const { event } = Astro.props as { event: ArchiveEvent };
+const { event, hasGallery } = Astro.props as { event: ArchiveEvent; hasGallery: boolean };
 const supporters = event.supporters ?? [];
 
 const formattedDate = new Date(event.date).toLocaleDateString("en-US", {
@@ -258,7 +261,7 @@ function sessionDuration(start: string, end: string) {
   )}
 
   <!-- Gallery Link -->
-  {event.galleryAlbumId && (
+  {hasGallery && (
     <section class="bg-brand-dark py-16 border-t border-white/10">
       <div class="container max-w-5xl mx-auto px-4 text-center">
         <p class="text-brand-extra font-bold mb-4 text-xl font-header uppercase">Relive The Moments</p>

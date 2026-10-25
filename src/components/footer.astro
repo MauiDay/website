@@ -34,9 +34,7 @@ const sectionHref = (id: string) => `${eventBasePath || ""}/#${id}`;
 <div>
 <h4 class="font-bold mb-4 text-primary">Explore</h4>
 <ul class="space-y-2 text-sm text-gray-400">
-{landing ? (
-  <li><a class="hover:text-white transition-colors" href="/#locations">Locations</a></li>
-) : (
+{eventBasePath && (
   <>
 {confConfig.hasCfs ? (
   <li><a class="hover:text-white transition-colors" href={sectionHref("call-for-speakers")}>Call for Speakers</a></li>
