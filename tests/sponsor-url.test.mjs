@@ -27,10 +27,15 @@ test("preserves destination parameters and fragments while replacing tracking", 
   assert.equal(sponsorUrl(url.href, "london-2026"), url.href);
 });
 
-test("rejects missing event identities and invalid URLs", () => {
-  for (const eventId of [undefined, "", " "]) {
-    assert.throws(() => sponsorUrl("https://example.com", eventId), /requires an eventId/);
+test("returns the original URL unchanged when the event identity is absent", () => {
+  const url = "https://example.com/maui?product=ui&utm_source=existing#pricing";
+  for (const eventId of [undefined, null, "", " ", "\t\n"]) {
+    assert.equal(sponsorUrl(url, eventId), url);
   }
+  assert.equal(sponsorUrl("https://example.com"), "https://example.com");
+});
+
+test("rejects invalid URLs when adding tracking", () => {
   assert.throws(() => sponsorUrl("not a URL", "cologne-2026"), TypeError);
 });
 

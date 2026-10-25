@@ -32,8 +32,9 @@ already present.
 Each named conference config in `src/data/configs/` defines an `eventId` using
 the archive ID format (`{city}-{year}`, with a month when needed for
 disambiguation). Update it when reusing a config for a new edition. The generic
-`default-config.mjs` has no event identity: fill in its `eventId` before using it
-to render sponsor links, otherwise the build will fail with a tracking error.
+`default-config.mjs` has no event identity: fill in its `eventId` to enable
+tracking. If the ID is missing, empty, or whitespace-only, links use their
+original URLs unchanged.
 Archive pages use the snapshot's existing `id`, so no archive data changes are
 needed. Sponsor contact email links are not tracked.
 

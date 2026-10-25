@@ -1,6 +1,6 @@
-export function sponsorUrl(url: string, eventId: string): string {
+export function sponsorUrl(url: string, eventId?: string | null): string {
   if (!eventId?.trim()) {
-    throw new Error("Sponsor tracking requires an eventId (for example, cologne-2026).");
+    return url;
   }
 
   const trackedUrl = new URL(url);
