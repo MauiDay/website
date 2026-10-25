@@ -1,4 +1,5 @@
 export default {
+    eventId: "krakow-2026",
     name: "",
     sessionizeId: "0owlbzma",
     sessionizeCfsUrl: "https://sessionize.com/maui-day-krakow-2026",
@@ -92,4 +93,3 @@ export default {
         }
     ],
   };
-

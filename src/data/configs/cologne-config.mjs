@@ -1,4 +1,5 @@
 export default {
+    eventId: "cologne-2026",
     name: "",
     sessionizeId: "o0aj9rpg",
     sessionizeCfsUrl: "https://sessionize.com/mauiday-cologne-2026",

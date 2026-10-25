@@ -1,4 +1,5 @@
 export default {
+    eventId: "skopje-2026",
     name: "Skopje",
     sessionizeId: "q9b8reb9",
     sessionizeCfsUrl: "https://sessionize.com/maui-day-skopje-2026/",

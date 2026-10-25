@@ -1,4 +1,5 @@
 export default {
+    eventId: "", // Set to the event's archive-style ID before using this config.
     name: "",
     sessionizeId: "8cknf5zh",
     sessionizeCfsUrl: "",
