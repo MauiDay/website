@@ -28,13 +28,28 @@ export default {
             name: "Microsoft",
             logo: "microsoft",
             url: "https://www.microsoft.com",
-            boost: false,
+        },
+    ],
+    supporters: [
+        {
+            name: "Microsoft",
+            logo: "microsoft",
+            url: "https://www.microsoft.com",
         },
         {
             name: "Sessionize",
             logo: "sessionize",
             url: "https://sessionize.com",
-            boost: false,
+        },
+        {
+            name: "Grial UI Kit",
+            logo: "grial",
+            url: "https://grialkit.com/",
+        },
+        {
+            name: "UX Divers",
+            logo: "ux-divers",
+            url: "https://uxdivers.com/",
         },
     ],
   };
