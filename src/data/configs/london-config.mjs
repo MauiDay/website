@@ -1,75 +1,49 @@
 export default {
-    eventId: "london-2026",
+    eventId: "london-2027",
     name: "",
-    sessionizeId: "sm7afub1",
-    sessionizeCfsUrl: "https://sessionize.com/maui-day-london-2026",
-    headline: "Next event: February 6th, 2026 in London!",
-    hasCfs: false,
-    hasAnnouncedSpeakers: true,
-    hasAnnouncedSchedule: true,
-    location: "NewDay",
-    mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2481.7075286107192!2d-0.12333730000000002!3d51.536924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b3daaaaaaab%3A0xf88c121c552af668!2sNewDay!5e0!3m2!1sen!2sde!4v1764791780638!5m2!1sen!2sde",
-    ticketUrl: "https://e.runevents.net/maui-day-london-2026/checkout",
-    locationNote:"",
-    badge:"london26.png",
-    locationParking: 'Public parking nearby',
-    locationTransit: 'Train station 10 min walk',
-    locationCapacity: '150 seats',
+    sessionizeId: "llf9omzt",
+    sessionizeCfsUrl: "https://sessionize.com/maui-day-london-2027",
+    headline: "Next event: January 29th, 2027 in London!",
+    hasCfs: true,
+    hasAnnouncedSpeakers: false,
+    hasAnnouncedSchedule: false,
+    location: "The Building Centre",
+    mapsEmbedUrl: "https://www.google.com/maps?q=The+Building+Centre,+26+Store+St,+London+WC1E+7BT&output=embed",
+    mapsLinkUrl: "https://www.google.com/maps/search/?api=1&query=The+Building+Centre,+26+Store+St,+London+WC1E+7BT",
+    ticketUrl: "",
+    locationNote: "",
+    badge: "undecided-2027.png",
+    locationParking: 'Public transport recommended',
+    locationTransit: 'Goodge Street station 3 min walk',
+    locationCapacity: '100 seats',
     locationAddress: `
-        7 Handyside St,<br/>
-        London N1C 4DA,<br/>
+        26 Store St,<br/>
+        London WC1E 7BT,<br/>
         United Kingdom
     `,
     codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a>`,
     codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:tony@mauiday.net">Tony Edwards</a> `,
-    sponsors: [
-        {
-            name: "Syncfusion",
-            logo: "syncfusion",
-            url: "https://syncfusion.com/",
-            boost: true,
-        },       
-        // {
-        //     name: "Telerik",
-        //     logo: "progress",
-        //     url: "https://www.telerik.com/maui-ui",
-        //     boost: true,
-        // },
-        // {
-        //     name: "Sentry",
-        //     logo: "sentry",
-        //     url: "https://sentry.io",
-        //     boost: true,
-        // },
+    sponsors: [],
+    supporters: [
         {
             name: "Microsoft",
             logo: "microsoft",
             url: "https://www.microsoft.com",
-            boost: false,
-        },
-        {
-            name: "NewDay",
-            logo: "newday",
-            url: "https://newday.co.uk/",
-            boost: true,
         },
         {
             name: "Sessionize",
             logo: "sessionize",
             url: "https://sessionize.com",
-            boost: false,   
         },
         {
-            name: "JetBrains",
-            logo: "jetbrains",
-            url: "https://www.jetbrains.com/",
-            boost: false,
-        }
-        //,
-        // {
-        //     name: "UX Divers",
-        //     logo: "ux-divers",
-        //     url: "https://uxdivers.com/",
-        // }
+            name: "Grial UI Kit",
+            logo: "grial",
+            url: "https://grialkit.com/",
+        },
+        {
+            name: "UX Divers",
+            logo: "ux-divers",
+            url: "https://uxdivers.com/",
+        },
     ],
   };
