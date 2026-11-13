@@ -1,7 +1,7 @@
 export default {
     eventId: "london-2027",
     name: "",
-    sessionizeId: "",
+    sessionizeId: "llf9omzt",
     sessionizeCfsUrl: "https://sessionize.com/maui-day-london-2027",
     headline: "Next event: January 29th, 2027 in London!",
     hasCfs: true,
@@ -15,7 +15,7 @@ export default {
     badge: "undecided-2027.png",
     locationParking: 'Public transport recommended',
     locationTransit: 'Goodge Street station 3 min walk',
-    locationCapacity: '',
+    locationCapacity: '100 seats',
     locationAddress: `
         26 Store St,<br/>
         London WC1E 7BT,<br/>
