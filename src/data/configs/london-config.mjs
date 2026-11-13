@@ -23,13 +23,7 @@ export default {
     `,
     codeOfConductMain: `<a class="text-brand-extra hover:underline" href="mailto:gerald@verslu.is">Gerald Versluis</a>`,
     codeOfConductSecondary: `<a class="text-brand-extra hover:underline" href="mailto:tony@mauiday.net">Tony Edwards</a> `,
-    sponsors: [
-        {
-            name: "Microsoft",
-            logo: "microsoft",
-            url: "https://www.microsoft.com",
-        },
-    ],
+    sponsors: [],
     supporters: [
         {
             name: "Microsoft",
