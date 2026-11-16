@@ -12,7 +12,7 @@ export default {
     mapsLinkUrl: "https://www.google.com/maps/search/?api=1&query=The+Building+Centre,+26+Store+St,+London+WC1E+7BT",
     ticketUrl: "",
     locationNote: "",
-    badge: "undecided-2027.png",
+    badge: "london2027.png",
     locationParking: 'Public transport recommended',
     locationTransit: 'Goodge Street station 3 min walk',
     locationCapacity: '100 seats',
